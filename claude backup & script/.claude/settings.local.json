@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3:*)",
+      "Bash(python:*)",
+      "Bash(dir /s \"C:\\\\Users\\\\Belle\\\\OneDrive\\\\Documents\\\\Desktop\\\\ICG\\\\ICG Website Resources\")",
+      "Bash(dir:*)",
+      "Bash(grep:*)",
+      "Bash(start \"\" \"C:\\\\Users\\\\Belle\\\\OneDrive\\\\Documents\\\\Desktop\\\\ICG\\\\ICG Website Resources\\\\index.html\")",
+      "Bash(where:*)",
+      "Bash(curl:*)",
+      "Bash(powershell -Command:*)",
+      "WebFetch(domain:companieslogo.com)",
+      "WebFetch(domain:seeklogo.com)",
+      "WebFetch(domain:www.logo.wine)",
+      "WebFetch(domain:brandfetch.com)",
+      "Bash(cmd /c \"dir /S \"\"C:\\\\Users\\\\Belle\\\\OneDrive\\\\Documents\\\\Desktop\\\\ICG\\\\ICG Website Resources\\\\icons\"\"\")",
+      "WebFetch(domain:1000logos.net)",
+      "WebFetch(domain:logos-world.net)",
+      "WebFetch(domain:commons.wikimedia.org)",
+      "Bash(test:*)",
+      "Bash(find:*)",
+      "Bash(start \"\" \"C:\\\\Users\\\\Belle\\\\OneDrive\\\\Documents\\\\Desktop\\\\ICG\\\\comparison.html\")",
+      "WebFetch(domain:seekvectorlogo.com)",
+      "Bash(py -3 -c:*)",
+      "Bash(powershell -ExecutionPolicy Bypass -File:*)"
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "icg-website",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "8080", "--directory", "C:\\Users\\Belle\\OneDrive\\Documents\\Desktop\\ICG\\website icg"],
+      "port": 8080
+    }
+  ]
+}

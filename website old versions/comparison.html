@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICG Website — Version Comparison</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0f0f0f;
+            color: #fff;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        /* ── Top toolbar ── */
+        .toolbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 24px;
+            background: #1a1a1a;
+            border-bottom: 1px solid #333;
+            flex-shrink: 0;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .toolbar__title {
+            font-size: 15px;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            color: #ccc;
+            white-space: nowrap;
+        }
+
+        .toolbar__controls {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .toolbar label {
+            font-size: 13px;
+            color: #999;
+            white-space: nowrap;
+        }
+
+        .toolbar select {
+            padding: 6px 12px;
+            border-radius: 6px;
+            border: 1px solid #444;
+            background: #2a2a2a;
+            color: #fff;
+            font-size: 13px;
+            cursor: pointer;
+            outline: none;
+        }
+        .toolbar select:hover { border-color: #666; }
+        .toolbar select:focus { border-color: #C5D34F; }
+
+        .toolbar button {
+            padding: 6px 14px;
+            border-radius: 6px;
+            border: 1px solid #444;
+            background: #2a2a2a;
+            color: #ccc;
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.15s;
+            white-space: nowrap;
+        }
+        .toolbar button:hover { background: #3a3a3a; border-color: #666; color: #fff; }
+        .toolbar button.active { background: #C5D34F; color: #1a1a1a; border-color: #C5D34F; font-weight: 600; }
+
+        .sync-toggle {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .sync-toggle input[type="checkbox"] {
+            accent-color: #C5D34F;
+            width: 14px;
+            height: 14px;
+        }
+
+        /* ── Frames area ── */
+        .frames {
+            display: flex;
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .frame-wrapper {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            transition: flex 0.3s ease;
+        }
+
+        .frame-wrapper.hidden {
+            flex: 0;
+            overflow: hidden;
+        }
+
+        .frame-wrapper + .frame-wrapper {
+            border-left: 2px solid #333;
+        }
+
+        .frame-label {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 8px 16px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            flex-shrink: 0;
+        }
+
+        .frame-label--old {
+            background: #1A3C34;
+            color: #C4A265;
+        }
+
+        .frame-label--new {
+            background: #2a2a2a;
+            color: #C5D34F;
+        }
+
+        .frame-label__tag {
+            font-size: 10px;
+            padding: 2px 8px;
+            border-radius: 99px;
+            font-weight: 700;
+        }
+
+        .frame-label--old .frame-label__tag {
+            background: rgba(196, 162, 101, 0.2);
+            color: #C4A265;
+        }
+
+        .frame-label--new .frame-label__tag {
+            background: rgba(197, 211, 79, 0.2);
+            color: #C5D34F;
+        }
+
+        .frame-wrapper iframe {
+            flex: 1;
+            border: none;
+            background: #fff;
+            width: 100%;
+        }
+
+        /* ── Full-width mode ── */
+        .frames.focus-old .frame-wrapper:nth-child(2) { flex: 0; overflow: hidden; }
+        .frames.focus-old .frame-wrapper:nth-child(2) .frame-label,
+        .frames.focus-old .frame-wrapper:nth-child(2) iframe { display: none; }
+
+        .frames.focus-new .frame-wrapper:nth-child(1) { flex: 0; overflow: hidden; }
+        .frames.focus-new .frame-wrapper:nth-child(1) .frame-label,
+        .frames.focus-new .frame-wrapper:nth-child(1) iframe { display: none; }
+
+        /* ── Divider handle ── */
+        .divider {
+            width: 6px;
+            background: #333;
+            cursor: col-resize;
+            flex-shrink: 0;
+            transition: background 0.15s;
+            position: relative;
+            z-index: 10;
+        }
+        .divider:hover, .divider.active { background: #C5D34F; }
+
+        /* ── Keyboard hint ── */
+        .keyboard-hint {
+            position: fixed;
+            bottom: 16px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0,0,0,0.85);
+            color: #999;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 11px;
+            pointer-events: none;
+            z-index: 100;
+            white-space: nowrap;
+        }
+        .keyboard-hint kbd {
+            background: #333;
+            padding: 1px 6px;
+            border-radius: 3px;
+            font-size: 11px;
+            color: #ccc;
+            border: 1px solid #555;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Toolbar -->
+    <div class="toolbar">
+        <div class="toolbar__title">ICG Website Comparison</div>
+
+        <div class="toolbar__controls">
+            <label for="pageSelect">Page:</label>
+            <select id="pageSelect">
+                <option value="index">Home</option>
+                <option value="about">About</option>
+                <option value="services">Services (Overview)</option>
+                <option value="contact">Contact</option>
+                <option value="team">Team</option>
+                <option value="insights">Insights</option>
+                <optgroup label="Individual Services (New only)">
+                    <option value="service-consulting">Business Consulting</option>
+                    <option value="service-cfo">CFO Outsourcing</option>
+                    <option value="service-global">Global Structuring</option>
+                    <option value="service-estate">Estate Planning</option>
+                    <option value="service-corporate">Corporate Structure</option>
+                    <option value="service-esg">ESG Compliance</option>
+                </optgroup>
+            </select>
+
+            <div style="width:1px;height:20px;background:#444;"></div>
+
+            <button id="btnBoth" class="active" title="Show both side-by-side">Both</button>
+            <button id="btnOld" title="Show only old version">Old Only</button>
+            <button id="btnNew" title="Show only new version">New Only</button>
+
+            <div style="width:1px;height:20px;background:#444;"></div>
+
+            <div class="sync-toggle">
+                <input type="checkbox" id="syncScroll" checked>
+                <label for="syncScroll">Sync scroll</label>
+            </div>
+        </div>
+    </div>
+
+    <!-- Frames -->
+    <div class="frames" id="frames">
+        <div class="frame-wrapper" id="wrapperOld">
+            <div class="frame-label frame-label--old">
+                <span>Version A — Original (Forest Green &amp; Gold)</span>
+                <span class="frame-label__tag">OLD</span>
+            </div>
+            <iframe id="frameOld" src="website icg/index.html"></iframe>
+        </div>
+
+        <div class="divider" id="divider"></div>
+
+        <div class="frame-wrapper" id="wrapperNew">
+            <div class="frame-label frame-label--new">
+                <span>Version B — Redesign (Lime &amp; White)</span>
+                <span class="frame-label__tag">NEW</span>
+            </div>
+            <iframe id="frameNew" src="ICG Website Resources/index.html"></iframe>
+        </div>
+    </div>
+
+    <div class="keyboard-hint">
+        <kbd>1</kbd> Old only &nbsp; <kbd>2</kbd> Both &nbsp; <kbd>3</kbd> New only &nbsp; <kbd>&larr;</kbd><kbd>&rarr;</kbd> Switch pages
+    </div>
+
+    <script>
+        // ── Page mapping ──
+        const pages = {
+            'index':              { old: 'website icg/index.html',              new: 'ICG Website Resources/index.html' },
+            'about':              { old: 'website icg/about.html',              new: 'ICG Website Resources/about.html' },
+            'services':           { old: 'website icg/services.html',           new: 'ICG Website Resources/services.html' },
+            'contact':            { old: 'website icg/contact.html',            new: 'ICG Website Resources/contact.html' },
+            'team':               { old: 'website icg/team.html',               new: 'ICG Website Resources/team.html' },
+            'insights':           { old: 'website icg/insights.html',           new: 'ICG Website Resources/insights.html' },
+            'service-consulting': { old: 'website icg/services.html',           new: 'ICG Website Resources/service-consulting.html' },
+            'service-cfo':        { old: 'website icg/services.html',           new: 'ICG Website Resources/service-cfo.html' },
+            'service-global':     { old: 'website icg/services.html',           new: 'ICG Website Resources/service-global.html' },
+            'service-estate':     { old: 'website icg/services.html',           new: 'ICG Website Resources/service-estate.html' },
+            'service-corporate':  { old: 'website icg/services.html',           new: 'ICG Website Resources/service-corporate.html' },
+            'service-esg':        { old: 'website icg/services.html',           new: 'ICG Website Resources/service-esg.html' },
+        };
+
+        const frameOld = document.getElementById('frameOld');
+        const frameNew = document.getElementById('frameNew');
+        const pageSelect = document.getElementById('pageSelect');
+        const frames = document.getElementById('frames');
+        const btnBoth = document.getElementById('btnBoth');
+        const btnOld = document.getElementById('btnOld');
+        const btnNew = document.getElementById('btnNew');
+        const syncCheckbox = document.getElementById('syncScroll');
+
+        // ── Page switching ──
+        pageSelect.addEventListener('change', () => {
+            const key = pageSelect.value;
+            const p = pages[key];
+            if (p) {
+                frameOld.src = p.old;
+                frameNew.src = p.new;
+            }
+        });
+
+        // ── View mode buttons ──
+        function setMode(mode) {
+            frames.className = 'frames';
+            btnBoth.classList.remove('active');
+            btnOld.classList.remove('active');
+            btnNew.classList.remove('active');
+
+            if (mode === 'old') {
+                frames.classList.add('focus-old');
+                btnOld.classList.add('active');
+            } else if (mode === 'new') {
+                frames.classList.add('focus-new');
+                btnNew.classList.add('active');
+            } else {
+                btnBoth.classList.add('active');
+            }
+        }
+
+        btnBoth.addEventListener('click', () => setMode('both'));
+        btnOld.addEventListener('click', () => setMode('old'));
+        btnNew.addEventListener('click', () => setMode('new'));
+
+        // ── Keyboard shortcuts ──
+        document.addEventListener('keydown', (e) => {
+            if (e.target.tagName === 'SELECT' || e.target.tagName === 'INPUT') return;
+
+            if (e.key === '1') setMode('old');
+            else if (e.key === '2') setMode('both');
+            else if (e.key === '3') setMode('new');
+            else if (e.key === 'ArrowRight') {
+                const opts = pageSelect.options;
+                const next = Math.min(pageSelect.selectedIndex + 1, opts.length - 1);
+                pageSelect.selectedIndex = next;
+                pageSelect.dispatchEvent(new Event('change'));
+            } else if (e.key === 'ArrowLeft') {
+                const prev = Math.max(pageSelect.selectedIndex - 1, 0);
+                pageSelect.selectedIndex = prev;
+                pageSelect.dispatchEvent(new Event('change'));
+            }
+        });
+
+        // ── Synced scrolling ──
+        let scrolling = false;
+
+        function setupSyncScroll() {
+            // We try to sync when iframes load
+            const trySync = (sourceFrame, targetFrame) => {
+                try {
+                    const sourceDoc = sourceFrame.contentDocument || sourceFrame.contentWindow.document;
+                    const targetDoc = targetFrame.contentDocument || targetFrame.contentWindow.document;
+
+                    sourceFrame.contentWindow.addEventListener('scroll', () => {
+                        if (!syncCheckbox.checked || scrolling) return;
+                        scrolling = true;
+
+                        const sourceMax = sourceDoc.documentElement.scrollHeight - sourceFrame.contentWindow.innerHeight;
+                        const pct = sourceMax > 0 ? sourceFrame.contentWindow.scrollY / sourceMax : 0;
+                        const targetMax = targetDoc.documentElement.scrollHeight - targetFrame.contentWindow.innerHeight;
+
+                        targetFrame.contentWindow.scrollTo(0, pct * targetMax);
+
+                        requestAnimationFrame(() => { scrolling = false; });
+                    });
+                } catch(e) {
+                    // Cross-origin will block this, but local files should work
+                }
+            };
+
+            frameOld.addEventListener('load', () => {
+                trySync(frameOld, frameNew);
+            });
+            frameNew.addEventListener('load', () => {
+                trySync(frameNew, frameOld);
+            });
+        }
+
+        setupSyncScroll();
+
+        // ── Draggable divider ──
+        const divider = document.getElementById('divider');
+        const wrapperOld = document.getElementById('wrapperOld');
+        const wrapperNew = document.getElementById('wrapperNew');
+
+        let isDragging = false;
+
+        divider.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            divider.classList.add('active');
+            document.body.style.cursor = 'col-resize';
+            document.body.style.userSelect = 'none';
+            // Prevent iframes from capturing mouse
+            frameOld.style.pointerEvents = 'none';
+            frameNew.style.pointerEvents = 'none';
+            e.preventDefault();
+        });
+
+        document.addEventListener('mousemove', (e) => {
+            if (!isDragging) return;
+            const rect = frames.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const total = rect.width - 6; // minus divider width
+            const pct = Math.max(15, Math.min(85, (x / rect.width) * 100));
+
+            wrapperOld.style.flex = `0 0 ${pct}%`;
+            wrapperNew.style.flex = `0 0 ${100 - pct}%`;
+        });
+
+        document.addEventListener('mouseup', () => {
+            if (!isDragging) return;
+            isDragging = false;
+            divider.classList.remove('active');
+            document.body.style.cursor = '';
+            document.body.style.userSelect = '';
+            frameOld.style.pointerEvents = '';
+            frameNew.style.pointerEvents = '';
+        });
+    </script>
+</body>
+</html>
