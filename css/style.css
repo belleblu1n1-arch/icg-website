@@ -7163,3 +7163,26 @@ p:last-child {
         font-size: 1.75rem;
     }
 }
+
+/* ========== IOC STICKY SPLIT-SCREEN ========== */
+.ioc-section { background: var(--cream); padding: var(--space-16) 0; }
+.ioc-section__inner { max-width: var(--max-width); margin: 0 auto; padding: 0 2rem; display: grid; grid-template-columns: 40% 60%; gap: 5rem; align-items: start; }
+.ioc-section__narrative { display: flex; flex-direction: column; gap: var(--space-10); }
+.ioc-section__header { padding-bottom: var(--space-8); border-bottom: 1px solid var(--cream-dark); }
+.ioc-section__title { font-family: var(--font-heading); font-size: 2rem; font-weight: 400; color: var(--charcoal); line-height: 1.2; letter-spacing: -0.01em; margin: var(--space-3) 0 var(--space-4); }
+.ioc-tm { font-size: 1rem; font-weight: 400; vertical-align: super; font-family: var(--font-body); }
+.ioc-section__sub { font-size: 1.0625rem; font-weight: 500; line-height: 1.65; color: var(--charcoal); opacity: 0.85; }
+.ioc-phase { padding-left: 1.25rem; border-left: 2px solid #4A8C3F; }
+.ioc-phase__marker { font-family: var(--font-body); font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #4A8C3F; margin-bottom: 0.5rem; }
+.ioc-phase__title { font-family: var(--font-heading); font-size: 1.5rem; font-weight: 500; color: var(--charcoal); margin-bottom: 0.75rem; line-height: 1.2; }
+.ioc-phase__text { font-size: 0.9375rem; font-weight: 400; line-height: 1.75; color: #5A5A5A; }
+.ioc-section__tagline { font-size: 0.9375rem; font-style: italic; color: #5A5A5A; line-height: 1.65; padding-top: var(--space-6); border-top: 1px solid var(--cream-dark); }
+.ioc-section__sticky { position: sticky; top: 6rem; }
+.ioc-section__image { width: 100%; height: auto; display: block; }
+.ioc-section__trademark { font-family: var(--font-body); font-size: 0.6875rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #aaa; text-align: center; margin-top: 1rem; }
+@media (max-width: 1023px) {
+  .ioc-section__inner { grid-template-columns: 1fr; gap: var(--space-10); }
+  .ioc-section__visual { order: -1; }
+  .ioc-section__sticky { position: static; }
+  .ioc-section__title { font-size: 1.75rem; }
+}
