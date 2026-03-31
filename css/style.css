@@ -612,7 +612,7 @@ p:last-child {
     position: relative;
     z-index: 2;
     width: 100%;
-    padding-top: calc(var(--nav-height) + var(--space-12));
+    padding-top: 60px;
 }
 
 @media (min-width: 1024px) {
@@ -691,7 +691,7 @@ p:last-child {
     color: #5A5A5A;
     font-size: 1.0625rem;
     font-weight: 400;
-    line-height: 1.7;
+    line-height: 1.85;
     text-align: center;
     max-width: 640px;
     opacity: 1;
@@ -699,11 +699,11 @@ p:last-child {
 
 .hero-supporting__hook {
     display: block;
-    margin-top: 1.25rem;
+    margin-top: 1.75rem;
     font-size: 1.0625rem;
-    font-weight: 600;
+    font-weight: 700;
     color: var(--charcoal);
-    opacity: 0.88;
+    opacity: 1;
     letter-spacing: 0.005em;
 }
 
@@ -6048,11 +6048,11 @@ p:last-child {
 }
 
 .logo-strip__inner img {
-    height: 22px;
+    height: 26px;
     width: auto;
     flex-shrink: 0;
     object-fit: contain;
-    opacity: 0.92;
+    opacity: 1;
     filter: none;
     transition: opacity 0.3s ease;
 }
