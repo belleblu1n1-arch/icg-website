@@ -7148,7 +7148,7 @@ p:last-child {
 }
 
 /* Mobile — stack vertically, diagram first */
-@media (max-width: 1023px) {
+@media (max-width: 767px) {
     .ioc-section__inner {
         grid-template-columns: 1fr;
         gap: var(--space-10);
