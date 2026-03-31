@@ -2153,9 +2153,10 @@ p:last-child {
     flex-direction: column;
     gap: 0.75rem;
     align-items: flex-start;
-    background: #E8EDE3;
+    background: #FFFFFF;
     border: none;
-    border-radius: 20px;
+    border-left: 3px solid var(--olive);
+    border-radius: 8px;
     padding: 1.75rem 2rem;
     min-height: 0;
 }
