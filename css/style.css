@@ -2086,158 +2086,147 @@ p:last-child {
 
 /* ---- When Leadership Teams Bring Us In ---- */
 .engage-section {
-    background: var(--cream);
-    padding: 6.5rem 0 7rem;
+  background: #EDF0E8;
+  padding: 6.5rem 0 7rem;
 }
 
 .engage-section > .container {
-    max-width: 1200px;
-}
-
-.engage-section__header {
-    display: grid;
-    grid-template-columns: 1fr 320px;
-    gap: 3rem;
-    align-items: center;
-    margin-bottom: 3rem;
-}
-
-.engage-section__header-text {
-    /* text column */
-}
-
-.engage-section__visual {
-    display: flex;
-    justify-content: center;
-}
-
-.engage-section__illustration {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
+  max-width: 960px;
 }
 
 .engage-section__title {
-    font-family: var(--font-heading);
-    font-size: 2.25rem;
-    font-weight: 500;
-    color: var(--charcoal);
-    text-align: left;
-    margin: 0 0 1.25rem;
+  font-family: var(--font-heading);
+  font-size: 2.25rem;
+  font-weight: 500;
+  color: var(--charcoal);
+  margin: 0 0 1.25rem;
 }
 
 .engage-section__intro {
-    font-size: 1.0625rem;
-    font-weight: 400;
-    line-height: 1.7;
-    color: #6A6A6A;
-    text-align: left;
-    max-width: 100%;
-    margin: 0 0 1rem;
+  font-size: 1.0625rem;
+  font-weight: 400;
+  line-height: 1.7;
+  color: rgb(106,106,106);
+  margin: 0 0 2rem;
+  max-width: 640px;
 }
 
-.engage-section__intro:last-of-type {
-    margin-bottom: 0;
+.engage-section__header {
+  margin-bottom: 1.5rem;
 }
 
-.engage-section__grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    max-width: 1060px;
-    margin: 0 auto;
+.engage-section__col-headers {
+  display: grid;
+  grid-template-columns: 0.7fr 32px 1.3fr 20px 0.7fr 32px 1.3fr;
+  margin-bottom: 8px;
 }
 
-.engage-section__item {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    align-items: flex-start;
-    background: #FFFFFF;
-    border: 1px solid #E8E4DC;
-    border-radius: 12px;
-    padding: 1.75rem 2rem;
-    min-height: 0;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
-}
-
-.engage-section__number {
-  font-family: var(--font-body);
-  font-size: 0.75rem;
+.engage-section__ch {
+  font-size: 0.5625rem;
   font-weight: 600;
-  color: #5C7A4A;
-  width: 28px;
-  height: 28px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #9AAF8E;
+  text-align: center;
+}
+
+.engage-section__table {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.engage-section__row {
+  display: grid;
+  grid-template-columns: 0.7fr 32px 1.3fr 20px 0.7fr 32px 1.3fr;
+  align-items: stretch;
+}
+
+.engage-section__cc {
+  background: #FAFAF8;
+  border: 0.5px solid #D8E2D0;
+  border-right: none;
+  border-radius: 8px 0 0 8px;
+  padding: 16px;
+}
+
+.engage-section__ac {
+  background: #FAFAF8;
+  border-top: 0.5px solid #D8E2D0;
+  border-bottom: 0.5px solid #D8E2D0;
+  display: flex;
+  align-items: flex-start;
   justify-content: center;
-  border: 1.5px solid #7A9B66;
-  border-radius: 50%;
-  margin-bottom: 0.5rem;
-  line-height: 1;
-  opacity: 1;
+  padding-top: 42px;
 }
 
-.engage-section__content {
-    flex: 1;
+.engage-section__bc {
+  background: #EBF3E4;
+  border: 0.5px solid #C8D9BC;
+  border-left: none;
+  border-radius: 0 8px 8px 0;
+  padding: 36px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
-.engage-section__item-title {
-    font-family: var(--font-heading);
-    font-size: 1.125rem;
-    font-weight: 400;
-    color: var(--charcoal);
-    margin: 0 0 0.5rem;
-    line-height: 1.3;
+.engage-section__sp {
+  background: transparent;
 }
 
-.engage-section__item-text {
-    font-family: var(--font-body);
-    font-size: 0.9375rem;
-    font-weight: 400;
-    line-height: 1.65;
-    color: #6A6A6A;
-    margin: 0;
+.engage-section__num {
+  font-size: 0.625rem;
+  font-weight: 600;
+  color: #B8CAAF;
+  margin-bottom: 6px;
+  letter-spacing: 0.04em;
+  display: block;
 }
 
-@media (max-width: 1023px) and (min-width: 768px) {
-    .engage-section__grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .engage-section__header {
-        grid-template-columns: 1fr 240px;
-        gap: 2rem;
-    }
-    .engage-section__illustration {
-        max-width: 220px;
-    }
+.engage-section__ct {
+  font-family: var(--font-heading);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--charcoal);
+  line-height: 1.4;
+}
+
+.engage-section__cb {
+  font-size: 0.6875rem;
+  color: #6A7A62;
+  line-height: 1.55;
+  margin-top: 5px;
+}
+
+.engage-section__bt {
+  font-family: var(--font-heading);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #2D4A25;
+  margin-bottom: 5px;
+}
+
+.engage-section__bb {
+  font-size: 0.6875rem;
+  color: #3D5A30;
+  line-height: 1.55;
 }
 
 @media (max-width: 767px) {
-    .engage-section__grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
-    }
-    .engage-section__item {
-        padding: 1.25rem 1rem;
-    }
-    .engage-section__item-title {
-        font-size: 0.9375rem;
-    }
-    .engage-section__item-text {
-        font-size: 0.8125rem;
-    }
-    .engage-section__title { font-size: 1.875rem; }
-    .engage-section__header {
-        grid-template-columns: 1fr;
-    }
-    .engage-section__visual {
-        order: -1;
-        margin-bottom: 1rem;
-    }
-    .engage-section__illustration {
-        max-width: 200px;
-    }
+  .engage-section__col-headers {
+    display: none;
+  }
+  .engage-section__row {
+    grid-template-columns: 1fr 24px 1fr;
+    gap: 8px 0;
+  }
+  .engage-section__sp {
+    display: none;
+  }
+  .engage-section__title {
+    font-size: 1.875rem;
+  }
 }
 
 /* ---- Shared Credibility Header (above both versions) ---- */
@@ -2736,10 +2725,7 @@ p:last-child {
 }
 
 
-/* ---- When We Engage Section ---- */
-.engage-section {
-    padding: var(--space-16) 0;
-}
+/* ---- When We Engage Section (legacy, moved to top) ---- */
 
 .engage-intro {
     max-width: 900px;
@@ -7208,37 +7194,15 @@ p:last-child {
 
 /* ========== BRIDGE LINE ========== */
 .engage-section__bridge {
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: var(--space-10) 2rem 0;
-    border-top: 1px solid var(--cream-dark);
-}
-.engage-section__bridge p {
-    font-size: 1.0625rem;
-    font-weight: 400;
-    line-height: 1.75;
-    color: #5A5A5A;
-    font-style: italic;
-    text-align: center;
-    max-width: 720px;
-    margin: 0 auto;
-}
-.engage-section__pillars {
-    font-family: var(--font-heading);
-    font-size: 1.25rem;
-    font-weight: 500;
-    font-style: normal;
-    color: var(--green-dark);
-    letter-spacing: 0.04em;
-    margin-top: var(--space-6);
-}
-.engage-section__ioc-label {
-    font-family: var(--font-heading);
-    font-size: 1rem;
-    font-weight: 400;
-    font-style: normal;
-    color: #6A6A6A;
-    margin-top: var(--space-2);
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 0.5px solid #C8D4C0;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--charcoal);
+  line-height: 1.7;
+  text-align: center;
+  font-style: italic;
 }
 
 /* ========== ENGAGE MODEL — SERVICE LIST ========== */
