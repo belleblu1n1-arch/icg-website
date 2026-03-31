@@ -7255,3 +7255,11 @@ p:last-child {
   .ioc-section__sticky { position: static; }
   .ioc-section__title { font-size: 1.75rem; }
 }
+.ioc-section__inner{display:grid;grid-template-columns:40% 60%;gap:5rem;align-items:start;max-width:var(--max-width);margin:0 auto;padding:0 2rem}
+.ioc-section__narrative{display:flex;flex-direction:column;gap:var(--space-10)}
+.ioc-section__header{padding-bottom:var(--space-8);border-bottom:1px solid var(--cream-dark)}
+.ioc-section__title{font-family:var(--font-heading);font-size:2rem;font-weight:400;color:var(--charcoal);line-height:1.2;letter-spacing:-0.01em;margin:var(--space-3) 0 var(--space-4)}
+.ioc-section__sub{font-size:1.0625rem;font-weight:500;line-height:1.65;color:var(--charcoal);opacity:0.85}
+.ioc-section__sticky{position:sticky;top:6rem}
+.ioc-section__image{width:100%;height:auto;display:block}
+@media(max-width:1023px){.ioc-section__inner{grid-template-columns:1fr}.ioc-section__visual{order:-1}.ioc-section__sticky{position:static}}
