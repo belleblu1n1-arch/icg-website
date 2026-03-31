@@ -2165,13 +2165,13 @@ p:last-child {
   font-family: var(--font-body);
   font-size: 0.75rem;
   font-weight: 600;
-  color: #8A9B82;
+  color: #5C7A4A;
   width: 28px;
   height: 28px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1.5px solid #B5C49E;
+  border: 1.5px solid #7A9B66;
   border-radius: 50%;
   margin-bottom: 0.5rem;
   line-height: 1;
