@@ -7049,6 +7049,30 @@ p:last-child {
     padding: var(--space-16) 0;
 }
 
+.ioc-section__center-header {
+    text-align: center;
+    max-width: var(--max-width);
+    margin: 0 auto var(--space-12);
+    padding: 0 2rem;
+}
+.ioc-section__pillars {
+    font-family: var(--font-heading);
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: var(--green-dark);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: var(--space-3);
+}
+.ioc-section__center-title {
+    font-family: var(--font-heading);
+    font-size: 2.25rem;
+    font-weight: 400;
+    color: var(--charcoal);
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+}
+
 .ioc-section__inner {
     max-width: var(--max-width);
     margin: 0 auto;
