@@ -2113,20 +2113,20 @@ p:last-child {
 
 .engage-section__header {
   display: grid;
-  grid-template-columns: 1fr 280px;
-  gap: 2.5rem;
+  grid-template-columns: 1fr 360px;
+  gap: 1.25rem;
   align-items: center;
   margin-bottom: 4.5rem;
 }
 
 .engage-section__visual {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .engage-section__illustration {
   width: 100%;
-  max-width: 260px;
+  max-width: 340px;
   height: auto;
 }
 
@@ -2230,11 +2230,11 @@ p:last-child {
 
 @media (max-width: 1023px) {
   .engage-section__header {
-    grid-template-columns: 1fr 200px;
-    gap: 2rem;
+    grid-template-columns: 1fr 260px;
+    gap: 1.25rem;
   }
   .engage-section__illustration {
-    max-width: 180px;
+    max-width: 240px;
   }
 }
 
