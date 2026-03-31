@@ -1904,7 +1904,7 @@ p:last-child {
     font-weight: 400;
     color: var(--charcoal);
     line-height: 1.3;
-    margin: 0 0 1.25rem;
+    margin: 0 0 0.75rem;
     letter-spacing: -0.005em;
     text-align: center;
     width: 100%;
@@ -1914,8 +1914,7 @@ p:last-child {
     font-family: var(--font-body);
     font-size: 1.125rem;
     font-weight: 400;
-    color: var(--charcoal);
-    opacity: 0.68;
+    color: #4A4A4A;
     line-height: 1.7;
     max-width: 720px;
     margin: 0 0 2.5rem;
@@ -1933,12 +1932,20 @@ p:last-child {
     text-align: center;
 }
 
+.engage-model__logo {
+    display: block;
+    width: 36px;
+    height: auto;
+    margin: 0 auto 1rem;
+    opacity: 0.7;
+}
+
 .engage-model__primary-label {
     display: block;
     font-family: var(--font-body);
     font-size: 0.8125rem;
     font-weight: 600;
-    color: var(--green);
+    color: var(--green-dark);
     text-transform: uppercase;
     letter-spacing: 0.08em;
     margin-bottom: 0.75rem;
@@ -1950,15 +1957,14 @@ p:last-child {
     font-weight: 400;
     color: var(--charcoal);
     line-height: 1.3;
-    margin: 0 0 1rem;
+    margin: 0 0 0.75rem;
 }
 
 .engage-model__primary-text {
     font-family: var(--font-body);
     font-size: 1.0625rem;
     font-weight: 400;
-    color: var(--charcoal);
-    opacity: 0.72;
+    color: #4A4A4A;
     line-height: 1.7;
     margin: 0 auto 0.5rem;
     max-width: 680px;
@@ -1979,7 +1985,7 @@ p:last-child {
     font-size: 0.8125rem;
     font-weight: 600;
     color: var(--charcoal);
-    opacity: 0.45;
+    opacity: 0.7;
     text-transform: uppercase;
     letter-spacing: 0.06em;
     margin: 0 auto 1.25rem;
@@ -7284,7 +7290,7 @@ p:last-child {
 .engage-model__item-desc {
     font-size: 0.875rem;
     font-weight: 400;
-    color: #5A5A5A;
+    color: #4A4A4A;
     line-height: 1.6;
 }
 @media (max-width: 767px) {
