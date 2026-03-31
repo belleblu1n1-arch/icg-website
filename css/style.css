@@ -7249,7 +7249,7 @@ p:last-child {
 .ioc-section__sticky { position: sticky; top: 6rem; }
 .ioc-section__image { width: 100%; height: auto; display: block; }
 .ioc-section__trademark { font-family: var(--font-body); font-size: 0.6875rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #aaa; text-align: center; margin-top: 1rem; }
-@media (max-width: 1023px) {
+@media (max-width: 767px) {
   .ioc-section__inner { grid-template-columns: 1fr; gap: var(--space-10); }
   .ioc-section__visual { order: -1; }
   .ioc-section__sticky { position: static; }
