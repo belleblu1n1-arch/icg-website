@@ -2113,8 +2113,8 @@ p:last-child {
 
 .engage-section__header {
   display: grid;
-  grid-template-columns: 1fr 360px;
-  gap: 1.25rem;
+  grid-template-columns: 1fr 420px;
+  gap: 1rem;
   align-items: center;
   margin-bottom: 4.5rem;
 }
@@ -2122,11 +2122,12 @@ p:last-child {
 .engage-section__visual {
   display: flex;
   justify-content: flex-start;
+  align-items: center;
 }
 
 .engage-section__illustration {
   width: 100%;
-  max-width: 340px;
+  max-width: 400px;
   height: auto;
 }
 
