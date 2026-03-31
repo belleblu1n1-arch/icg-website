@@ -2086,12 +2086,12 @@ p:last-child {
 
 /* ---- When Leadership Teams Bring Us In ---- */
 .engage-section {
-  background: #EDF0E8;
+  background: #F5F7F2;
   padding: 6.5rem 0 7rem;
 }
 
 .engage-section > .container {
-  max-width: 960px;
+  max-width: 1120px;
 }
 
 .engage-section__title {
@@ -2112,21 +2112,36 @@ p:last-child {
 }
 
 .engage-section__header {
-  margin-bottom: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 2.5rem;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.engage-section__visual {
+  display: flex;
+  justify-content: center;
+}
+
+.engage-section__illustration {
+  width: 100%;
+  max-width: 260px;
+  height: auto;
 }
 
 .engage-section__col-headers {
   display: grid;
-  grid-template-columns: 0.7fr 32px 1.3fr 20px 0.7fr 32px 1.3fr;
+  grid-template-columns: 0.6fr 28px 1.4fr 20px 0.6fr 28px 1.4fr;
   margin-bottom: 8px;
 }
 
 .engage-section__ch {
-  font-size: 0.5625rem;
+  font-size: 0.625rem;
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #9AAF8E;
+  color: #6A8A5C;
   text-align: center;
 }
 
@@ -2138,7 +2153,7 @@ p:last-child {
 
 .engage-section__row {
   display: grid;
-  grid-template-columns: 0.7fr 32px 1.3fr 20px 0.7fr 32px 1.3fr;
+  grid-template-columns: 0.6fr 28px 1.4fr 20px 0.6fr 28px 1.4fr;
   align-items: stretch;
 }
 
@@ -2147,7 +2162,7 @@ p:last-child {
   border: 0.5px solid #D8E2D0;
   border-right: none;
   border-radius: 8px 0 0 8px;
-  padding: 16px;
+  padding: 18px;
 }
 
 .engage-section__ac {
@@ -2161,11 +2176,11 @@ p:last-child {
 }
 
 .engage-section__bc {
-  background: #EBF3E4;
-  border: 0.5px solid #C8D9BC;
+  background: #F2F7ED;
+  border: 0.5px solid #D4E2CC;
   border-left: none;
   border-radius: 0 8px 8px 0;
-  padding: 36px 16px 16px;
+  padding: 36px 20px 18px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -2176,9 +2191,9 @@ p:last-child {
 }
 
 .engage-section__num {
-  font-size: 0.625rem;
-  font-weight: 600;
-  color: #B8CAAF;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #5C7A4A;
   margin-bottom: 6px;
   letter-spacing: 0.04em;
   display: block;
@@ -2186,14 +2201,14 @@ p:last-child {
 
 .engage-section__ct {
   font-family: var(--font-heading);
-  font-size: 0.8125rem;
+  font-size: 0.9375rem;
   font-weight: 500;
   color: var(--charcoal);
   line-height: 1.4;
 }
 
 .engage-section__cb {
-  font-size: 0.6875rem;
+  font-size: 0.8125rem;
   color: #6A7A62;
   line-height: 1.55;
   margin-top: 5px;
@@ -2201,16 +2216,26 @@ p:last-child {
 
 .engage-section__bt {
   font-family: var(--font-heading);
-  font-size: 0.8125rem;
+  font-size: 0.9375rem;
   font-weight: 600;
   color: #2D4A25;
   margin-bottom: 5px;
 }
 
 .engage-section__bb {
-  font-size: 0.6875rem;
+  font-size: 0.8125rem;
   color: #3D5A30;
   line-height: 1.55;
+}
+
+@media (max-width: 1023px) {
+  .engage-section__header {
+    grid-template-columns: 1fr 200px;
+    gap: 2rem;
+  }
+  .engage-section__illustration {
+    max-width: 180px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -2226,6 +2251,12 @@ p:last-child {
   }
   .engage-section__title {
     font-size: 1.875rem;
+  }
+  .engage-section__header {
+    grid-template-columns: 1fr;
+  }
+  .engage-section__visual {
+    display: none;
   }
 }
 
