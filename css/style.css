@@ -612,7 +612,7 @@ p:last-child {
     position: relative;
     z-index: 2;
     width: 100%;
-    padding-top: 60px;
+    padding-top: 48px;
 }
 
 @media (min-width: 1024px) {
@@ -699,7 +699,7 @@ p:last-child {
 
 .hero-supporting__hook {
     display: block;
-    margin-top: 1.75rem;
+    margin-top: 3.5rem;
     font-size: 1.0625rem;
     font-weight: 700;
     color: var(--charcoal);
