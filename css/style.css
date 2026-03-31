@@ -7262,4 +7262,4 @@ p:last-child {
 .ioc-section__sub{font-size:1.0625rem;font-weight:500;line-height:1.65;color:var(--charcoal);opacity:0.85}
 .ioc-section__sticky{position:sticky;top:6rem}
 .ioc-section__image{width:100%;height:auto;display:block}
-@media(max-width:1023px){.ioc-section__inner{grid-template-columns:1fr}.ioc-section__visual{order:-1}.ioc-section__sticky{position:static}}
+@media(max-width:767px){.ioc-section__inner{grid-template-columns:1fr}.ioc-section__visual{order:-1}.ioc-section__sticky{position:static}}
