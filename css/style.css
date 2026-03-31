@@ -2142,7 +2142,8 @@ p:last-child {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: #6A8A5C;
-  text-align: center;
+  text-align: left;
+  align-self: end;
 }
 
 .engage-section__table {
@@ -2172,7 +2173,7 @@ p:last-child {
   display: flex;
   align-items: flex-start;
   justify-content: flex-end;
-  padding-top: 42px;
+  padding-top: 20px;
   padding-right: 0;
 }
 
@@ -2181,7 +2182,7 @@ p:last-child {
   border: 0.5px solid #D4E2CC;
   border-left: none;
   border-radius: 0 8px 8px 0;
-  padding: 36px 20px 18px;
+  padding: 18px 20px 18px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
