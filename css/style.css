@@ -7199,6 +7199,23 @@ p:last-child {
     max-width: 720px;
     margin: 0 auto;
 }
+.engage-section__pillars {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 500;
+    font-style: normal;
+    color: var(--green-dark);
+    letter-spacing: 0.04em;
+    margin-top: var(--space-6);
+}
+.engage-section__ioc-label {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: normal;
+    color: #6A6A6A;
+    margin-top: var(--space-2);
+}
 
 /* ========== ENGAGE MODEL — SERVICE LIST ========== */
 .engage-model__upgrade {
