@@ -2154,23 +2154,25 @@ p:last-child {
     gap: 0.75rem;
     align-items: flex-start;
     background: #FFFFFF;
-    border: none;
-    border-left: 2px solid #C5D4A0;
-    border-radius: 8px;
+    border: 1px solid #E8E4DC;
+    border-radius: 12px;
     padding: 1.75rem 2rem;
     min-height: 0;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
 }
 
 .engage-section__number {
   font-family: var(--font-body);
   font-size: 0.75rem;
-  font-weight: 500;
+  font-weight: 600;
   color: #8A9B82;
-  width: auto;
-  height: auto;
-  display: block;
-  border: none;
-  border-radius: 0;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid #B5C49E;
+  border-radius: 50%;
   margin-bottom: 0.5rem;
   line-height: 1;
   opacity: 1;
