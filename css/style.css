@@ -2133,6 +2133,7 @@ p:last-child {
 .engage-section__col-headers {
   display: grid;
   grid-template-columns: 0.6fr 28px 1.4fr 20px 0.6fr 28px 1.4fr;
+  align-items: baseline;
   margin-bottom: 8px;
 }
 
@@ -2143,7 +2144,7 @@ p:last-child {
   text-transform: uppercase;
   color: #6A8A5C;
   text-align: left;
-  align-self: end;
+  line-height: 1;
 }
 
 .engage-section__table {
@@ -2173,7 +2174,7 @@ p:last-child {
   display: flex;
   align-items: flex-start;
   justify-content: flex-end;
-  padding-top: 20px;
+  padding-top: 18px;
   padding-right: 0;
 }
 
