@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <circle cx="32" cy="32" r="30" fill="#F5F3EC"/>
+  <g stroke="#A5C83A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <!-- Orchid - structuring/foundation form -->
+    <path d="M26 22c0 4 3 7 6 8"/>
+    <path d="M38 22c0 4-3 7-6 8"/>
+    <path d="M22 28c3 2 6 2 8 0"/>
+    <path d="M42 28c-3 2-6 2-8 0"/>
+    <!-- Upper petals -->
+    <path d="M29 18c-2-3 0-6 3-7"/>
+    <path d="M35 18c2-3 0-6-3-7"/>
+    <!-- Stem -->
+    <path d="M32 30v17"/>
+    <!-- Root structure -->
+    <path d="M32 47c-4 1-7 0-8-2"/>
+    <path d="M32 47c4 1 7 0 8-2"/>
+    <path d="M32 44c-3 2-6 1-7-1"/>
+    <path d="M32 44c3 2 6 1 7-1"/>
+  </g>
+</svg>

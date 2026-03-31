@@ -3177,7 +3177,7 @@ p:last-child {
 
 /* ---- Credibility Strip ---- */
 .credibility-strip {
-    background: var(--surface-main);
+    background: var(--surface-warm);
     padding: var(--space-16) 0 var(--space-10);
     text-align: center;
 }
@@ -3244,6 +3244,12 @@ p:last-child {
     .credibility-strip__stats {
         grid-template-columns: repeat(2, 1fr);
         gap: var(--space-6) var(--space-4);
+    }
+    .credibility-strip__number {
+        font-size: 1.875rem;
+    }
+    .credibility-strip__label {
+        font-size: 0.95rem;
     }
 }
 

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none" stroke="#A5C83A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Dashboard with trend line — Performance Management & Transformation -->
+  <rect x="10" y="10" width="36" height="28" rx="2"/>
+  <polyline points="16 30 22 24 28 28 34 18 40 22"/>
+  <circle cx="34" cy="18" r="2"/>
+  <line x1="16" y1="44" x2="24" y2="44"/>
+  <line x1="32" y1="44" x2="40" y2="44"/>
+  <line x1="28" y1="38" x2="28" y2="44"/>
+</svg>

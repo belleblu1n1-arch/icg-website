@@ -1,0 +1,234 @@
+# Session 14 — Homepage, Services Page Rebuild & Sitewide Cleanup
+
+**Date**: 2026-03-22 / 2026-03-23
+**Pages affected**: Homepage, Services, About, Contact, Insights
+**Status**: Implementation complete, design refinement in progress
+
+---
+
+## Context
+
+Island Capital Group (ICG) is building a premium static HTML/CSS/JS website for a senior advisory firm targeting CEO/leadership teams across Asia-Pacific. The site had evolved through multiple sessions with accumulated inconsistencies: old service taxonomy (ESG Compliance, Corporate Structure, Business Consulting), mixed navigation systems, duplicate A/B version sections, and misaligned vocabulary across pages.
+
+This session focused on:
+1. Finalising the homepage section architecture
+2. Completely rebuilding the Services page
+3. Running a sitewide consistency and cleanup pass
+4. Preparing the site for publish
+
+---
+
+## Service Architecture — Final Decision
+
+### The Problem
+The old site used a flat 4-service model (Fractional CFO, ESG Compliance, Corporate Structure, Business Consulting). The new positioning needed a clear hierarchy with one primary engagement model and four focused service areas.
+
+### Final Approved Structure
+1. **Fractional CFO & Performance Leadership** — Primary engagement model (visually dominant)
+2. **Lean & Stakeholder-Ready Reporting** — Focused service area
+3. **Performance Management & Decision Support** — Focused service area
+4. **Structuring, Governance & Cross-Border Readiness** — Focused service area
+5. **Strategic Execution & Regional Expansion** — Focused service area (project-based)
+
+### Key Decision: "How we help" vs Service Lines
+There was significant discussion about whether the homepage "How we help" section should describe an abstract approach (insight ? decisions ? alignment ? execution) or directly reflect the service lines.
+
+**Initial approach**: 4 abstract approach blocks mapping loosely to services.
+**Problem identified by user**: Blending the overarching Fractional CFO description (which is the primary service) with secondary service language created confusion. The old version's CFO description was about the primary overarching offer, not a peer service.
+**Final decision**: The "How we help" section was restructured as a value/impact table showing 5 rows — each mapping an area of impact to a delivery method. This directly reflects the 5 service lines without the abstract approach layer.
+
+---
+
+## Homepage Architecture — Final Section Order
+
+1. **Logo strip** — 6 marquee logos on warm neutral background (instant trust)
+2. **Hero** — Headline, subheadline, supporting line, dual CTAs
+3. **Credibility strip** — "100+ years combined senior leadership experience" + 4 stat boxes
+4. **Pedigree logos** — 17-logo grid with heading (full track record)
+5. **When leadership teams bring us in** — 6 situation cards
+6. **How we help** — Impact/delivery table with brick-and-plant illustration
+7. **How clients engage us** — Primary featured block + 4 secondary service categories
+8. **Engagement CTA** — "Built for businesses that need senior support..."
+9. **Footer**
+
+### Credibility Strip Decisions
+- **Headline**: "100+ years of combined senior leadership experience" (user revised from "on global scale")
+- **Subtitle**: "Our senior leaders bring decades of experience and track records built in leading Fortune 500 companies and top-tier institutions." (user specified "institutions" not "institutes")
+- **Stats**: 50+ Finance & Strategy | 50+ Corporate Structuring | 40+ Markets managed | 20+ Sectors led & advised
+- **About Us button**: Kept per original design reference
+
+### Logo Strip — Two-Layer Credibility System
+**Final decision** (amended from an earlier instruction to remove the strip):
+- **Layer 1 (top)**: 6 strongest logos in a slim premium band — Microsoft, Unilever, Diageo, Boston Scientific, Bain & Company, N.M. Rothschild & Sons
+- **Layer 2 (lower)**: 17-logo grid in 2 rows (9+8) with heading "Leadership experience shaped in leading multinationals, institutions, and complex cross-border environments"
+
+**Design evolution**:
+- Started as dark charcoal-green background with white logos
+- User feedback: changed to warm neutral background (#E8E3D9) with greyscale logos to support rather than compete with the hero
+
+### "How we help" Table
+Each row has: left column (area of impact with icon) | right column (delivery method title + description).
+
+Row 2 (Performance Management) received special treatment:
+- Body text restructured to: "Integrated, proactive performance management linking business drivers to financial impact and measurable delivery:" followed by a new line listing "target setting – forecasting – scenario planning – dashboards – risks and opportunities – accountability – reward mechanisms"
+- Title styled in green bold to match other delivery titles
+
+### "How clients engage us" Section
+- Replaced the earlier "What we do" section
+- Primary block: Fractional CFO & Performance Leadership with "Explore Services" CTA
+- 4 secondary service tiles (clickable, linking to Services page anchors)
+- User instruction: "or through focused" should wrap to next line
+- No final service anchor linking until Services page is finalised
+
+---
+
+## Services Page — Complete Rebuild
+
+### Design Direction
+The page was rebuilt from scratch following a detailed editorial design spec. Key principles:
+- Light, elegant, spacious, premium, editorial
+- One clearly featured primary service, four elegant secondary cards
+- Pill/chip tags for scope examples (not bullet lists)
+- Generous whitespace, refined serif headings, soft sans-serif body
+- No five-equal-service-essays treatment
+
+### Section Structure
+1. **Hero** — Eyebrow, serif headline ("Retained CFO leadership or focused support where it matters most"), subheadline, supporting line, CTA
+2. **How clients engage us** — Two-column: left text + right panels (primary model panel + focused areas list)
+3. **Featured primary service** — Full-width warm panel with label, title, fit line, body, "Best fit when" bullets, scope chips, outcome line, CTA
+4. **Focused service cards** — 2x2 grid, each with title, fit line, body, best-fit-when, scope chips, outcome
+5. **Why clients choose this model** — 2-column value points
+6. **Closing CTA** — Centered narrow block
+
+### CSS Architecture
+All new Services page styles use the `sp-` prefix to avoid conflicts with existing homepage styles. Typography follows the spec: Playfair Display for headings, Source Sans 3 for body, with specific size/weight/colour hierarchies.
+
+### Anchor IDs (for cross-page linking)
+- `#fractional-cfo-performance-leadership`
+- `#lean-stakeholder-ready-reporting`
+- `#performance-management-decision-support`
+- `#structuring-governance-cross-border-readiness`
+- `#strategic-execution-regional-expansion`
+
+---
+
+## About Page Updates
+
+### Vocabulary Alignment
+The About page was updated to match the shared vocabulary used on Homepage and Services:
+
+| Old term | New term |
+|---|---|
+| operational agility (intro) | entrepreneurial agility and hands-on execution |
+| innovative solutions | tailored, pragmatic solutions |
+
+**Exception**: "operational agility" was kept in Section 3 (track record bullets) and Isabel's bio (para 5) per user's second-thought revision. The reasoning: "entrepreneurial agility" is positioning language for the intro/strapline, while "operational agility" describes how the team actually works.
+
+### Anchor Terms Added
+- **prioritisation** — appears in Section 1 intro + Section 3 bullet
+- **performance cadence** — appears in Section 1 intro + Section 3 bullet + Section 4
+
+### Section 1 (Intro) — Full Rewrite
+User provided exact copy:
+- "Island Capital gives businesses access to top-tier global leadership without the need to build a full senior layer too early."
+- "We combine Fortune 500 leadership with entrepreneurial agility and hands-on execution..."
+- "Our track record has been achieved in partnership with leadership teams, helping businesses strengthen insight, improve prioritisation, build stronger performance cadence..."
+
+### Section 4 (What Sets Us Apart)
+User provided exact copy incorporating "gain sharper insight for faster and clearer decision-making" and "performance cadence."
+
+### Edmund Bio — Tightened
+Reduced from 5 paragraphs to 3. Removed the "licensed pilot / saxophone player" line per design refinement instruction to de-emphasise unless intentionally kept for personality.
+
+### CTA Alignment
+Changed from "Request an Introductory Discussion" to "Schedule a Consultation" to match Homepage and Services. Removed "Get Started" label.
+
+---
+
+## Sitewide Cleanup Pass
+
+### Navigation Standardised
+All 5 live pages now use: **Home | Services | About | Contact**
+- Impact removed sitewide (no live page exists)
+- Old nav items (What we do, Team) eliminated from all live files
+
+### Footer Standardised
+All pages share identical footer:
+- **Descriptor**: "Senior finance leadership, strategic advisory, and cross-border structuring for growing businesses across Asia-Pacific."
+- **Company links**: About, Insights, Contact
+- **Service links**: Using new anchor IDs matching services.html
+- **Contact**: info@IslandCap-g.com, Singapore, LinkedIn
+
+### Contact Page
+- Form service options updated to new 5-service architecture + "Multiple Areas / Not Sure"
+- Nav and footer already aligned
+
+### Insights Page
+- Card topics rebalanced from ESG/compliance-heavy to current positioning:
+  - Card 1: "Building a Performance Cadence That Delivers" (was CSP-Act Gap Scan)
+  - Card 2: "Governance Foundations for Cross-Border Growth" (was CSRD Readiness)
+  - Card 3: Kept "Scaling into APAC: Singapore as Your Gateway"
+
+### Old Files
+- `team.html` still exists but is not linked from any current nav/footer
+- `services-v2.html` was deleted in previous session
+- Old versions preserved in `website old versions/` and `backups/`
+
+---
+
+## Design Refinement Decisions (Late Session)
+
+### Homepage Logo Strip
+- Changed from dark (#1A2F22) to warm stone (#E8E3D9)
+- Logos switched from white/inverted to greyscale monochrome at opacity 0.4
+- Increased horizontal padding from 2rem to 4rem
+
+### Section Spacing
+- Increased padding across all major homepage sections by ~1-1.5rem for more breathing room
+
+### Focused Service Areas
+- Restyled from bordered 2×2 grid with large centred icons (button-like) to soft rounded category cards with smaller icons, left-aligned text, subtle backgrounds
+
+### "How we help" Wording
+- Removed duplicate supporting line under the section intro (the table below already explains delivery methods)
+
+---
+
+## User Preferences Established
+
+### Content Changes
+- **Always ask before changing content** — user was upset when logos were reduced from 11 to 6 without asking
+- **Never rename the misspelled filename** "consolidatied" — it's intentional (original filename)
+
+### Vocabulary Rules
+**Prefer**: senior, premium, practical, cross-border, outcome-oriented, decision support, performance management, prioritisation, execution, credibility, confidence, growth, complexity, change
+
+**Avoid**: visibility, discipline, generic phrases like "innovative solutions", audit-heavy framing, overly technical language, CFO outsourcing language
+
+### Design Rules
+- Do not treat all 5 services as equal — maintain primary/secondary hierarchy
+- Do not use accounting-firm menu style or admin/compliance-first grouping
+- Aim for calm, premium, senior-advisory tone
+- Use credibility strips to reinforce trust but keep visually integrated
+
+---
+
+## Open Questions / Deferred Items
+
+1. **"How we help" section redesign** — User paused the 4-block approach rewrite, saying "we will get back to this later." The current impact table is in place but may be revisited.
+2. **Mobile responsiveness** — Full cross-page mobile review still needed
+3. **Impact page** — Referenced in old nav, removed for now. May need building later.
+4. **Old team.html** — Still exists, needs redirect or removal decision
+5. **Logo visibility issue** — User reported logos not rendering on live site. Diagnosis requested but not yet confirmed resolved from user's perspective.
+6. **Netlify deployment** — ngrok tunnel set up for ChatGPT design review. Final hosting decision pending.
+
+---
+
+## Backups Created
+
+| Timestamp | Contents |
+|---|---|
+| `website_2026-03-19_0901/` | index.html, about.html, style.css |
+| `website_2026-03-19_1830/` | index.html, about.html, style.css, team.html |
+| `website_2026-03-22_2301/` | index.html, services.html, about.html, style.css |
+
