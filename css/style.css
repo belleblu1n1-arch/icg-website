@@ -6964,9 +6964,9 @@ p:last-child {
 
 .ioc-section__center-header {
     text-align: center;
-    max-width: var(--max-width);
+    max-width: 1080px;
     margin: 0 auto var(--space-12);
-    padding: 0 2rem;
+    padding: var(--space-8) 2rem 0;
 }
 .ioc-section__pillars {
     font-family: var(--font-heading);
@@ -6987,7 +6987,7 @@ p:last-child {
 }
 
 .ioc-section__inner {
-    max-width: var(--max-width);
+    max-width: 1080px;
     margin: 0 auto;
     padding: 0 2rem;
     display: grid;
@@ -7028,7 +7028,7 @@ p:last-child {
 .ioc-section__list {
     list-style: disc;
     padding-left: 1.5rem;
-    margin: -0.25rem 0 0.25rem;
+    margin: -0.25rem 0 1rem;
     font-size: 1.0625rem;
     font-weight: 500;
     line-height: 1.65;
@@ -7190,7 +7190,7 @@ p:last-child {
 
 /* ========== IOC STICKY SPLIT-SCREEN ========== */
 .ioc-section { background: var(--cream); padding: var(--space-16) 0; }
-.ioc-section__inner { max-width: var(--max-width); margin: 0 auto; padding: 0 2rem; display: grid; grid-template-columns: 45% 55%; gap: 4rem; align-items: start; }
+.ioc-section__inner { max-width: 1080px; margin: 0 auto; padding: 0 2rem; display: grid; grid-template-columns: 45% 55%; gap: 4rem; align-items: start; }
 .ioc-section__narrative { display: flex; flex-direction: column; gap: var(--space-10); }
 .ioc-section__header { padding-bottom: var(--space-8); border-bottom: 1px solid var(--cream-dark); }
 .ioc-section__title { font-family: var(--font-heading); font-size: 2rem; font-weight: 400; color: var(--charcoal); line-height: 1.2; letter-spacing: -0.01em; margin: var(--space-3) 0 var(--space-4); }
@@ -7210,7 +7210,7 @@ p:last-child {
   .ioc-section__sticky { position: static; }
   .ioc-section__title { font-size: 1.75rem; }
 }
-.ioc-section__inner{display:grid;grid-template-columns:45% 55%;gap:4rem;align-items:start;max-width:var(--max-width);margin:0 auto;padding:0 2rem}
+.ioc-section__inner{display:grid;grid-template-columns:45% 55%;gap:4rem;align-items:start;max-width:1080px;margin:0 auto;padding:0 2rem}
 .ioc-section__narrative{display:flex;flex-direction:column;gap:var(--space-10)}
 .ioc-section__header{padding-bottom:var(--space-8);border-bottom:1px solid var(--cream-dark)}
 .ioc-section__title{font-family:var(--font-heading);font-size:2rem;font-weight:400;color:var(--charcoal);line-height:1.2;letter-spacing:-0.01em;margin:var(--space-3) 0 var(--space-4)}
