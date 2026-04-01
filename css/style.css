@@ -2090,150 +2090,123 @@ p:last-child {
     }
 }
 
-/* ---- When Leadership Teams Bring Us In (6 cards) ---- */
+/* ---- When Leadership Teams Bring Us In ---- */
 .leaders-section {
-  background: #F5F7F2;
-  padding: 6.5rem 0 7rem;
+  background: var(--cream);
+  padding: 6rem 0;
 }
-.leaders-section > .container { max-width: 1120px; }
-.leaders-section__title {
-  font-family: var(--font-heading);
-  font-size: 2.25rem;
-  font-weight: 500;
-  color: var(--charcoal);
-  margin: 0 0 1.25rem;
+
+.leaders-section > .container {
+  max-width: 1120px;
 }
-.leaders-section__intro {
-  font-size: 1.0625rem;
-  font-weight: 400;
-  line-height: 1.7;
-  color: rgb(106,106,106);
-  margin: 0 0 2rem;
-  max-width: 640px;
-}
-.leaders-section__header {
-  display: grid;
-  grid-template-columns: 1fr 420px;
-  gap: 1rem;
-  align-items: center;
-  margin-bottom: 4.5rem;
-}
-.leaders-section__visual {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-.leaders-section__illustration {
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-}
-.leaders-section__col-headers {
-  display: grid;
-  grid-template-columns: 0.6fr 28px 1.4fr 20px 0.6fr 28px 1.4fr;
-  align-items: baseline;
-  margin-bottom: 8px;
-}
-.leaders-section__ch {
-  font-size: 0.625rem;
+
+.ls-label {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
   font-weight: 600;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.13em;
   text-transform: uppercase;
-  color: #6A8A5C;
-  text-align: left;
-  line-height: 1;
+  color: var(--green);
+  text-align: center;
+  margin: 0 0 1.5rem;
 }
-.leaders-section__table {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+
+.ls-intro {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.75;
+  color: #888;
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 3rem;
 }
-.leaders-section__row {
+
+.ls-wrap {
+  max-width: 720px;
+  margin: 0 auto 3rem;
+}
+
+.ls-headers {
   display: grid;
-  grid-template-columns: 0.6fr 28px 1.4fr 20px 0.6fr 28px 1.4fr;
-  align-items: stretch;
+  grid-template-columns: 1fr 28px 1.2fr;
+  margin-bottom: 0.6rem;
 }
-.leaders-section__cc {
-  background: #FAFAF8;
-  border: 0.5px solid #D8E2D0;
-  border-right: none;
-  border-radius: 8px 0 0 8px;
-  padding: 18px;
+
+.ls-h {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--charcoal);
 }
-.leaders-section__ac {
-  background: #FAFAF8;
-  border-top: 0.5px solid #D8E2D0;
-  border-bottom: 0.5px solid #D8E2D0;
+
+.ls-tline {
+  height: 1px;
+  background: #c8d9be;
+  width: 100%;
+}
+
+.ls-row {
+  display: grid;
+  grid-template-columns: 1fr 28px 1.2fr;
+  align-items: start;
+  border-bottom: 0.5px solid #dde8d6;
+  padding: 1.1rem 0;
+}
+
+.ls-ch p {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--charcoal);
+  line-height: 1.45;
+  margin: 0;
+}
+
+.ls-ar {
   display: flex;
   align-items: flex-start;
-  justify-content: flex-end;
-  padding-top: 18px;
-  padding-right: 0;
+  justify-content: center;
+  padding-top: 0.1rem;
 }
-.leaders-section__bc {
-  background: #F2F7ED;
-  border: 0.5px solid #D4E2CC;
-  border-left: none;
-  border-radius: 0 8px 8px 0;
-  padding: 18px 20px 18px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-.leaders-section__sp { background: transparent; }
-.leaders-section__ct {
-  font-family: var(--font-heading);
-  font-size: 0.9375rem;
-  font-weight: 500;
-  color: var(--charcoal);
-  line-height: 1.4;
-}
-.leaders-section__cb {
-  font-size: 0.8125rem;
-  color: #6A7A62;
-  line-height: 1.55;
-  margin-top: 5px;
-}
-.leaders-section__bt {
-  font-family: var(--font-heading);
+
+.ls-sol {
+  font-family: var(--font-body);
   font-size: 0.9375rem;
   font-weight: 600;
-  color: #2D4A25;
-  margin-bottom: 5px;
+  color: #3a7a30;
+  line-height: 1.3;
+  margin: 0 0 0.25rem;
 }
-.leaders-section__bb {
-  font-size: 0.8125rem;
-  color: #3D5A30;
-  line-height: 1.55;
+
+.ls-sok {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #555;
+  line-height: 1.5;
+  margin: 0;
 }
-.leaders-section__bridge {
-  margin-top: 40px;
-  padding-top: 28px;
-  border-top: 0.5px solid #C8D4C0;
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: var(--charcoal);
-  line-height: 1.7;
-  text-align: center;
+
+.ls-bridge {
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
   font-style: italic;
+  font-weight: 400;
+  color: var(--charcoal);
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto;
+  line-height: 1.85;
 }
-@media (max-width: 1023px) {
-  .leaders-section__header {
-    grid-template-columns: 1fr 260px;
-    gap: 1.25rem;
+
+@media (max-width: 600px) {
+  .ls-wrap {
+    max-width: 100%;
   }
-  .leaders-section__illustration { max-width: 240px; }
-}
-@media (max-width: 767px) {
-  .leaders-section__col-headers { display: none; }
-  .leaders-section__row {
-    grid-template-columns: 1fr 24px 1fr;
-    gap: 8px 0;
+  .ls-headers {
+    display: none;
   }
-  .leaders-section__sp { display: none; }
-  .leaders-section__title { font-size: 1.875rem; }
-  .leaders-section__header { grid-template-columns: 1fr; }
-  .leaders-section__visual { display: none; }
 }
 
 /* ---- How Clients Engage Us (partner card) ---- */
