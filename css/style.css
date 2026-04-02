@@ -2093,7 +2093,7 @@ p:last-child {
 /* ---- When Leadership Teams Bring Us In ---- */
 .leaders-section {
   background: #FAFAF8;
-  padding: 5rem 0 4rem;
+  padding: 3.5rem 0 4rem;
 }
 
 .leaders-section > .container {
@@ -6206,7 +6206,7 @@ p:last-child {
 }
 
 .pedigree-logos {
-    padding: 1.75rem 0 48px;
+    padding: 28px 0;
     background: rgb(243, 237, 228);
 }
 
