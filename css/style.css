@@ -3240,7 +3240,7 @@ p:last-child {
 /* ---- Credibility Strip ---- */
 .credibility-strip {
     background: var(--cream);
-    padding: 5rem 0 4rem;
+    padding: 5rem 0 1.5rem;
     text-align: center;
     margin-top: 80px;
 }
@@ -6236,7 +6236,7 @@ p:last-child {
 }
 
 .pedigree-logos {
-    padding: 48px 0;
+    padding: 1.75rem 0 48px;
     background: rgb(243, 237, 228);
 }
 
