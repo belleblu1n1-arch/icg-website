@@ -599,7 +599,7 @@ p:last-child {
     align-items: center;
     justify-content: center;
     padding: 0 var(--space-6);
-    padding-bottom: 4rem;
+    padding-bottom: 5rem;
 }
 
 .hero-inner {
@@ -617,7 +617,7 @@ p:last-child {
 
 @media (min-width: 1024px) {
     .hero-inner {
-        padding-top: 3rem;
+        padding-top: 4rem;
     }
 }
 
