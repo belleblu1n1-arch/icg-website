@@ -2202,18 +2202,18 @@ p:last-child {
 
 .ls-sol {
   font-family: var(--font-body);
-  font-size: 1.0625rem;
+  font-size: 1.125rem;
   font-weight: 600;
   color: #3a7a30;
   line-height: 1.3;
-  margin: 0 0 0.25rem;
+  margin: 0 0 0.2rem;
 }
 
 .ls-sok {
   font-family: var(--font-body);
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   font-weight: 400;
-  color: #555;
+  color: var(--charcoal);
   line-height: 1.5;
   margin: 0;
 }
