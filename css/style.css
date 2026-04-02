@@ -6247,12 +6247,12 @@ p:last-child {
     max-height: 32px;
     object-fit: contain;
     opacity: 1;
-    filter: grayscale(100%) brightness(0) opacity(0.35);
+    filter: grayscale(100%) brightness(0) opacity(0.45);
     transition: filter 0.3s ease;
 }
 
 .pedigree-logos__row img:hover {
-    filter: grayscale(100%) brightness(0) opacity(0.5);
+    filter: grayscale(100%) brightness(0) opacity(0.6);
 }
 
 /* ---- Per-logo optical sizing ---- */
