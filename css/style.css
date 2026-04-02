@@ -3312,7 +3312,7 @@ p:last-child {
 .cta-banner {
     position: relative;
     padding: var(--space-16) 0;
-    background: var(--cream-dark);
+    background: var(--cream);
     text-align: center;
 }
 
@@ -6206,8 +6206,8 @@ p:last-child {
 }
 
 .pedigree-logos {
-    padding: 28px 0;
-    background: rgb(243, 237, 228);
+    padding: 1.75rem 0;
+    background: #F8F5EE;
 }
 
 .pedigree-logos__heading {
@@ -6247,12 +6247,12 @@ p:last-child {
     max-height: 32px;
     object-fit: contain;
     opacity: 1;
-    filter: grayscale(100%) brightness(0) opacity(0.5);
+    filter: grayscale(100%) brightness(0) opacity(0.35);
     transition: filter 0.3s ease;
 }
 
 .pedigree-logos__row img:hover {
-    filter: grayscale(100%) brightness(0) opacity(0.62);
+    filter: grayscale(100%) brightness(0) opacity(0.5);
 }
 
 /* ---- Per-logo optical sizing ---- */
@@ -6288,7 +6288,7 @@ p:last-child {
 }
 
 @media (max-width: 1023px) {
-    .pedigree-logos { padding: 28px 0; }
+    .pedigree-logos { padding: 1.75rem 0; }
     .pedigree-logos__heading { font-size: 1.375rem; margin-bottom: 28px; }
     .pedigree-logos__rows { max-width: 800px; }
     .pedigree-logos__row { margin-bottom: 22px; }
@@ -6299,7 +6299,7 @@ p:last-child {
 }
 
 @media (max-width: 767px) {
-    .pedigree-logos { padding: 28px 0; }
+    .pedigree-logos { padding: 1.75rem 0; }
     .pedigree-logos__heading { font-size: 1.25rem; margin-bottom: 24px; }
     .pedigree-logos__row {
         grid-template-columns: repeat(3, 1fr);
