@@ -6288,7 +6288,7 @@ p:last-child {
 }
 
 @media (max-width: 1023px) {
-    .pedigree-logos { padding: 48px 0 64px; }
+    .pedigree-logos { padding: 28px 0; }
     .pedigree-logos__heading { font-size: 1.375rem; margin-bottom: 28px; }
     .pedigree-logos__rows { max-width: 800px; }
     .pedigree-logos__row { margin-bottom: 22px; }
@@ -6299,7 +6299,7 @@ p:last-child {
 }
 
 @media (max-width: 767px) {
-    .pedigree-logos { padding: 40px 0 56px; }
+    .pedigree-logos { padding: 28px 0; }
     .pedigree-logos__heading { font-size: 1.25rem; margin-bottom: 24px; }
     .pedigree-logos__row {
         grid-template-columns: repeat(3, 1fr);
