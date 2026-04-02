@@ -6243,8 +6243,8 @@ p:last-child {
 .pedigree-logos__row img {
     height: auto;
     width: 100%;
-    max-width: 110px;
-    max-height: 32px;
+    max-width: 130px;
+    max-height: 38px;
     object-fit: contain;
     opacity: 1;
     filter: grayscale(100%) brightness(0) opacity(0.45);
@@ -6253,6 +6253,30 @@ p:last-child {
 
 .pedigree-logos__row img:hover {
     filter: grayscale(100%) brightness(0) opacity(0.6);
+}
+
+/* Diageo — very wide aspect ratio */
+.pedigree-logos__row:nth-child(1) img:nth-child(3) {
+    max-height: 26px;
+    max-width: 160px;
+}
+
+/* Bain & Company — very wide */
+.pedigree-logos__row:nth-child(2) img:nth-child(1) {
+    max-height: 26px;
+    max-width: 180px;
+}
+
+/* Energizer — needs height boost */
+.pedigree-logos__row:nth-child(1) img:nth-child(6) {
+    max-height: 30px;
+    max-width: 140px;
+}
+
+/* STEP — needs height boost */
+.pedigree-logos__row:nth-child(3) img:nth-child(2) {
+    max-height: 38px;
+    max-width: 90px;
 }
 
 /* ---- Per-logo optical sizing ---- */
