@@ -2092,7 +2092,7 @@ p:last-child {
 
 /* ---- When Leadership Teams Bring Us In ---- */
 .leaders-section {
-  background: var(--cream);
+  background: #FAFAF8;
   padding: 6rem 0;
 }
 
@@ -2101,9 +2101,10 @@ p:last-child {
 }
 
 .leaders-section__title {
-  font-family: var(--font-heading);
+  font-family: var(--font-body);
   font-size: 2.25rem;
-  font-weight: 500;
+  font-weight: 300;
+  letter-spacing: 0.005em;
   color: var(--charcoal);
   margin: 0 0 1.25rem;
 }
@@ -2262,7 +2263,7 @@ p:last-child {
 
 /* ---- How Clients Engage Us (partner card) ---- */
 .engage-section {
-  background: #F8FAF6;
+  background: #FAFAF8;
   padding: 6.5rem 0 7rem;
 }
 .engage-section > .container { max-width: 700px; }
@@ -3239,7 +3240,7 @@ p:last-child {
 
 /* ---- Credibility Strip ---- */
 .credibility-strip {
-    background: var(--cream);
+    background: #FAFAF8;
     padding: 5rem 0 1.5rem;
     text-align: center;
     margin-top: 80px;
@@ -3317,7 +3318,7 @@ p:last-child {
 /* CTA below logo band */
 .proof-cta {
     text-align: center;
-    padding: 2rem 0 2.5rem;
+    padding: 1.25rem 0 1.5rem;
     background: var(--white);
 }
 
@@ -3333,7 +3334,7 @@ p:last-child {
 .cta-banner {
     position: relative;
     padding: var(--space-16) 0;
-    background: var(--surface-card);
+    background: var(--cream-dark);
     text-align: center;
 }
 
@@ -3380,6 +3381,12 @@ p:last-child {
 
 .cta-banner .section-label {
     color: var(--green);
+}
+
+.cta-banner .reveal,
+.cta-banner [class*="reveal"] {
+    opacity: 1 !important;
+    transform: none !important;
 }
 
 
@@ -7142,7 +7149,7 @@ p:last-child {
 /* ========== IOC STICKY SPLIT-SCREEN SECTION ========== */
 .ioc-section {
     background: var(--cream);
-    padding: var(--space-16) 0;
+    padding: 4rem 0;
 }
 
 .ioc-section__center-header {
@@ -7172,7 +7179,7 @@ p:last-child {
 .ioc-section__inner {
     max-width: 1080px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 2rem 2rem 0;
     display: grid;
     grid-template-columns: 45% 55%;
     gap: 4rem;
@@ -7372,7 +7379,7 @@ p:last-child {
 }
 
 /* ========== IOC STICKY SPLIT-SCREEN ========== */
-.ioc-section { background: var(--cream); padding: var(--space-16) 0; }
+.ioc-section { background: var(--cream); padding: 4rem 0; }
 .ioc-section__inner { max-width: 1080px; margin: 0 auto; padding: 0 2rem; display: grid; grid-template-columns: 45% 55%; gap: 4rem; align-items: start; }
 .ioc-section__narrative { display: flex; flex-direction: column; gap: var(--space-10); }
 .ioc-section__header { padding-bottom: var(--space-8); border-bottom: 1px solid var(--cream-dark); }
