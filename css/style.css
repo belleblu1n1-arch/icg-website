@@ -2093,7 +2093,7 @@ p:last-child {
 /* ---- When Leadership Teams Bring Us In ---- */
 .leaders-section {
   background: #FAFAF8;
-  padding: 3.5rem 0 4rem;
+  padding: 3.5rem 0 3rem;
 }
 
 .leaders-section > .container {
@@ -7127,7 +7127,7 @@ p:last-child {
 /* ========== IOC STICKY SPLIT-SCREEN SECTION ========== */
 .ioc-section {
     background: var(--cream);
-    padding: 4rem 0;
+    padding: 3rem 0;
 }
 
 .ioc-section__center-header {
