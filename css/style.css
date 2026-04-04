@@ -7511,8 +7511,7 @@ p:last-child {
 .eng-bullets li { font-size: 1rem; color: var(--charcoal); line-height: 1.65; padding: 0.3rem 0 0.3rem 1.2rem; position: relative; }
 .eng-bullets li::before { content: "·"; position: absolute; left: 0; color: var(--green); font-size: 1.3rem; line-height: 1.2; }
 .eng-fc-intro { font-size: 1rem; color: var(--charcoal); line-height: 1.75; margin-bottom: 2rem; }
-.eng-service-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.25rem 1.5rem; margin-top: 0.75rem; justify-items: center; }
-.eng-service-grid > :last-child:nth-child(odd) { grid-column: 1 / -1; }
+.eng-service-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2.25rem 1.25rem; margin-top: 0.75rem; }
 .eng-service-item { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 0.85rem; }
 .eng-svc-icon { width: 52px; height: 52px; display: flex; align-items: center; justify-content: center; }
 .eng-svc-icon img { width: 48px; height: 48px; object-fit: contain; }
