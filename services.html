@@ -16,7 +16,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <!-- Site stylesheet -->
-<link rel="stylesheet" href="css/style.css?v=20260405a">
+<link rel="stylesheet" href="css/style.css?v=20260405d">
 
 <!-- Page-specific styles -->
 <style>
@@ -28,13 +28,13 @@
 }
 
 /* Hero — centered title, split intro/illustration */
-.sp-hero{padding:4.5rem 2rem 4rem;text-align:center;background:var(--cream)}
+.sp-hero{padding:7rem 2rem 4rem;text-align:center;background:var(--cream)}
 .sp-hero-eyebrow{font-size:0.8125rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--green);margin-bottom:1.25rem}
-.sp-hero-title{font-family:var(--font-heading);font-size:2.75rem;font-weight:400;line-height:1.2;margin-bottom:2rem;letter-spacing:-0.01em;color:var(--charcoal);max-width:760px;margin-left:auto;margin-right:auto;text-wrap:balance}
-.sp-hero-split{max-width:var(--sp-max);margin:0 auto;display:grid;grid-template-columns:1fr 380px;gap:4rem;align-items:center;text-align:left;margin-top:0}
+.sp-hero-title{font-family:var(--font-heading);font-size:2.75rem;font-weight:400;line-height:1.2;margin-bottom:2rem;letter-spacing:-0.01em;color:var(--charcoal);max-width:860px;margin-left:auto;margin-right:auto}
+.sp-hero-split{max-width:var(--sp-max);margin:0 auto;display:grid;grid-template-columns:1fr 460px;gap:2.5rem;align-items:center;text-align:left;margin-top:0}
 .sp-hero-p{font-size:1.0625rem;line-height:1.75;margin-bottom:1.25rem;color:var(--charcoal)}
 .sp-hero-sub{font-size:1.1875rem;color:var(--sp-muted);line-height:1.65;margin-bottom:1.5rem}
-.sp-hero-img img{width:100%;max-width:380px;height:auto;display:block}
+.sp-hero-img img{width:100%;max-width:460px;height:auto;display:block}
 .sp-btns{display:flex;gap:0.75rem;flex-wrap:wrap;margin-top:2rem}
 .sp-btn{display:inline-block;background:var(--green);color:#fff;padding:11px 28px;border-radius:999px;font-size:0.875rem;font-weight:500;text-decoration:none}
 .sp-btn:hover{background:var(--green-dark)}
@@ -42,7 +42,7 @@
 .sp-btn-out:hover{background:var(--green);color:#fff}
 
 /* Engagement Models */
-.sp-models{padding:4.5rem 2rem;border-top:0.5px solid var(--sp-border);background:#FFFFFF}
+.sp-models{padding:4.5rem 2rem 2rem;border-top:0.5px solid var(--sp-border);background:var(--cream)}
 .sp-models-inner{max-width:var(--sp-max);margin:0 auto}
 .sp-models-grid{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem}
 .sp-model-card{background:#fff;border:0.5px solid rgba(74,140,63,0.12);border-radius:8px;padding:2.5rem 2.75rem}
@@ -58,11 +58,11 @@
 .sp-sprint-list li::before{content:"→";position:absolute;left:0;color:var(--green);font-size:0.8rem;line-height:1.9}
 
 /* Scope section */
-.sp-scope{padding:4.5rem 2rem;background:var(--cream);border-top:0.5px solid var(--sp-border)}
+.sp-scope{padding:2.5rem 2rem 4.5rem;background:var(--cream)}
 .sp-scope-inner{max-width:var(--sp-max);margin:0 auto}
 .sp-scope-label{font-size:0.68rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--green);margin-bottom:0.75rem}
 .sp-scope-title{font-family:var(--font-heading);font-size:2rem;font-weight:400;color:var(--charcoal);line-height:1.2;margin-bottom:0.75rem}
-.sp-scope-note{font-size:1rem;font-style:italic;color:var(--sp-muted);line-height:1.7;margin-bottom:2.5rem;max-width:700px}
+.sp-scope-note{font-size:1rem;color:var(--charcoal);line-height:1.7;margin-bottom:2.5rem;max-width:700px}
 .sp-scope-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
 .sp-scope-card{background:#fff;border:0.5px solid rgba(74,140,63,0.12);border-radius:8px;padding:1.5rem}
 .sp-scope-icon{width:100%;margin-bottom:0.85rem;display:flex;align-items:center;justify-content:center}
@@ -77,7 +77,7 @@
 .sp-closing{background:var(--surface-dark);color:#fff;padding:5rem 2rem;text-align:center}
 .sp-closing .sp-rule{width:48px;height:1.5px;background:var(--green);margin:0 auto 2rem}
 .sp-closing-title{font-family:var(--font-heading);font-size:2.75rem;font-weight:300;color:#fff;line-height:1.2;margin-bottom:1.5rem;max-width:680px;margin-left:auto;margin-right:auto}
-.sp-closing-note{font-size:1.0625rem;color:rgba(255,255,255,0.7);line-height:1.8;margin-bottom:2.5rem;max-width:560px;margin-left:auto;margin-right:auto;font-style:italic}
+.sp-closing-note{font-size:1.25rem;color:rgba(255,255,255,0.7);line-height:1.75;margin-bottom:2.5rem;max-width:620px;margin-left:auto;margin-right:auto;font-style:italic}
 .sp-btn-white{display:inline-block;background:#fff;color:var(--green-dark);padding:11px 28px;border-radius:999px;font-size:0.875rem;font-weight:500;text-decoration:none}
 </style>
 </head>
@@ -118,15 +118,14 @@
 <!-- ========== HERO ========== -->
 <div class="sp-hero">
   <p class="sp-hero-eyebrow">Services</p>
-  <h1 class="sp-hero-title">Senior finance leadership and strategic execution&nbsp;— retained or sprint-based, sized to what you need.</h1>
+  <h1 class="sp-hero-title">Senior finance leadership and strategic execution<br>&mdash; retained or sprint-based, sized to what you need.</h1>
   <div class="sp-hero-split">
     <div>
-      <p class="sp-hero-sub">We work alongside leadership teams to sharpen decisions, strengthen performance, and move priorities forward — through growth, complexity, and change.</p>
-      <p class="sp-hero-p">You can engage us through an ongoing Fractional CFO &amp; Performance Leadership relationship, or through a focused 4–12 week sprint on a defined priority.</p>
+      <p class="sp-hero-sub">We work alongside your leadership team to sharpen decisions, strengthen performance, and move priorities forward — through growth, complexity, and change.</p>
+      <p class="sp-hero-p">You can retain us for ongoing senior finance and business leadership, or engage us on a targeted sprint scoped to a defined priority.</p>
       <p class="sp-hero-p">We adapt our approach to your context — helping connect strategy to execution and improving delivery across the full operating cycle.</p>
       <div class="sp-btns">
         <a href="contact.html" class="sp-btn">Schedule a Consultation</a>
-        <a href="#scope" class="sp-btn sp-btn-out">Explore Services</a>
       </div>
     </div>
     <div class="sp-hero-img">
@@ -143,7 +142,7 @@
       <div class="sp-model-card">
         <p class="sp-model-label">Retained Model</p>
         <h2 class="sp-model-title">Fractional CFO &amp; Performance Leadership</h2>
-        <p class="sp-model-body">Ongoing access to senior finance and business leadership — without the cost or commitment of a full in-house senior team.</p>
+        <p class="sp-model-body">Flexible access to senior finance and business leadership — without building a full in-house senior team.</p>
         <p class="sp-model-body">We work alongside the leadership team on the priorities that matter most: strengthening decisions, driving performance, and connecting planning to delivery, with workstreams activated as the business evolves.</p>
         <ul class="sp-model-bullets">
           <li>Direct CEO &amp; Board decision support</li>
@@ -154,15 +153,9 @@
       <div class="sp-model-card" id="focused-support">
         <p class="sp-model-label">Focused Engagements</p>
         <h2 class="sp-model-title">Targeted Sprints</h2>
-        <p class="sp-model-body">Focused 4–12 week engagements scoped to a defined business need. Each sprint has a clear starting point, a practical output, and a natural path into broader retained support if needed.</p>
-        <ul class="sp-sprint-list">
-          <li>Investment &amp; Resource Prioritisation</li>
-          <li>Planning &amp; Scenario Support</li>
-          <li>Performance Cadence &amp; Accountability</li>
-          <li>Lean &amp; Stakeholder-Ready Reporting</li>
-          <li>Structuring, Governance &amp; Cross-Border Readiness</li>
-          <li>Strategic Execution &amp; Change Support</li>
-        </ul>
+        <p class="sp-model-body">Focused 4–12 week engagements scoped to a defined business need. Each sprint has a clear starting point, a practical output, and a natural path into broader ongoing support if needed.</p>
+        <p class="sp-model-body" style="margin-top:1rem;margin-bottom:0">A sprint may focus on a specific gap or priority within the Illustrative Scope below.</p>
+        <p class="sp-model-body" style="font-style:italic;color:var(--sp-muted);margin-top:1.25rem;margin-bottom:0">Clients often begin with a targeted sprint and expand into a broader retained relationship as priorities become more interconnected.</p>
       </div>
     </div>
   </div>
@@ -173,26 +166,26 @@
 <div class="sp-scope" id="scope">
   <div class="sp-scope-inner">
     <p class="sp-scope-label">Illustrative Scope</p>
-    <h2 class="sp-scope-title">What this looks like in practice</h2>
     <p class="sp-scope-note">The scope of each engagement — retained or sprint — is tailored to your specific context. These areas illustrate the depth and range we typically draw on:</p>
     <div class="sp-scope-grid">
 
-      <!-- 1 Planning: SVG calendar icon -->
+      <!-- 1 Planning: seedling icon -->
       <div class="sp-scope-card" id="planning-forecasting">
         <div class="sp-scope-icon">
           <svg viewBox="0 0 44 44" fill="none" stroke="#a5c83a" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="5" y="9" width="34" height="28" rx="2"/>
-            <line x1="5" y1="17" x2="39" y2="17"/>
-            <line x1="14" y1="9" x2="14" y2="4"/><line x1="30" y1="9" x2="30" y2="4"/>
-            <line x1="12" y1="24" x2="22" y2="24"/><line x1="12" y1="30" x2="26" y2="30"/>
+            <path d="M22 38 V20"/>
+            <path d="M22 28 C16 28 11 22 11 16 C17 16 22 22 22 28"/>
+            <path d="M22 22 C28 22 33 16 33 10 C27 10 22 16 22 22"/>
+            <line x1="14" y1="38" x2="30" y2="38"/>
           </svg>
         </div>
-        <div class="sp-scope-card-title">Planning &amp; Forecasting</div>
+        <div class="sp-scope-card-title">Robust Planning &amp; Forecasting</div>
         <ul>
           <li>Budgeting &amp; annual operational planning</li>
           <li>Rolling forecast design and cadence</li>
-          <li>Scenario planning and trade-off analysis</li>
-          <li>Cross-functional process improvement</li>
+          <li>Scenario planning and trade-offs</li>
+          <li>Cross-functional priority alignment</li>
+          <li>Target setting</li>
         </ul>
       </div>
 
@@ -201,13 +194,13 @@
         <div class="sp-scope-icon">
           <img src="img/icon-sun.png" alt="Performance Management" />
         </div>
-        <div class="sp-scope-card-title">Performance — Integrated Cadence</div>
+        <div class="sp-scope-card-title">Integrated Performance Cadence</div>
         <ul>
-          <li>Monthly performance rhythm</li>
+          <li>Performance rhythm</li>
           <li>Integrated dashboard reset</li>
           <li>Accountability and follow-through</li>
           <li>Performance reward alignment</li>
-          <li>One shared fact base — aligned assumptions and shared priorities</li>
+          <li>One shared view across teams</li>
         </ul>
       </div>
 
@@ -218,21 +211,24 @@
         </div>
         <div class="sp-scope-card-title">Lean &amp; Stakeholder-Ready Reporting</div>
         <ul>
-          <li>Board pack design and simplification</li>
-          <li>Leadership materials &amp; investor readiness</li>
+          <li>Board pack design</li>
+          <li>Reporting simplification</li>
+          <li>Leadership materials</li>
+          <li>Investor readiness</li>
         </ul>
       </div>
 
-      <!-- 4 Decision Support: SVG chart with arrows -->
+      <!-- 4 Decision Support: double mountain icon -->
       <div class="sp-scope-card" id="decision-support-resource-allocation">
         <div class="sp-scope-icon">
           <svg viewBox="0 0 44 44" fill="none" stroke="#a5c83a" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M6 34 L14 24 L20 28 L30 16 L38 18"/>
-            <polyline points="30,10 38,10 38,18"/>
-            <line x1="6" y1="38" x2="38" y2="38"/>
+            <path d="M2 38 L18 8 L23.5 17.5 L18 22 L13 17.8 L7.5 21.5 L18 8"/>
+            <path d="M2 38 L18 8 L34.5 38"/>
+            <path d="M29 38 L35 24 L38.5 27.5 L41 25 L42 38"/>
+            <path d="M29 38 L35 24 L42 38"/>
           </svg>
         </div>
-        <div class="sp-scope-card-title">Decision Support &amp; Resource Allocation</div>
+        <div class="sp-scope-card-title">Agile &amp; Insight-Driven Decisions</div>
         <ul>
           <li>Investment prioritisation</li>
           <li>Cost and profitability driver analysis</li>
@@ -251,7 +247,7 @@
             <circle cx="22" cy="22" r="2.5" fill="#a5c83a" stroke="none"/>
           </svg>
         </div>
-        <div class="sp-scope-card-title">Strategic Execution &amp; Change Support</div>
+        <div class="sp-scope-card-title">Strategic Execution &amp; Proactive Change Management</div>
         <ul>
           <li>Integration</li>
           <li>Restructuring</li>
@@ -271,7 +267,7 @@
             <path d="M6 14 h32"/><path d="M6 30 h32"/>
           </svg>
         </div>
-        <div class="sp-scope-card-title">Structuring, Governance &amp; Cross-Border Readiness</div>
+        <div class="sp-scope-card-title">Cross-Border Structuring &amp; Governance</div>
         <ul>
           <li>Entity and operational structuring</li>
           <li>Governance and decision-rights design</li>
@@ -290,7 +286,7 @@
   <div class="sp-rule"></div>
   <h2 class="sp-closing-title">Senior leadership support — sized to what you need, built to grow with you.</h2>
   <p class="sp-closing-note">Clients often begin with a targeted sprint and expand into a broader retained relationship as priorities become more interconnected.</p>
-  <a href="contact.html" class="sp-btn-white">Schedule a Consultation</a>
+  <a href="contact.html" class="sp-btn-white">Discuss an Engagement</a>
 </div>
 
 
