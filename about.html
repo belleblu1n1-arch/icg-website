@@ -19,7 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="css/style.css?v=20260324b">
+    <link rel="stylesheet" href="css/style.css?v=20260407a">
 </head>
 <body>
 
@@ -53,96 +53,61 @@
     </nav>
 
 
-    <!-- ========== SECTION 1 — ABOUT OPENER / VALUE PROPOSITION ========== -->
-    <section class="about-opener">
-        <div class="container">
-            <div class="about-opener__content">
-                <h1 class="about-opener__headline">Island Capital gives businesses access to top&#8209;tier global leadership without the need to build a full senior layer too early.</h1>
-                <p class="about-opener__strapline">Fortune 500 leadership. Entrepreneurial agility.</p>
-                <p>We combine Fortune 500 leadership with entrepreneurial agility and hands&#8209;on execution &mdash; bringing over 100 years of combined experience across finance, performance, transformation, and cross&#8209;border leadership.</p>
-                <p>Our track record has been achieved in partnership with leadership teams, helping businesses strengthen insight, improve prioritisation, build stronger performance cadence, and execute more effectively through growth, complexity, and change.</p>
-            </div>
+    <!-- ========== TOP LOGO STRIP (matches homepage) ========== -->
+    <section class="logo-strip">
+        <div class="logo-strip__inner">
+            <img src="img/logo-microsoft.svg?v=4" alt="Microsoft">
+            <img src="img/logo-bain.svg?v=4" alt="Bain &amp; Company">
+            <img src="img/logo-unilever.svg?v=4" alt="Unilever">
+            <img src="img/logo-diageo.svg?v=4" alt="Diageo">
+            <img src="img/logo-boston-scientific.svg?v=4" alt="Boston Scientific">
+            <img src="img/logo-rothschild.svg?v=4" alt="N.M. Rothschild &amp; Sons">
         </div>
     </section>
 
 
-    <!-- ========== SECTION 1B — 3-ICON VALUE ROW ========== -->
-    <section class="about-values">
-        <div class="container">
-            <div class="about-values__grid">
-                <div class="about-values__item">
-                    <img src="img/icon-sun.svg" alt="" class="about-values__icon">
-                    <h3 class="about-values__title">Fortune 500 leadership</h3>
-                    <p class="about-values__text">Senior experience built in leading multinationals and top&#8209;tier institutions across complex markets.</p>
-                </div>
-                <div class="about-values__item">
-                    <img src="img/icon-globe.svg" alt="" class="about-values__icon">
-                    <h3 class="about-values__title">Cross&#8209;border perspective</h3>
-                    <p class="about-values__text">40+ markets managed across Asia&#8209;Pacific, Europe, the Middle East, and emerging markets.</p>
-                </div>
-                <div class="about-values__item">
-                    <img src="img/icon-target.svg" alt="" class="about-values__icon">
-                    <h3 class="about-values__title">Practical execution</h3>
-                    <p class="about-values__text">We bridge strategy and execution, bringing clarity, focus, and measurable delivery to every engagement.</p>
-                </div>
+    <!-- ========== SECTION 1 — HERO ========== -->
+    <header class="hero" role="banner" style="background:var(--cream)">
+        <div class="hero-inner">
+            <div class="hero-text">
+                <p class="hero-eyebrow">Leadership experience built in leading multinationals, institutions, and complex cross-border environments</p>
+                <h1 class="hero-title">Senior leadership for businesses navigating growth, complexity, and change.</h1>
+                <p class="hero-sub">Built by operators who have run international businesses,<br>regional hubs, and transformations from the inside.</p>
             </div>
         </div>
-    </section>
+    </header>
 
 
-    <!-- ========== SECTION 2 — PROOF STRIP ========== -->
-    <section class="about-proof">
+    <!-- ========== SECTION 3 — WHO WE ARE + PROOF (2-column) ========== -->
+    <section style="padding:5rem 0;background:#fff">
         <div class="container">
-            <div class="about-proof__grid">
-                <div class="about-proof__item">
-                    <span class="about-proof__number">100+</span>
-                    <span class="about-proof__label">Years<br>Combined leadership experience</span>
-                </div>
-                <div class="about-proof__item">
-                    <span class="about-proof__number">Fortune 500</span>
-                    <span class="about-proof__label">&amp; Top&#8209;Tier Institutions<br>Leadership and advisory experience</span>
-                </div>
-                <div class="about-proof__item">
-                    <span class="about-proof__number">40+</span>
-                    <span class="about-proof__label">Markets<br>Managed across complex regions</span>
-                </div>
-                <div class="about-proof__item">
-                    <span class="about-proof__number">20+</span>
-                    <span class="about-proof__label">Sectors<br>Led and advised across industries</span>
-                </div>
-            </div>
-        </div>
-    </section>
+            <div style="display:grid;grid-template-columns:1.1fr 1fr;gap:4rem;align-items:center">
 
-
-    <!-- ========== SECTION 3 — TRACK RECORD + CLIENT VALUE ========== -->
-    <section class="about-track">
-        <div class="container">
-            <div class="about-track__grid">
-
-                <!-- Left column — Track Record -->
-                <div class="about-track__col">
-                    <h2 class="about-track__heading">Our track record includes success achieved in partnership with leadership teams across diverse industries, markets, and business contexts, including:</h2>
-                    <ul class="about-track__list">
-                        <li>Profitable growth</li>
-                        <li>Turnaround</li>
-                        <li>Business integration and restructuring</li>
-                        <li>Regional expansion</li>
-                        <li>Sharper investment prioritisation and stronger ROI</li>
-                        <li>Transformation</li>
-                    </ul>
+                <!-- Left: Who we are -->
+                <div>
+                    <p class="section-label">Who we are</p>
+                    <p style="font-size:1rem;line-height:1.8;color:var(--charcoal);margin-bottom:1.25rem">Island Capital is built by senior leaders who have led international businesses, regional hubs, and transformations from the inside. We bring the judgement, perspective, and follow-through that come from real accountability in complex, cross-border environments.</p>
+                    <p style="font-size:1rem;line-height:1.8;color:var(--charcoal)">We work alongside leadership teams to strengthen planning, decision-making, performance, and execution &mdash; connecting strategy to delivery across growth, transformation, and cross-border expansion in Asia-Pacific.</p>
                 </div>
 
-                <!-- Right column — Client Value -->
-                <div class="about-track__col">
-                    <h2 class="about-track__heading">That experience enables us to deliver high&#8209;impact value to clients through:</h2>
-                    <ul class="about-track__list">
-                        <li>Proactively managing change and complexity</li>
-                        <li>Faster, insight&#8209;based decisions, including sharper investment and resourcing choices</li>
-                        <li>Stronger alignment between strategy and execution</li>
-                        <li>Greater operational agility and more focused, collaborative performance cadence</li>
-                        <li>Stronger delivery of business targets, growth, profitability, and strategic priorities &mdash; with increased board and investor confidence</li>
-                    </ul>
+                <!-- Right: Stats grid 2x2 -->
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem 1.5rem">
+                    <div style="text-align:center">
+                        <div style="font-family:var(--font-heading);font-size:2.5rem;font-weight:500;color:var(--charcoal);line-height:1">100+</div>
+                        <div style="font-size:0.85rem;color:#5A5A5A;margin-top:0.5rem;line-height:1.5">Years<br>Combined senior leadership experience</div>
+                    </div>
+                    <div style="text-align:center">
+                        <div style="font-family:var(--font-heading);font-size:2.5rem;font-weight:500;color:var(--charcoal);line-height:1">40+</div>
+                        <div style="font-size:0.85rem;color:#5A5A5A;margin-top:0.5rem;line-height:1.5">Markets<br>Managed across complex regions</div>
+                    </div>
+                    <div style="text-align:center">
+                        <div style="font-family:var(--font-heading);font-size:2.5rem;font-weight:500;color:var(--charcoal);line-height:1">Fortune 500</div>
+                        <div style="font-size:0.85rem;color:#5A5A5A;margin-top:0.5rem;line-height:1.5">&amp; Top&#8209;Tier Institutions</div>
+                    </div>
+                    <div style="text-align:center">
+                        <div style="font-family:var(--font-heading);font-size:2.5rem;font-weight:500;color:var(--charcoal);line-height:1">20+</div>
+                        <div style="font-size:0.85rem;color:#5A5A5A;margin-top:0.5rem;line-height:1.5">Sectors<br>Served</div>
+                    </div>
                 </div>
 
             </div>
@@ -150,31 +115,113 @@
     </section>
 
 
-    <!-- ========== SECTION 4 — WHAT SETS US APART ========== -->
+    <!-- ========== PEDIGREE LOGOS (18) ========== -->
+    <section class="pedigree-logos" style="background:#EEEAE0">
+        <div class="container">
+            <div class="pedigree-logos__rows">
+                <div class="pedigree-logos__row pedigree-logos__row--1">
+                    <img src="img/logo-microsoft.svg?v=5" alt="Microsoft" class="pl-microsoft">
+                    <img src="img/logo-unilever.svg?v=5" alt="Unilever" class="pl-unilever">
+                    <img src="img/logo-diageo.svg?v=5" alt="Diageo" class="pl-diageo">
+                    <img src="img/logo-boston-scientific.svg?v=5" alt="Boston Scientific" class="pl-boston">
+                    <img src="img/logo-bat.svg?v=5" alt="BAT" class="pl-bat">
+                    <img src="img/logo-energizer.svg?v=5" alt="Energizer" class="pl-energizer">
+                </div>
+                <div class="pedigree-logos__row pedigree-logos__row--2">
+                    <img src="img/logo-bain.svg?v=5" alt="Bain &amp; Company" class="pl-bain">
+                    <img src="img/logo-standard-chartered.svg?v=5" alt="Standard Chartered" class="pl-stanchart">
+                    <img src="img/logo-avery-dennison.svg?v=5" alt="Avery Dennison" class="pl-avery">
+                    <img src="img/logo-keppel.svg?v=5" alt="Keppel Corporation" class="pl-keppel">
+                    <img src="img/logo-navitas.svg?v=5" alt="Navitas" class="pl-navitas">
+                    <img src="img/logo-kingfisher.svg?v=5" alt="Kingfisher" class="pl-kingfisher">
+                </div>
+                <div class="pedigree-logos__row pedigree-logos__row--3">
+                    <img src="img/logo-rothschild.svg?v=5" alt="N.M. Rothschild &amp; Sons" class="pl-rothschild">
+                    <img src="img/logo-step.svg?v=5" alt="STEP" class="pl-step">
+                    <img src="img/logo-hk-government.svg?v=5" alt="Government of Hong Kong" class="pl-hkgov">
+                    <img src="img/logo-sg-government.svg?v=5" alt="Government of Singapore" class="pl-sggov">
+                    <img src="img/logo-hkta.svg?v=5" alt="Hong Kong Trustees' Association" class="pl-hkta">
+                    <img src="img/logo-nus.svg?v=5" alt="NUS" class="pl-nus">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ========== SECTION 5 — WHAT SETS US APART ========== -->
     <section class="about-apart">
         <div class="container">
-            <div class="about-apart__content">
+            <div class="about-apart__content" style="text-align:center;max-width:1200px;margin:0 auto">
                 <h2>What sets us apart</h2>
-                <p>What sets us apart is our ability to connect strategy, finance, execution, and cross&#8209;border complexity &mdash; enabling leadership teams to gain sharper insight for faster and clearer decision&#8209;making, align priorities, strengthen performance cadence, and move forward with greater clarity and confidence.</p>
-                <p>Our strength lies in combining strategic thinking, pragmatic execution, global perspective, and adaptability to create tailored, pragmatic solutions for each client&rsquo;s specific context, priorities, and challenges.</p>
-                <div class="about-apart__pillars">
-                    <span class="about-apart__pillar">Strategic thinking</span>
-                    <span class="about-apart__pillar">Pragmatic execution</span>
-                    <span class="about-apart__pillar">Global perspective</span>
-                    <span class="about-apart__pillar">Tailored solutions</span>
+                <p style="max-width:820px;margin-left:auto;margin-right:auto">What differentiates us is not just experience, but how we work: led from inside the business, senior on every engagement, and built to connect strategy to delivery.</p>
+
+                <div class="about-apart__pillars-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:3.5rem;margin:3rem auto 0;text-align:center;max-width:1200px">
+                    <div>
+                        <img src="img/icon-orchid-leadership.svg" alt="" style="width:88px;height:auto;margin:0 auto 1.25rem;display:block">
+                        <h3 style="font-family:var(--font-heading);font-size:1.4rem;font-weight:400;color:var(--charcoal);margin-bottom:0.85rem">Led from inside the business</h3>
+                        <p style="font-size:0.95rem;line-height:1.7;color:var(--charcoal)">We have led international businesses, regional hubs, and transformations from within. We bring the judgement and instincts that come from real accountability, not just an external advisory perspective.</p>
+                    </div>
+                    <div>
+                        <img src="img/icon-orchid-execution.svg" alt="" style="width:88px;height:auto;margin:0 auto 1.25rem;display:block">
+                        <h3 style="font-family:var(--font-heading);font-size:1.4rem;font-weight:400;color:var(--charcoal);margin-bottom:0.85rem">Strategy connected to delivery</h3>
+                        <p style="font-size:0.95rem;line-height:1.7;color:var(--charcoal)">We connect planning, decisions, performance, and execution into one operating rhythm, helping leadership teams move priorities forward with greater clarity and follow-through.</p>
+                        <p style="font-size:0.85rem;line-height:1.6;color:var(--green);margin-top:0.75rem;font-style:italic">This is reflected in our Integrated Operating Cadence (IOC&trade;) approach.</p>
+                    </div>
+                    <div>
+                        <img src="img/icon-orchid-performance.svg" alt="" style="width:88px;height:auto;margin:0 auto 1.25rem;display:block">
+                        <h3 style="font-family:var(--font-heading);font-size:1.4rem;font-weight:400;color:var(--charcoal);margin-bottom:0.85rem">Senior on every engagement</h3>
+                        <p style="font-size:0.95rem;line-height:1.7;color:var(--charcoal)">Clients work directly with senior leaders, not layered junior teams. The person in the room is the person doing the work.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
 
-    <!-- ========== SECTION 5 — TEAM INTRO ========== -->
+    <!-- ========== SECTION 6 — TRACK RECORD ========== -->
+    <section style="padding:6rem 0;background:var(--cream)">
+        <div class="container">
+            <div style="display:grid;grid-template-columns:1fr 1.15fr;gap:4.5rem;align-items:center;max-width:1200px;margin:0 auto">
+
+                <!-- Left: visual placeholder -->
+                <div style="aspect-ratio:4/3;background:#fff;border:1px dashed rgba(74,140,63,0.25);border-radius:8px;display:flex;align-items:center;justify-content:center;color:#aaa;font-size:0.85rem">[ visual placeholder ]</div>
+
+                <!-- Right: content -->
+                <div>
+                    <p class="section-label" style="color:var(--green)">Our track record</p>
+                    <h2 style="font-family:var(--font-heading);font-size:2.25rem;font-weight:500;color:var(--charcoal);line-height:1.25;margin:0.5rem 0 1.25rem">Proven across growth, change, and cross-border complexity</h2>
+                    <p style="font-size:1rem;line-height:1.8;color:var(--charcoal);margin-bottom:2rem">We have led and supported businesses through the full arc of strategic challenges &mdash; building growth, navigating change, and operating across borders.</p>
+
+                    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:2rem">
+                        <div>
+                            <img src="img/icon-orchid-leadership.svg" alt="" style="width:42px;height:auto;display:block;margin-bottom:0.6rem">
+                            <p style="font-family:var(--font-heading);font-size:1.05rem;font-weight:500;color:var(--charcoal);margin:0 0 0.25rem;line-height:1.3">Growth &amp; Turnaround</p>
+                            <p style="font-size:0.8rem;color:#5A5A5A;line-height:1.5;margin:0">Profitable growth, performance recovery, ROI</p>
+                        </div>
+                        <div>
+                            <img src="img/icon-orchid-execution.svg" alt="" style="width:42px;height:auto;display:block;margin-bottom:0.6rem">
+                            <p style="font-family:var(--font-heading);font-size:1.05rem;font-weight:500;color:var(--charcoal);margin:0 0 0.25rem;line-height:1.3">Transformation &amp; Change</p>
+                            <p style="font-size:0.8rem;color:#5A5A5A;line-height:1.5;margin:0">Integration, restructuring, performance cadence</p>
+                        </div>
+                        <div>
+                            <img src="img/icon-orchid-structuring.svg" alt="" style="width:42px;height:auto;display:block;margin-bottom:0.6rem">
+                            <p style="font-family:var(--font-heading);font-size:1.05rem;font-weight:500;color:var(--charcoal);margin:0 0 0.25rem;line-height:1.3">Cross-Border &amp; Expansion</p>
+                            <p style="font-size:0.8rem;color:#5A5A5A;line-height:1.5;margin:0">Regional expansion, governance, structuring</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ========== SECTION 7 — TEAM INTRO ========== -->
     <section class="team-intro">
         <div class="container">
             <div class="team-intro__content">
-                <span class="section-label">Leadership</span>
                 <h2>Core Leadership Team</h2>
-                <p>Island Capital&rsquo;s core leadership team brings together deep experience across finance, strategy, execution, and international structuring &mdash; combining senior multinational leadership with practical cross&#8209;border advisory expertise.</p>
+                <p>Senior leaders with decades of experience built in leading multinationals, institutions, and complex cross-border environments.</p>
             </div>
         </div>
     </section>
@@ -184,22 +231,19 @@
     <section class="team-profiles">
         <div class="container">
 
-            <!-- Isabel — Featured (Row 1) -->
+            <!-- Isabella— Featured (Row 1) -->
             <div class="team-featured reveal">
                 <div class="team-featured__photo">
                     <img src="img/isabella-lan.png" alt="Isabel" class="team-featured__img">
                 </div>
                 <div class="team-featured__content">
-                    <h3 class="team-featured__name">Isabel</h3>
+                    <h3 class="team-featured__name">Isabella Lan</h3>
                     <span class="team-featured__title">Managing Director</span>
                     <span class="team-featured__expertise">Finance Leadership, Performance, Transformation &amp; Regional Growth</span>
 
-                    <p>Isabel is a seasoned international Finance and business leader with over 25 years of experience with leading multinationals including Microsoft, Diageo, Energizer, BAT, Unilever, and Boston Scientific.</p>
-                    <p>She has led Finance, Strategy, Business Development, PMO, and Transformation, with broader leadership scope spanning business process and cadence, governance, and a wide range of strategic initiatives.</p>
-                    <p>Isabel has managed six regions spanning over 40 markets across APAC, MEA, Greater China, Southeast Asia, Australasia, and Emerging Markets.</p>
-                    <p>Her track record includes profitable growth, turnaround, regional expansion, multiple business integrations and restructuring, high&#8209;impact productivity programmes, capability building, and large&#8209;scale transformation.</p>
-                    <p>She is known for bridging strategy and execution, bringing clarity, focus, and operational agility to the business, and working in strong collaboration with diverse international teams to navigate complexity and uncertainty while consistently delivering business targets and strategic goals.</p>
-                    <p>Isabel brings board, committee, and programme leadership experience, change management capability, APAC strength, and the ability to combine strategic perspective with tailored, pragmatic solutions for each client&rsquo;s business context.</p>
+                    <p>Isabella is a seasoned international Finance and business leader with over 25 years at leading multinationals including Microsoft, Diageo, Energizer, BAT, Unilever, and Boston Scientific. She has led Finance, Strategy, Business Development, PMO, and Transformation across six regions and 40+ markets spanning APAC, Greater China, Southeast Asia, Australasia, MEA, and Emerging Markets.</p>
+                    <p>Her track record includes profitable growth, turnaround, regional expansion, multiple business integrations and restructurings, high&#8209;impact productivity programmes, capability building, and large&#8209;scale transformation &mdash; consistently delivered through strong collaboration with international leadership teams.</p>
+                    <p>Isabella is known for bridging strategy and execution, bringing clarity, focus, and operational agility, and combining senior board-level perspective with tailored, pragmatic solutions for each client&rsquo;s business context.</p>
 
                     <div class="team-featured__credentials">
                         <span class="team-featured__credential">PRINCE2 Practitioner</span>
@@ -223,7 +267,7 @@
                         <span class="team-director__initials">EP</span>
                     </div>
                     <div class="team-director__content">
-                        <h3 class="team-director__name">Edmund</h3>
+                        <h3 class="team-director__name">Edmund Wuu</h3>
                         <span class="team-director__title">Director</span>
                         <span class="team-director__expertise">Growth, Market Entry, Execution &amp; Capability Building</span>
 
@@ -245,11 +289,10 @@
                     <div class="team-director__content">
                         <h3 class="team-director__name">Mark Lea</h3>
                         <span class="team-director__title">Lead Advisor</span>
-                        <span class="team-director__expertise">International Structuring, Governance &amp; Comparative Taxation</span>
+                        <span class="team-director__expertise">Structuring, Governance &amp; International Matters</span>
 
-                        <p>Mark is a respected veteran in international estate planning, structuring, governance, and comparative taxation, with over 50 years of experience across multiple jurisdictions. He began his career with N.M. Rothschild &amp; Sons Limited in London and later became a Director of Rothschild&rsquo;s Trust Companies and of its Guernsey Bank.</p>
-                        <p>He has advised the Governments of Singapore, Hong Kong, and Malaysia on trust and related laws, and has undertaken drafting, law&#8209;reform, and advisory roles across multiple jurisdictions. He also served as a Member of the Inland Revenue Board of Review of Hong Kong, on the executive committees of STEP Hong Kong and the Hong Kong Trustees Association, and later on their Joint Law Reform Committee.</p>
-                        <p>Mark was Adjunct Professor of Law at the National University of Singapore for 10 years, teaching international estate planning, including the use of trusts and foundations. He brings exceptional depth, technical judgement, and longstanding credibility to Island Capital&rsquo;s international structuring, governance, and comparative taxation work.</p>
+                        <p>Mark is a respected veteran in international estate planning, structuring, governance, and comparative taxation, with over 50 years of experience across multiple jurisdictions. He began his career at N.M. Rothschild &amp; Sons in London and later became a Director of Rothschild&rsquo;s Trust Companies and its Guernsey Bank. He has advised the Governments of Singapore, Hong Kong, and Malaysia on trust and related laws, and served on the Inland Revenue Board of Review of Hong Kong and the executive committees of STEP Hong Kong and the Hong Kong Trustees Association.</p>
+                        <p>Mark was Adjunct Professor of Law at the National University of Singapore for 10 years. He brings exceptional depth, technical judgement, and longstanding credibility to Island Capital&rsquo;s international structuring, governance, and cross-border work.</p>
 
                         <div class="team-director__credentials">
                             <span class="team-director__credential">STEP TEP Full Member</span>
@@ -268,8 +311,8 @@
     <section class="cta-banner">
         <div class="container">
             <div class="reveal">
-                <h2>Ready to Work with Senior Practitioners?</h2>
-                <p>Schedule a complimentary consultation with our leadership team to discuss how we can support your business.</p>
+                <h2>Let&rsquo;s talk about what your business needs next.</h2>
+                <p>Whether you need senior finance leadership, focused support in a priority area, or help building out your Singapore hub, we&rsquo;d value an introductory conversation.</p>
                 <a href="contact.html" class="btn btn--primary btn--lg">Schedule a Consultation</a>
             </div>
         </div>

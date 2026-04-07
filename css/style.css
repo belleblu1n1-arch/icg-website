@@ -5533,7 +5533,7 @@ p:last-child {
     font-weight: 500;
     color: var(--gray);
     padding: var(--space-1) var(--space-3);
-    background: var(--white);
+    background: transparent;
     border-radius: var(--radius-full);
 }
 
@@ -5665,7 +5665,7 @@ p:last-child {
     font-weight: 500;
     color: var(--gray);
     padding: var(--space-1) var(--space-3);
-    background: var(--white);
+    background: transparent;
     border-radius: var(--radius-full);
 }
 
@@ -7500,7 +7500,14 @@ p:last-child {
 
 /* ── How clients engage us ── */
 .eng-section { padding: 5rem 0; background: #F5F7F2; }
-.eng-two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: stretch; margin-bottom: 2.5rem; max-width: 1100px; margin-left: auto; margin-right: auto; }
+.eng-two-col { display: grid; grid-template-columns: 1fr 1fr 1.25fr; gap: 2rem; align-items: stretch; margin-bottom: 2.5rem; max-width: 1280px; margin-left: auto; margin-right: auto; }
+.eng-two-col > :nth-child(2), .eng-two-col > :nth-child(3) { padding: 2.5rem 2.75rem; background: #fff; border-radius: 8px; border: 0.5px solid rgba(74,140,63,0.10); }
+.eng-engage-list { list-style: none; padding: 0; margin: 1rem 0 0; }
+.eng-engage-list li { padding: 0.6rem 0; border-top: 0.5px solid rgba(74,140,63,0.15); font-size: 0.85rem; line-height: 1.4; }
+.eng-engage-list li:first-child { border-top: none; }
+.eng-engage-list .eng-engage-type { display: block !important; font-size: 0.6rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--green); margin-bottom: 0.2rem; }
+.eng-engage-list .eng-engage-type--managed { color: var(--green); }
+.eng-engage-list .eng-engage-title { display: block !important; font-size: 0.85rem; font-weight: 500; color: #4a4a4a; line-height: 1.4; }
 .eng-two-col > :first-child { padding: 2.5rem 2.75rem; background: #fff; border-radius: 8px; border: 0.5px solid rgba(74,140,63,0.10); }
 .eng-two-col > :last-child { padding: 2.5rem 2.75rem; background: #fff; border-radius: 8px; border: 0.5px solid rgba(74,140,63,0.10); }
 .eng-two-col > a.eng-card-link { padding: 2.5rem 2.75rem; }
@@ -7509,7 +7516,7 @@ p:last-child {
 .eng-col-body { font-size: 1rem; font-weight: 400; color: var(--charcoal); line-height: 1.75; margin-bottom: 1.75rem; }
 .eng-bullets { list-style: none; padding: 0; margin-bottom: 1.75rem; }
 .eng-bullets li { font-size: 1rem; color: var(--charcoal); line-height: 1.65; padding: 0.3rem 0 0.3rem 1.2rem; position: relative; }
-.eng-bullets li::before { content: "·"; position: absolute; left: 0; color: var(--green); font-size: 1.3rem; line-height: 1.2; }
+.eng-bullets li::before { content: "✅"; position: absolute; left: 0; font-size: 0.75rem; line-height: 1.8; }
 .eng-fc-intro { font-size: 1rem; color: var(--charcoal); line-height: 1.75; margin-bottom: 2rem; }
 .eng-service-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2.25rem 1.25rem; margin-top: 0.75rem; }
 .eng-service-item { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 0.85rem; }

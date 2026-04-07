@@ -16,7 +16,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <!-- Site stylesheet -->
-<link rel="stylesheet" href="css/style.css?v=20260405d">
+<link rel="stylesheet" href="css/style.css?v=20260406a">
 
 <!-- Page-specific styles -->
 <style>
@@ -44,18 +44,29 @@
 /* Engagement Models */
 .sp-models{padding:4.5rem 2rem 2rem;border-top:0.5px solid var(--sp-border);background:var(--cream)}
 .sp-models-inner{max-width:var(--sp-max);margin:0 auto}
-.sp-models-grid{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem}
+.sp-models-grid{display:grid;grid-template-columns:1fr 1fr 1.25fr;gap:2rem}
 .sp-model-card{background:#fff;border:0.5px solid rgba(74,140,63,0.12);border-radius:8px;padding:2.5rem 2.75rem}
 .sp-model-label{font-size:0.68rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--green);margin-bottom:0.75rem;text-align:center}
 .sp-model-title{font-family:var(--font-heading);font-size:1.75rem;font-weight:400;line-height:1.3;margin-bottom:1.25rem;text-align:center;color:var(--charcoal)}
 .sp-model-body{font-size:1rem;line-height:1.8;color:var(--charcoal);margin-bottom:1rem}
 .sp-model-bullets{list-style:none;padding:0;margin-top:1rem}
 .sp-model-bullets li{font-size:0.9375rem;color:var(--charcoal);line-height:1.65;padding:0.3rem 0 0.3rem 1.2rem;position:relative}
-.sp-model-bullets li::before{content:"·";position:absolute;left:0;color:var(--green);font-size:1.3rem;line-height:1.2}
-.sp-sprint-list{list-style:none;padding:0;margin-top:1rem}
-.sp-sprint-list li{font-size:0.9375rem;line-height:1.65;padding:0.55rem 0 0.55rem 1.5rem;position:relative;border-bottom:0.5px solid var(--sp-border)}
-.sp-sprint-list li:last-child{border-bottom:none}
-.sp-sprint-list li::before{content:"→";position:absolute;left:0;color:var(--green);font-size:0.8rem;line-height:1.9}
+.sp-model-bullets li::before{content:"✅";position:absolute;left:0;font-size:0.75rem;line-height:1.8}
+.sp-sprint-table{width:100%;border-collapse:collapse;margin-top:1.25rem}
+.sp-sprint-table thead th{font-size:0.68rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--green);padding:0 0 0.6rem;text-align:left}
+.sp-sprint-table thead th:last-child{color:var(--sp-muted);font-weight:500}
+.sp-sprint-table tbody td{font-size:0.875rem;line-height:1.55;padding:0.55rem 0.5rem 0.55rem 0;border-top:0.5px solid var(--sp-border);vertical-align:top}
+.sp-sprint-table tbody td:first-child{font-weight:500;color:var(--charcoal);padding-right:1rem;white-space:nowrap}
+.sp-sprint-table tbody td:last-child{color:var(--sp-muted);font-size:0.8125rem}
+
+/* Engagement list — single-column stacked layout */
+.sp-engage-list{list-style:none;padding:0;margin:0}
+.sp-engage-list li{padding:0.6rem 0;border-top:0.5px solid var(--sp-border)}
+.sp-engage-list li:first-child{border-top:none}
+.sp-engage-type{display:block;font-size:0.6rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--green);margin-bottom:0.15rem}
+.sp-engage-type--managed{color:var(--green)}
+.sp-engage-title{display:block;font-size:0.875rem;font-weight:500;color:var(--charcoal);line-height:1.4}
+.sp-engage-scope{display:block;font-size:0.75rem;color:var(--sp-muted);line-height:1.5;margin-top:0.15rem}
 
 /* Scope section */
 .sp-scope{padding:2.5rem 2rem 4.5rem;background:var(--cream)}
@@ -118,12 +129,12 @@
 <!-- ========== HERO ========== -->
 <div class="sp-hero">
   <p class="sp-hero-eyebrow">Services</p>
-  <h1 class="sp-hero-title">Senior finance leadership and strategic execution<br>&mdash; retained or sprint-based, sized to what you need.</h1>
+  <h1 class="sp-hero-title">Senior finance and business leadership</h1>
+  <p class="sp-hero-sub">Connecting strategy to execution.<br>Sharper decisions. Stronger delivery.<br>For businesses navigating growth, complexity, and change.</p>
   <div class="sp-hero-split">
     <div>
-      <p class="sp-hero-sub">We work alongside your leadership team to sharpen decisions, strengthen performance, and move priorities forward — through growth, complexity, and change.</p>
-      <p class="sp-hero-p">You can retain us for ongoing senior finance and business leadership, or engage us on a targeted sprint scoped to a defined priority.</p>
-      <p class="sp-hero-p">We adapt our approach to your context — helping connect strategy to execution and improving delivery across the full operating cycle.</p>
+      <p class="sp-hero-p">We work alongside leadership teams to strengthen planning, decision-making, performance, and execution — with clearer accountability and follow-through.</p>
+      <p class="sp-hero-p">Engage us through an ongoing retained model or a focused engagement scoped to a specific business need.</p>
       <div class="sp-btns">
         <a href="contact.html" class="sp-btn">Schedule a Consultation</a>
       </div>
@@ -140,22 +151,58 @@
   <div class="sp-models-inner">
     <div class="sp-models-grid">
       <div class="sp-model-card">
-        <p class="sp-model-label">Retained Model</p>
+        <p class="sp-model-label">Retained Model (Core engagement model)</p>
         <h2 class="sp-model-title">Fractional CFO &amp; Performance Leadership</h2>
-        <p class="sp-model-body">Flexible access to senior finance and business leadership — without building a full in-house senior team.</p>
-        <p class="sp-model-body">We work alongside the leadership team on the priorities that matter most: strengthening decisions, driving performance, and connecting planning to delivery, with workstreams activated as the business evolves.</p>
+        <p class="sp-model-body">Ongoing access to senior finance and business leadership — without building a full in-house senior layer.</p>
+        <p class="sp-model-body">We work alongside your leadership team on the priorities that matter most, including:</p>
         <ul class="sp-model-bullets">
-          <li>Direct CEO &amp; Board decision support</li>
-          <li>End-to-end performance management</li>
-          <li>Cross-border strategic execution</li>
+          <li>Leadership team decision support</li>
+          <li>Planning, forecasting, and performance leadership</li>
+          <li>Stakeholder-ready reporting</li>
+          <li>Cross-border governance &amp; coordination</li>
         </ul>
       </div>
       <div class="sp-model-card" id="focused-support">
         <p class="sp-model-label">Focused Engagements</p>
-        <h2 class="sp-model-title">Targeted Sprints</h2>
-        <p class="sp-model-body">Focused 4–12 week engagements scoped to a defined business need. Each sprint has a clear starting point, a practical output, and a natural path into broader ongoing support if needed.</p>
-        <p class="sp-model-body" style="margin-top:1rem;margin-bottom:0">A sprint may focus on a specific gap or priority within the Illustrative Scope below.</p>
-        <p class="sp-model-body" style="font-style:italic;color:var(--sp-muted);margin-top:1.25rem;margin-bottom:0">Clients often begin with a targeted sprint and expand into a broader retained relationship as priorities become more interconnected.</p>
+        <h2 class="sp-model-title">Targeted Scope</h2>
+        <p class="sp-model-body">Focused support designed around a defined business need, with a clear scope and practical output.</p>
+        <p class="sp-model-body">Typically scoped over 4–12 weeks, depending on the objective and context.</p>
+        <p class="sp-model-body" style="font-weight:500;margin-bottom:0.5rem">Examples:</p>
+        <ul class="sp-engage-list">
+          <li><span class="sp-engage-title">Forecast Reset</span></li>
+          <li><span class="sp-engage-title">Stakeholder-Ready Reporting Reset</span></li>
+          <li><span class="sp-engage-title">KPI &amp; Dashboard Reset</span></li>
+          <li><span class="sp-engage-title">Profitability &amp; Cost Insight</span></li>
+          <li><span class="sp-engage-title">Scenario Planning &amp; Trade-off Review</span></li>
+          <li><span class="sp-engage-title">Cross-Border Readiness &amp; Compliance</span></li>
+          <li><span class="sp-engage-title">Integration &amp; Transition Support</span></li>
+        </ul>
+
+      </div>
+      <div class="sp-model-card" id="singapore-hub-compliance">
+      <p class="sp-model-label">Singapore Hub Engagement</p>
+      <h2 class="sp-model-title">Singapore Hub Readiness, Governance &amp; Compliance</h2>
+      <p class="sp-model-body">For businesses establishing or operating a Singapore hub for regional operations.</p>
+      <p class="sp-model-body">Having run international hubs for decades, we help you design and set up the operating and financial model — how the hub earns, funds, and flows financially and intercompany — aligned to group's strategic intent and compliant, fully coordinated across finance, tax, legal, banking, and corporate services.</p>
+
+      <ul class="sp-engage-list" style="margin-top:1rem">
+        <li>
+          <span class="sp-engage-type">Focused Engagement</span>
+          <span class="sp-engage-title">Hub Readiness Review</span>
+          <span class="sp-engage-scope">Structure, health, gaps, actions</span>
+        </li>
+        <li>
+          <span class="sp-engage-type">Focused Engagement</span>
+          <span class="sp-engage-title">Hub Governance &amp; Operating Design</span>
+          <span class="sp-engage-scope">Decision rights, approvals, entity structure, reporting</span>
+        </li>
+        <li>
+          <span class="sp-engage-type sp-engage-type--managed">Managed by us</span>
+          <span class="sp-engage-title">Managed Hub Governance &amp; Compliance</span>
+          <span class="sp-engage-scope">Ongoing CSP support</span>
+        </li>
+      </ul>
+
       </div>
     </div>
   </div>
@@ -179,13 +226,12 @@
             <line x1="14" y1="38" x2="30" y2="38"/>
           </svg>
         </div>
-        <div class="sp-scope-card-title">Robust Planning &amp; Forecasting</div>
+        <div class="sp-scope-card-title">Planning &amp; Forecasting</div>
         <ul>
-          <li>Budgeting &amp; annual operational planning</li>
+          <li>Budgeting and annual operating planning</li>
           <li>Rolling forecast design and cadence</li>
-          <li>Scenario planning and trade-offs</li>
-          <li>Cross-functional priority alignment</li>
-          <li>Target setting</li>
+          <li>Scenario planning and trade-off analysis</li>
+          <li>Target setting and resource alignment</li>
         </ul>
       </div>
 
@@ -194,12 +240,11 @@
         <div class="sp-scope-icon">
           <img src="img/icon-sun.png" alt="Performance Management" />
         </div>
-        <div class="sp-scope-card-title">Integrated Performance Cadence</div>
+        <div class="sp-scope-card-title">Performance Cadence</div>
         <ul>
-          <li>Performance rhythm</li>
-          <li>Integrated dashboard reset</li>
+          <li>Monthly &amp; quarterly rhythm</li>
+          <li>KPI structure &amp; dashboard reset</li>
           <li>Accountability and follow-through</li>
-          <li>Performance reward alignment</li>
           <li>One shared view across teams</li>
         </ul>
       </div>
@@ -209,12 +254,12 @@
         <div class="sp-scope-icon">
           <img src="img/icon-leaf.png" alt="Reporting" />
         </div>
-        <div class="sp-scope-card-title">Lean &amp; Stakeholder-Ready Reporting</div>
+        <div class="sp-scope-card-title">Reporting &amp; Board Materials</div>
         <ul>
           <li>Board pack design</li>
           <li>Reporting simplification</li>
-          <li>Leadership materials</li>
-          <li>Investor readiness</li>
+          <li>Leadership and stakeholder materials</li>
+          <li>Investor and lender readiness</li>
         </ul>
       </div>
 
@@ -228,12 +273,12 @@
             <path d="M29 38 L35 24 L42 38"/>
           </svg>
         </div>
-        <div class="sp-scope-card-title">Agile &amp; Insight-Driven Decisions</div>
+        <div class="sp-scope-card-title">Decision Support &amp; Insight</div>
         <ul>
           <li>Investment prioritisation</li>
           <li>Cost and profitability driver analysis</li>
           <li>Business model evaluation</li>
-          <li>Decision support — portfolio / customer / market / segment / channel</li>
+          <li>Portfolio, customer, market, segment, or channel decisions</li>
         </ul>
       </div>
 
@@ -247,12 +292,11 @@
             <circle cx="22" cy="22" r="2.5" fill="#a5c83a" stroke="none"/>
           </svg>
         </div>
-        <div class="sp-scope-card-title">Strategic Execution &amp; Proactive Change Management</div>
+        <div class="sp-scope-card-title">Integration, Transition &amp; Change</div>
         <ul>
-          <li>Integration</li>
-          <li>Restructuring</li>
-          <li>Transition</li>
-          <li>Transformation</li>
+          <li>Integration support</li>
+          <li>Restructuring and transition support</li>
+          <li>Transformation execution</li>
           <li>Cross-functional and cross-border implementation</li>
         </ul>
       </div>
@@ -267,12 +311,12 @@
             <path d="M6 14 h32"/><path d="M6 30 h32"/>
           </svg>
         </div>
-        <div class="sp-scope-card-title">Cross-Border Structuring &amp; Governance</div>
+        <div class="sp-scope-card-title">Structuring &amp; Governance</div>
         <ul>
           <li>Entity and operational structuring</li>
           <li>Governance and decision-rights design</li>
-          <li>Cross-border readiness</li>
-          <li>Compliance support</li>
+          <li>Cross-border operating readiness</li>
+          <li>Coordination across finance, legal, tax, and compliance workstreams</li>
         </ul>
       </div>
 
