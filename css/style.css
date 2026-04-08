@@ -5434,7 +5434,7 @@ p:last-child {
 /* ---- Section 5: Team Intro ---- */
 .team-intro {
     padding: var(--space-16) 0 var(--space-8);
-    background: var(--white);
+    background: #FAFBF8;
 }
 
 .team-intro__content {
@@ -5463,18 +5463,18 @@ p:last-child {
 /* ---- Section 6: Isabel Featured Profile ---- */
 .team-profiles {
     padding: 0 0 var(--space-16);
-    background: var(--white);
+    background: #FAFBF8;
 }
 
 .team-featured {
     display: grid;
     grid-template-columns: 1fr;
     gap: var(--space-8);
-    padding: var(--space-10);
-    background: var(--cream);
-    border-radius: var(--radius-lg);
-    border: 1px solid var(--cream-dark);
-    border-left: 3px solid var(--green);
+    padding: var(--space-10) 0;
+    background: transparent;
+    border-radius: 0;
+    border: none;
+    border-left: none;
     margin-bottom: var(--space-10, 5rem);
 }
 
@@ -5483,9 +5483,9 @@ p:last-child {
 }
 
 .team-featured__img {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
+    width: 180px;
+    height: 220px;
+    border-radius: 6px;
     object-fit: cover;
     object-position: center top;
 }
@@ -5565,8 +5565,8 @@ p:last-child {
     }
 
     .team-featured__img {
-        width: 180px;
-        height: 180px;
+        width: 200px;
+        height: 250px;
     }
 }
 
@@ -5576,13 +5576,13 @@ p:last-child {
     }
 
     .team-featured {
-        grid-template-columns: 200px 1fr;
-        padding: var(--space-12);
+        grid-template-columns: 220px 1fr;
+        padding: var(--space-12) 0;
     }
 
     .team-featured__img {
-        width: 200px;
-        height: 200px;
+        width: 220px;
+        height: 280px;
     }
 }
 
@@ -5598,14 +5598,23 @@ p:last-child {
     display: grid;
     grid-template-columns: 1fr;
     gap: var(--space-6);
-    padding: var(--space-8);
-    background: var(--cream);
-    border-radius: var(--radius-lg);
-    border: 1px solid var(--cream-dark);
+    padding: var(--space-8) 0;
+    background: transparent;
+    border-radius: 0;
+    border: none;
 }
 
 .team-director__photo {
     flex-shrink: 0;
+}
+
+.team-director__img {
+    width: 140px;
+    height: 170px;
+    border-radius: 6px;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
 }
 
 .team-director__initials {
