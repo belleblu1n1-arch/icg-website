@@ -7637,3 +7637,91 @@ p:last-child {
 .eng-service-link { text-decoration: none; color: inherit; transition: opacity 0.2s; }
 .eng-service-link:hover { opacity: 0.7; }
 .eng-cta-center { text-align: center; margin-top: 1.75rem; display: flex; justify-content: center; gap: 1rem; }
+
+
+/* ============================================================
+   MERGED V2 OVERRIDES — created 2026-04-19
+   Surgical overrides applied to A's base styles. Do not remove.
+   ============================================================ */
+
+/* --- Dark hero section --- */
+.hero {
+    background: #0F2318;
+    color: #ffffff;
+    padding-top: 6rem;
+    padding-bottom: 5rem;
+}
+.hero-eyebrow {
+    color: rgba(255, 255, 255, 0.78);
+}
+h1.hero-title {
+    color: #ffffff;
+    font-size: 5rem;                   /* was 3.5rem — B-style big statement */
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+}
+.hero-sub,
+.hero-sub strong {
+    color: rgba(255, 255, 255, 0.92);
+}
+.hero-supporting,
+.hero-supporting__hook {
+    color: rgba(255, 255, 255, 0.85);
+}
+.hero-supporting__hook strong,
+.hero-supporting strong {
+    color: #ffffff;
+}
+
+@media (max-width: 900px) {
+    h1.hero-title { font-size: 3.5rem; }
+}
+@media (max-width: 560px) {
+    h1.hero-title { font-size: 2.75rem; }
+}
+
+/* --- v2 Logo marquee (replaces old logo-strip + pedigree-logos) --- */
+.v2-marquee {
+    background: var(--cream);
+    padding: 2.75rem 0;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+.v2-marquee__viewport {
+    overflow: hidden;
+    position: relative;
+}
+.v2-marquee__track {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    animation: v2-marquee-scroll 55s linear infinite;
+    width: max-content;
+}
+.v2-marquee__track img {
+    height: 52px;
+    width: auto;
+    max-width: 160px;
+    object-fit: contain;
+    flex-shrink: 0;
+    filter: none;
+}
+.v2-marquee__track img[alt="BAT"]                    { height: 62px; }
+.v2-marquee__track img[alt="Unilever"]               { height: 58px; }
+.v2-marquee__track img[alt="Standard Chartered"]     { height: 56px; }
+.v2-marquee__track img[alt="Energizer"]              { height: 56px; }
+.v2-marquee__track img[alt="Keppel"]                 { height: 44px; }
+.v2-marquee__track img[alt="Rothschild"]             { height: 40px; }
+.v2-marquee__track img[alt="Boston Scientific"]      { height: 40px; }
+.v2-marquee__track img[alt="NUS"]                    { height: 52px; }
+.v2-marquee__track img[alt="Government of Singapore"] { height: 56px; }
+
+@keyframes v2-marquee-scroll {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+@media (max-width: 768px) {
+    .v2-marquee__track { gap: 3rem; }
+    .v2-marquee__track img { height: 40px; }
+}
