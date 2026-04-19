@@ -7735,9 +7735,9 @@ h1.hero-title {
 .v2-logo-strip__grid img[alt="Keppel"]                  { max-height: 42px; }
 .v2-logo-strip__grid img[alt="Rothschild"]              { max-height: 40px; }
 .v2-logo-strip__grid img[alt="Boston Scientific"]       { max-height: 36px; }
-/* Government wordmarks (2-line text blocks, taller aspect) */
-.v2-logo-strip__grid img[alt="Government of Hong Kong"] { max-height: 52px; }
-.v2-logo-strip__grid img[alt="Government of Singapore"] { max-height: 52px; }
+/* Government wordmarks (Georgia serif, 2-line, matching A's original elegant style) */
+.v2-logo-strip__grid img[alt="Government of Hong Kong"] { max-height: 44px; }
+.v2-logo-strip__grid img[alt="Government of Singapore"] { max-height: 44px; }
 
 /* Kill credibility-strip's margin-top so logo strip flows into stats */
 .credibility-strip {
