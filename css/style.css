@@ -7727,15 +7727,17 @@ h1.hero-title {
 .v2-logo-strip__grid img[alt="Unilever"]                { max-height: 64px; }
 .v2-logo-strip__grid img[alt="Standard Chartered"]      { max-height: 56px; }
 .v2-logo-strip__grid img[alt="BAT"]                     { max-height: 56px; }
-.v2-logo-strip__grid img[alt="Energizer"]               { max-height: 38px; }
+/* Typographic wordmarks (single-line caps/italic) */
+.v2-logo-strip__grid img[alt="Bain & Company"]          { max-height: 26px; }
+.v2-logo-strip__grid img[alt="Diageo"]                  { max-height: 32px; }
+.v2-logo-strip__grid img[alt="Energizer"]               { max-height: 36px; }
+/* Original brand PNGs */
 .v2-logo-strip__grid img[alt="Keppel"]                  { max-height: 42px; }
 .v2-logo-strip__grid img[alt="Rothschild"]              { max-height: 40px; }
 .v2-logo-strip__grid img[alt="Boston Scientific"]       { max-height: 36px; }
 /* Government wordmarks (2-line text blocks, taller aspect) */
 .v2-logo-strip__grid img[alt="Government of Hong Kong"] { max-height: 52px; }
 .v2-logo-strip__grid img[alt="Government of Singapore"] { max-height: 52px; }
-.v2-logo-strip__grid img[alt="Bain & Company"]          { max-height: 40px; }
-.v2-logo-strip__grid img[alt="Diageo"]                  { max-height: 42px; }
 
 /* Kill credibility-strip's margin-top so logo strip flows into stats */
 .credibility-strip {
