@@ -7824,3 +7824,51 @@ h1.hero-title {
     .ioc-section__inner--v2 { grid-template-columns: 1fr; gap: 2.5rem; }
     .ioc-section__hook { font-size: 1.5rem; padding: 1.25rem; }
 }
+
+
+/* --- v2 Stats section (dark bg, mid-page numerical proof) --- */
+.v2-stats {
+    background: #0F2318;
+    color: #ffffff;
+    padding: 4.5rem 1.5rem;
+}
+.v2-stats__inner {
+    max-width: 1240px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
+}
+.v2-stat {
+    text-align: left;
+    padding-left: 1.5rem;
+    border-left: 1px solid rgba(255, 255, 255, 0.18);
+}
+.v2-stat__number {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 4rem;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+    margin-bottom: 0.75rem;
+}
+.v2-stat__label {
+    display: block;
+    font-family: var(--font-body);
+    font-size: 0.8125rem;
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.82);
+}
+
+@media (max-width: 900px) {
+    .v2-stats__inner { grid-template-columns: 1fr 1fr; gap: 2.25rem 2rem; }
+    .v2-stat__number { font-size: 3.25rem; }
+}
+@media (max-width: 500px) {
+    .v2-stats__inner { grid-template-columns: 1fr; }
+}
