@@ -7699,38 +7699,42 @@ h1.hero-title {
     line-height: 1.4;
 }
 .v2-logo-strip__grid {
-    max-width: 1280px;
+    max-width: 1240px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 2.75rem 2rem;
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    justify-items: center;
+    justify-content: center;
+    gap: 2.5rem 3.25rem;
 }
 .v2-logo-strip__grid img {
-    max-height: 40px;
-    max-width: 140px;
+    max-height: 48px;
     width: auto;
     height: auto;
     object-fit: contain;
-    /* White-only SVGs -> dark grey silhouettes on light bg (A's proven filter) */
-    filter: grayscale(100%) brightness(0) opacity(0.42);
+    flex-shrink: 0;
+    /* PNGs carry internal brand detail (Microsoft 4-squares, Standard Chartered swirl, etc.).
+       Grayscale-only filter desaturates while preserving internal luminance contrast — matches
+       B's "desaturated but still-iconic" look, unlike a solid silhouette. */
+    filter: grayscale(100%) opacity(0.72);
     transition: filter 0.3s ease;
 }
 .v2-logo-strip__grid img:hover {
-    filter: grayscale(100%) brightness(0) opacity(0.65);
+    filter: grayscale(100%) opacity(1);
 }
-/* Per-logo size tweaks (account for intrinsic aspect ratios) */
-.v2-logo-strip__grid img[alt="Microsoft"]               { max-height: 28px; }
-.v2-logo-strip__grid img[alt="Unilever"]                { max-height: 48px; }
-.v2-logo-strip__grid img[alt="Standard Chartered"]      { max-height: 36px; }
-.v2-logo-strip__grid img[alt="BAT"]                     { max-height: 44px; }
-.v2-logo-strip__grid img[alt="Energizer"]               { max-height: 24px; }
-.v2-logo-strip__grid img[alt="Keppel"]                  { max-height: 32px; }
-.v2-logo-strip__grid img[alt="Rothschild"]              { max-height: 28px; }
-.v2-logo-strip__grid img[alt="Boston Scientific"]       { max-height: 26px; }
-.v2-logo-strip__grid img[alt="NUS"]                     { max-height: 38px; }
-.v2-logo-strip__grid img[alt="Government of Singapore"] { max-height: 40px; }
+/* Per-logo size tweaks (visual balance: taller square-ish logos, shorter wide wordmarks) */
+.v2-logo-strip__grid img[alt="Microsoft"]               { max-height: 36px; }
+.v2-logo-strip__grid img[alt="Unilever"]                { max-height: 64px; }
+.v2-logo-strip__grid img[alt="Standard Chartered"]      { max-height: 44px; }
+.v2-logo-strip__grid img[alt="BAT"]                     { max-height: 56px; }
+.v2-logo-strip__grid img[alt="Energizer"]               { max-height: 34px; }
+.v2-logo-strip__grid img[alt="Keppel"]                  { max-height: 40px; }
+.v2-logo-strip__grid img[alt="Rothschild"]              { max-height: 36px; }
+.v2-logo-strip__grid img[alt="Boston Scientific"]       { max-height: 34px; }
+.v2-logo-strip__grid img[alt="NUS"]                     { max-height: 52px; }
+.v2-logo-strip__grid img[alt="Government of Singapore"] { max-height: 58px; }
+.v2-logo-strip__grid img[alt="Bain & Company"]          { max-height: 36px; }
+.v2-logo-strip__grid img[alt="Diageo"]                  { max-height: 38px; }
 
 /* Kill credibility-strip's margin-top so logo strip flows into stats */
 .credibility-strip {
