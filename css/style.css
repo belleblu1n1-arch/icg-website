@@ -7681,11 +7681,17 @@ h1.hero-title {
 }
 
 /* --- v2 Logo marquee (replaces old logo-strip + pedigree-logos) --- */
+/* Dark bg: blends with hero, fixes white-only SVGs visibility, eliminates whitespace gap */
 .v2-marquee {
-    background: var(--cream);
-    padding: 2.75rem 0;
+    background: #0F2318;
+    padding: 1.75rem 0;
     overflow: hidden;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    border-bottom: none;
+}
+
+/* Kill credibility-strip's margin-top so dark marquee flows directly into stats section */
+.credibility-strip {
+    margin-top: 0 !important;
 }
 .v2-marquee__viewport {
     overflow: hidden;
