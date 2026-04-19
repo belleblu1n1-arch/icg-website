@@ -7731,8 +7731,9 @@ h1.hero-title {
 .v2-logo-strip__grid img[alt="Keppel"]                  { max-height: 42px; }
 .v2-logo-strip__grid img[alt="Rothschild"]              { max-height: 40px; }
 .v2-logo-strip__grid img[alt="Boston Scientific"]       { max-height: 36px; }
-.v2-logo-strip__grid img[alt="Government of Hong Kong"] { max-height: 62px; }
-.v2-logo-strip__grid img[alt="Government of Singapore"] { max-height: 62px; }
+/* Government wordmarks (2-line text blocks, taller aspect) */
+.v2-logo-strip__grid img[alt="Government of Hong Kong"] { max-height: 52px; }
+.v2-logo-strip__grid img[alt="Government of Singapore"] { max-height: 52px; }
 .v2-logo-strip__grid img[alt="Bain & Company"]          { max-height: 40px; }
 .v2-logo-strip__grid img[alt="Diageo"]                  { max-height: 42px; }
 
