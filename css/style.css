@@ -7723,18 +7723,18 @@ h1.hero-title {
     filter: grayscale(100%) opacity(1);
 }
 /* Per-logo size tweaks (visual balance: taller square-ish logos, shorter wide wordmarks) */
-.v2-logo-strip__grid img[alt="Microsoft"]               { max-height: 36px; }
+.v2-logo-strip__grid img[alt="Microsoft"]               { max-height: 46px; }
 .v2-logo-strip__grid img[alt="Unilever"]                { max-height: 64px; }
-.v2-logo-strip__grid img[alt="Standard Chartered"]      { max-height: 44px; }
+.v2-logo-strip__grid img[alt="Standard Chartered"]      { max-height: 56px; }
 .v2-logo-strip__grid img[alt="BAT"]                     { max-height: 56px; }
-.v2-logo-strip__grid img[alt="Energizer"]               { max-height: 34px; }
-.v2-logo-strip__grid img[alt="Keppel"]                  { max-height: 40px; }
-.v2-logo-strip__grid img[alt="Rothschild"]              { max-height: 36px; }
-.v2-logo-strip__grid img[alt="Boston Scientific"]       { max-height: 34px; }
-.v2-logo-strip__grid img[alt="NUS"]                     { max-height: 52px; }
-.v2-logo-strip__grid img[alt="Government of Singapore"] { max-height: 58px; }
-.v2-logo-strip__grid img[alt="Bain & Company"]          { max-height: 36px; }
-.v2-logo-strip__grid img[alt="Diageo"]                  { max-height: 38px; }
+.v2-logo-strip__grid img[alt="Energizer"]               { max-height: 38px; }
+.v2-logo-strip__grid img[alt="Keppel"]                  { max-height: 42px; }
+.v2-logo-strip__grid img[alt="Rothschild"]              { max-height: 40px; }
+.v2-logo-strip__grid img[alt="Boston Scientific"]       { max-height: 36px; }
+.v2-logo-strip__grid img[alt="Government of Hong Kong"] { max-height: 62px; }
+.v2-logo-strip__grid img[alt="Government of Singapore"] { max-height: 62px; }
+.v2-logo-strip__grid img[alt="Bain & Company"]          { max-height: 40px; }
+.v2-logo-strip__grid img[alt="Diageo"]                  { max-height: 42px; }
 
 /* Kill credibility-strip's margin-top so logo strip flows into stats */
 .credibility-strip {
