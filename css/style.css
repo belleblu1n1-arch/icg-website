@@ -7680,46 +7680,68 @@ h1.hero-title {
     h1.hero-title { font-size: 2.75rem; }
 }
 
-/* --- v2 Logo strip (STATIC — replaces old logo-strip + pedigree-logos) --- */
-/* Dark bg: blends with hero, correct bg for white-only SVGs */
+/* --- v2 Logo strip (STATIC, B-style: light bg, grey silhouettes, 2-row grid, eyebrow) --- */
 .v2-logo-strip {
-    background: #0F2318;
-    padding: 1.75rem 1rem;
-    border-bottom: none;
+    background: var(--cream);
+    padding: 3.5rem 1.5rem 3rem;
+    border-top: 1px solid rgba(15, 35, 24, 0.08);
 }
-.v2-logo-strip__inner {
+.v2-logo-strip__eyebrow {
+    max-width: 900px;
+    margin: 0 auto 2.5rem;
+    text-align: center;
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #7A7A7A;
+    line-height: 1.4;
+}
+.v2-logo-strip__grid {
     max-width: 1280px;
     margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2.75rem 2rem;
     align-items: center;
-    justify-content: center;
-    gap: 2.5rem 2.75rem;
+    justify-items: center;
 }
-.v2-logo-strip__inner img {
-    height: 36px;
+.v2-logo-strip__grid img {
+    max-height: 40px;
+    max-width: 140px;
     width: auto;
-    max-width: 130px;
+    height: auto;
     object-fit: contain;
-    flex-shrink: 0;
-    opacity: 0.9;
+    /* White-only SVGs -> dark grey silhouettes on light bg (A's proven filter) */
+    filter: grayscale(100%) brightness(0) opacity(0.42);
+    transition: filter 0.3s ease;
 }
-.v2-logo-strip__inner img[alt="BAT"]                    { height: 44px; }
-.v2-logo-strip__inner img[alt="Unilever"]               { height: 42px; }
-.v2-logo-strip__inner img[alt="Standard Chartered"]     { height: 40px; }
-.v2-logo-strip__inner img[alt="Energizer"]              { height: 40px; }
-.v2-logo-strip__inner img[alt="Keppel"]                 { height: 32px; }
-.v2-logo-strip__inner img[alt="Rothschild"]             { height: 30px; }
-.v2-logo-strip__inner img[alt="Boston Scientific"]      { height: 30px; }
-.v2-logo-strip__inner img[alt="NUS"]                    { height: 38px; }
-.v2-logo-strip__inner img[alt="Government of Singapore"] { height: 40px; }
+.v2-logo-strip__grid img:hover {
+    filter: grayscale(100%) brightness(0) opacity(0.65);
+}
+/* Per-logo size tweaks (account for intrinsic aspect ratios) */
+.v2-logo-strip__grid img[alt="Microsoft"]               { max-height: 28px; }
+.v2-logo-strip__grid img[alt="Unilever"]                { max-height: 48px; }
+.v2-logo-strip__grid img[alt="Standard Chartered"]      { max-height: 36px; }
+.v2-logo-strip__grid img[alt="BAT"]                     { max-height: 44px; }
+.v2-logo-strip__grid img[alt="Energizer"]               { max-height: 24px; }
+.v2-logo-strip__grid img[alt="Keppel"]                  { max-height: 32px; }
+.v2-logo-strip__grid img[alt="Rothschild"]              { max-height: 28px; }
+.v2-logo-strip__grid img[alt="Boston Scientific"]       { max-height: 26px; }
+.v2-logo-strip__grid img[alt="NUS"]                     { max-height: 38px; }
+.v2-logo-strip__grid img[alt="Government of Singapore"] { max-height: 40px; }
 
-/* Kill credibility-strip's margin-top so dark strip flows directly into stats */
+/* Kill credibility-strip's margin-top so logo strip flows into stats */
 .credibility-strip {
     margin-top: 0 !important;
 }
 
-@media (max-width: 768px) {
-    .v2-logo-strip__inner { gap: 1.75rem 2rem; }
-    .v2-logo-strip__inner img { height: 28px; }
+@media (max-width: 1024px) {
+    .v2-logo-strip__grid { grid-template-columns: repeat(4, 1fr); gap: 2.25rem 1.5rem; }
+}
+@media (max-width: 640px) {
+    .v2-logo-strip__grid { grid-template-columns: repeat(3, 1fr); gap: 1.75rem 1rem; }
+    .v2-logo-strip { padding: 2.5rem 1rem 2rem; }
+    .v2-logo-strip__eyebrow { font-size: 0.6875rem; letter-spacing: 0.14em; }
 }
