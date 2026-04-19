@@ -7680,54 +7680,46 @@ h1.hero-title {
     h1.hero-title { font-size: 2.75rem; }
 }
 
-/* --- v2 Logo marquee (replaces old logo-strip + pedigree-logos) --- */
-/* Dark bg: blends with hero, fixes white-only SVGs visibility, eliminates whitespace gap */
-.v2-marquee {
+/* --- v2 Logo strip (STATIC — replaces old logo-strip + pedigree-logos) --- */
+/* Dark bg: blends with hero, correct bg for white-only SVGs */
+.v2-logo-strip {
     background: #0F2318;
-    padding: 1.75rem 0;
-    overflow: hidden;
+    padding: 1.75rem 1rem;
     border-bottom: none;
 }
+.v2-logo-strip__inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem 2.75rem;
+}
+.v2-logo-strip__inner img {
+    height: 36px;
+    width: auto;
+    max-width: 130px;
+    object-fit: contain;
+    flex-shrink: 0;
+    opacity: 0.9;
+}
+.v2-logo-strip__inner img[alt="BAT"]                    { height: 44px; }
+.v2-logo-strip__inner img[alt="Unilever"]               { height: 42px; }
+.v2-logo-strip__inner img[alt="Standard Chartered"]     { height: 40px; }
+.v2-logo-strip__inner img[alt="Energizer"]              { height: 40px; }
+.v2-logo-strip__inner img[alt="Keppel"]                 { height: 32px; }
+.v2-logo-strip__inner img[alt="Rothschild"]             { height: 30px; }
+.v2-logo-strip__inner img[alt="Boston Scientific"]      { height: 30px; }
+.v2-logo-strip__inner img[alt="NUS"]                    { height: 38px; }
+.v2-logo-strip__inner img[alt="Government of Singapore"] { height: 40px; }
 
-/* Kill credibility-strip's margin-top so dark marquee flows directly into stats section */
+/* Kill credibility-strip's margin-top so dark strip flows directly into stats */
 .credibility-strip {
     margin-top: 0 !important;
 }
-.v2-marquee__viewport {
-    overflow: hidden;
-    position: relative;
-}
-.v2-marquee__track {
-    display: flex;
-    align-items: center;
-    gap: 5rem;
-    animation: v2-marquee-scroll 55s linear infinite;
-    width: max-content;
-}
-.v2-marquee__track img {
-    height: 52px;
-    width: auto;
-    max-width: 160px;
-    object-fit: contain;
-    flex-shrink: 0;
-    filter: none;
-}
-.v2-marquee__track img[alt="BAT"]                    { height: 62px; }
-.v2-marquee__track img[alt="Unilever"]               { height: 58px; }
-.v2-marquee__track img[alt="Standard Chartered"]     { height: 56px; }
-.v2-marquee__track img[alt="Energizer"]              { height: 56px; }
-.v2-marquee__track img[alt="Keppel"]                 { height: 44px; }
-.v2-marquee__track img[alt="Rothschild"]             { height: 40px; }
-.v2-marquee__track img[alt="Boston Scientific"]      { height: 40px; }
-.v2-marquee__track img[alt="NUS"]                    { height: 52px; }
-.v2-marquee__track img[alt="Government of Singapore"] { height: 56px; }
-
-@keyframes v2-marquee-scroll {
-    0%   { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-}
 
 @media (max-width: 768px) {
-    .v2-marquee__track { gap: 3rem; }
-    .v2-marquee__track img { height: 40px; }
+    .v2-logo-strip__inner { gap: 1.75rem 2rem; }
+    .v2-logo-strip__inner img { height: 28px; }
 }
