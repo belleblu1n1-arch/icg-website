@@ -73,11 +73,11 @@
     --shadow-md:  0 4px 12px rgba(0,0,0,0.06);
 
     /* Border Radius */
-    --radius-sm: 4px;
-    --radius-md: 8px;
-    --radius-lg: 12px;
+    --radius-sm: 2px;
+    --radius-md: 0;
+    --radius-lg: 0;
     --radius-xl: 24px;
-    --radius-full: 999px;
+    --radius-full: 2px;
 }
 
 
@@ -1412,7 +1412,7 @@ p:last-child {
     padding: 1.25rem 1.5rem;
     background: rgba(165, 200, 58, 0.08);
     border-left: 3px solid var(--olive);
-    border-radius: 0 6px 6px 0;
+    border-radius: 0;
 }
 
 .cfo-spotlight__outcome strong {
@@ -1795,7 +1795,7 @@ p:last-child {
 /* What We Do — Version B: Primary service highlight */
 .what-we-do__primary {
     background: #F1EEE5;
-    border-radius: 6px;
+    border-radius: 2px;
     padding: 2.25rem 2.5rem;
     margin: 2.5rem 0 2rem;
 }
@@ -1947,7 +1947,7 @@ p:last-child {
 .engage-model__primary {
     background: #F1EEE5;
     border-top: 3px solid var(--green);
-    border-radius: 6px;
+    border-radius: 2px;
     padding: 2.5rem 2.75rem;
     margin: 0 auto 2.5rem;
     max-width: 760px;
@@ -2051,7 +2051,7 @@ p:last-child {
     color: inherit;
     display: block;
     padding: 1.25rem 1.5rem;
-    border-radius: 16px;
+    border-radius: 0;
     background: var(--surface-card);
     transition: background 0.2s ease;
 }
@@ -2278,7 +2278,7 @@ p:last-child {
 .partner-section__title { font-family: var(--font-heading); font-size: 2rem; font-weight: 400; color: var(--charcoal); margin-bottom: 20px; letter-spacing: -0.01em; }
 .partner-section__sub { font-size: 1.0625rem; color: rgb(90,90,90); line-height: 1.7; margin-bottom: 12px; }
 .partner-section__choice { font-size: 0.9375rem; color: rgb(90,90,90); line-height: 1.6; }
-.partner-card { background: #fff; border-radius: 12px; box-shadow: 0 4px 28px rgba(74,140,63,0.06), 0 1px 4px rgba(0,0,0,0.03); padding: 44px 52px; max-width: 640px; margin: 0 auto; text-align: center; }
+.partner-card { background: #fff; border-radius: 0; box-shadow: 0 4px 28px rgba(74,140,63,0.06), 0 1px 4px rgba(0,0,0,0.03); padding: 44px 52px; max-width: 640px; margin: 0 auto; text-align: center; }
 .partner-card__logo { display: flex; justify-content: center; margin-bottom: 22px; }
 .partner-card__icon { height: 44px; width: auto; }
 .partner-card__eyebrow { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgb(45,45,45); margin-bottom: 12px; }
@@ -2292,7 +2292,7 @@ p:last-child {
 .partner-card__svc-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgb(45,45,45); margin-bottom: 6px; }
 .partner-card__svc-desc { font-size: 0.9375rem; color: rgb(90,90,90); font-style: italic; line-height: 1.55; margin-bottom: 16px; }
 .partner-card__svc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-.partner-card__svc-item { background: #F5F7F2; border-radius: 8px; padding: 12px 16px; display: flex; align-items: center; gap: 11px; text-align: left; }
+.partner-card__svc-item { background: #F5F7F2; border-radius: 0; padding: 12px 16px; display: flex; align-items: center; gap: 11px; text-align: left; }
 .partner-card__svc-icon { width: 24px; height: 24px; opacity: 0.6; flex-shrink: 0; color: #4A8C3F; }
 .partner-card__svc-name { font-size: 0.875rem; color: rgb(45,45,45); font-weight: 500; line-height: 1.35; }
 .partner-card__path { margin-top: 28px; }
@@ -2308,7 +2308,7 @@ p:last-child {
 .partner-card__phase-sub { font-size: 0.75rem; color: rgb(90,90,90); line-height: 1.4; }
 .partner-card__narrative { font-size: 0.9375rem; color: rgb(90,90,90); font-style: italic; line-height: 1.75; margin-top: 18px; margin-bottom: 32px; }
 .partner-card__cta { display: flex; justify-content: center; }
-.partner-card__btn { background: #2D2D2D; color: #fff; border: none; border-radius: 50px; padding: 14px 44px; font-size: 0.9375rem; font-family: var(--font-heading); text-decoration: none; display: inline-block; cursor: pointer; letter-spacing: 0.02em; }
+.partner-card__btn { background: #2D2D2D; color: #fff; border: none; border-radius: 2px; padding: 14px 44px; font-size: 0.9375rem; font-family: var(--font-heading); text-decoration: none; display: inline-block; cursor: pointer; letter-spacing: 0.02em; }
 
 /* ---- Shared Credibility Header (above both versions) ---- */
 .credibility-header {
@@ -3302,7 +3302,7 @@ p:last-child {
     gap: 0.15rem;
     padding: 1.5rem 1rem;
     background: #FFFFFF;
-    border-radius: 8px;
+    border-radius: 0;
     border: 0.5px solid rgba(74, 140, 63, 0.08);
 }
 
@@ -3385,7 +3385,7 @@ p:last-child {
 .cta-banner .btn {
     background: var(--green);
     color: #fff;
-    border-radius: 50px;
+    border-radius: 2px;
     padding: 13px 44px;
     font-size: 0.95rem;
     font-weight: 600;
@@ -3555,7 +3555,7 @@ p:last-child {
     color: var(--white);
     background: var(--green-dark);
     padding: 3px 10px;
-    border-radius: 100px;
+    border-radius: 2px;
     margin-bottom: var(--space-3);
 }
 
@@ -5566,7 +5566,7 @@ p:last-child {
 .team-featured__img {
     width: 180px;
     height: 220px;
-    border-radius: 6px;
+    border-radius: 2px;
     object-fit: cover;
     object-position: center top;
 }
@@ -5693,7 +5693,7 @@ p:last-child {
 .team-director__img {
     width: 180px;
     height: 260px;
-    border-radius: 6px;
+    border-radius: 2px;
     object-fit: contain;
     object-position: center top;
     background: var(--cream);
@@ -6595,7 +6595,7 @@ p:last-child {
 /* Right-side panels */
 .sp-engage__panel {
     background: var(--surface-card);
-    border-radius: 24px;
+    border-radius: 0;
     padding: 36px 40px;
     margin-bottom: 24px;
 }
@@ -6672,7 +6672,7 @@ p:last-child {
 
 .sp-featured__panel {
     background: var(--surface-warm);
-    border-radius: 28px;
+    border-radius: 0;
     padding: 60px 64px;
     max-width: 100%;
 }
@@ -6786,7 +6786,7 @@ p:last-child {
     color: #5A5A5A;
     background: rgba(0, 0, 0, 0.06);
     padding: 10px 16px;
-    border-radius: 999px;
+    border-radius: 2px;
     margin: 0 10px 10px 0;
 }
 
@@ -6812,7 +6812,7 @@ p:last-child {
 .sp-featured__ws-block {
     background: rgba(74, 140, 63, 0.04);
     border: 1px solid rgba(74, 140, 63, 0.12);
-    border-radius: 8px;
+    border-radius: 0;
     padding: 1.25rem 1.5rem;
 }
 
@@ -6896,7 +6896,7 @@ p:last-child {
 .sp-scope-box {
     background: var(--surface-card);
     border: 1px solid var(--border-subtle);
-    border-radius: 16px;
+    border-radius: 0;
     padding: 20px 24px;
     margin-bottom: 14px;
 }
@@ -6997,7 +6997,7 @@ p:last-child {
 .sp-card {
     background: var(--surface-card);
     border: 1px solid var(--border-subtle);
-    border-radius: 24px;
+    border-radius: 0;
     padding: 40px;
     display: flex;
     flex-direction: column;
@@ -7551,7 +7551,7 @@ p:last-child {
     padding: 1.25rem;
     background: rgba(255,255,255,0.6);
     border: 0.5px solid var(--cream-dark);
-    border-radius: 12px;
+    border-radius: 0;
     text-decoration: none;
     transition: border-color 0.2s ease, background 0.2s ease;
 }
@@ -7594,16 +7594,16 @@ p:last-child {
 /* ── How clients engage us ── */
 .eng-section { padding: 5rem 0; background: #F5F7F2; }
 .eng-two-col { display: grid; grid-template-columns: 1fr 1fr 1.25fr; gap: 2rem; align-items: stretch; margin-bottom: 2.5rem; max-width: 1280px; margin-left: auto; margin-right: auto; }
-.eng-two-col > :nth-child(2) { padding: 2.5rem 2.75rem; background: transparent; border-radius: 8px; border: none; }
-.eng-two-col > :nth-child(3) { padding: 2.5rem 2.75rem; background: transparent; border-radius: 8px; border: 0.5px solid rgba(74,140,63,0.10); }
+.eng-two-col > :nth-child(2) { padding: 2.5rem 2.75rem; background: transparent; border-radius: 0; border: none; }
+.eng-two-col > :nth-child(3) { padding: 2.5rem 2.75rem; background: transparent; border-radius: 0; border: 0.5px solid rgba(74,140,63,0.10); }
 .eng-engage-list { list-style: none; padding: 0; margin: 1rem 0 0; }
 .eng-engage-list li { padding: 0.6rem 0; border-top: 0.5px solid rgba(74,140,63,0.15); font-size: 0.85rem; line-height: 1.4; }
 .eng-engage-list li:first-child { border-top: none; }
 .eng-engage-list .eng-engage-type { display: block !important; font-size: 0.6rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--green); margin-bottom: 0.2rem; }
 .eng-engage-list .eng-engage-type--managed { color: var(--green); }
 .eng-engage-list .eng-engage-title { display: block !important; font-size: 0.85rem; font-weight: 500; color: #4a4a4a; line-height: 1.4; }
-.eng-two-col > :first-child { padding: 2.5rem 2.75rem; background: transparent; border-radius: 8px; border: 0.5px solid rgba(74,140,63,0.10); }
-.eng-two-col > :last-child { padding: 2.5rem 2.75rem; background: transparent; border-radius: 8px; border: 0.5px solid rgba(74,140,63,0.10); }
+.eng-two-col > :first-child { padding: 2.5rem 2.75rem; background: transparent; border-radius: 0; border: 0.5px solid rgba(74,140,63,0.10); }
+.eng-two-col > :last-child { padding: 2.5rem 2.75rem; background: transparent; border-radius: 0; border: 0.5px solid rgba(74,140,63,0.10); }
 .eng-two-col > a.eng-card-link { padding: 2.5rem 2.75rem; }
 .eng-col-label { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--green); margin-bottom: 0.75rem; text-align: center; }
 .eng-col-title { font-family: var(--font-heading); font-size: 1.5rem; font-weight: 400; color: var(--charcoal); line-height: 1.3; margin-bottom: 1rem; text-align: center; }
@@ -7614,7 +7614,7 @@ p:last-child {
 .eng-bullets li { font-size: 1rem; color: var(--charcoal); line-height: 1.65; padding: 0.3rem 0 0.3rem 1.2rem; position: relative; }
 .eng-bullets li::before { content: "✅"; position: absolute; left: 0; font-size: 0.75rem; line-height: 1.8; }
 .eng-fc-intro { font-size: 1rem; color: var(--charcoal); line-height: 1.75; margin-bottom: 2rem; }
-.eng-service-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2.25rem 1.25rem; margin-top: 0.75rem; background: #FAFBF8; padding: 2.5rem 2rem; border-radius: 8px; }
+.eng-service-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2.25rem 1.25rem; margin-top: 0.75rem; background: #FAFBF8; padding: 2.5rem 2rem; border-radius: 0; }
 .eng-service-item { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 0.85rem; }
 .eng-svc-icon { width: 52px; height: 52px; display: flex; align-items: center; justify-content: center; }
 .eng-svc-icon img { width: 48px; height: 48px; object-fit: contain; }
