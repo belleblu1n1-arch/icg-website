@@ -2274,15 +2274,15 @@ p:last-child {
 }
 
 .ls-bridge {
-  font-family: var(--font-body);
-  font-size: 1.0625rem;
+  font-family: var(--font-heading);
+  font-size: 1.375rem;
   font-style: italic;
-  font-weight: 400;
-  color: var(--charcoal);
+  font-weight: 500;
+  color: #1F5A13; /* deep green — the firm's voice, walks the reader into the green IOC kicker */
   text-align: center;
   max-width: 740px;
   margin: 2.5rem auto 0;
-  line-height: 1.85;
+  line-height: 1.7;
 }
 
 @media (max-width: 600px) {
