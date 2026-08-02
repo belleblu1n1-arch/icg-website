@@ -2210,6 +2210,21 @@ p:last-child {
   opacity: 0.7;
 }
 
+.ls-ch {
+  display: flex;
+  align-items: baseline;
+  gap: 0.9rem;
+}
+/* B-style ghost numerals, in brand palette */
+.ls-num {
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: #4A8C3F;
+  opacity: 0.45;
+  letter-spacing: 0.04em;
+  flex-shrink: 0;
+}
 .ls-row {
   display: grid;
   grid-template-columns: 1fr 28px 1.2fr;
