@@ -658,10 +658,11 @@ p:last-child {
     text-align: center;
 }
 
-/* Homepage variant: B-style category label — quiet tracked caps, olive on dark */
+/* Homepage variant: B-style category label — quiet tracked caps, olive on dark.
+   14px = label tier (matches section kickers); claims tier is 15px/600. */
 .hero-eyebrow--caps {
     font-family: var(--font-body);
-    font-size: 0.75rem;
+    font-size: 0.875rem;
     font-weight: 500;
     font-style: normal;
     text-transform: uppercase;
