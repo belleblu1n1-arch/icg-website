@@ -7693,7 +7693,7 @@ h1.hero-title {
 
 /* --- v2 Logo strip (STATIC, B-style: light bg, grey silhouettes, 2-row grid, eyebrow) --- */
 .v2-logo-strip {
-    background: var(--cream);
+    background: #F8F5EE; /* warm cream (original pedigree strip) — no grey undertone */
     padding: 3.5rem 1.5rem 3rem;
     border-top: 1px solid rgba(15, 35, 24, 0.08);
 }
@@ -7706,49 +7706,50 @@ h1.hero-title {
     font-weight: 500;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: #7A7A7A;
+    color: #6E6A5E; /* warm stone — matches the cream strip, no grey undertone */
     line-height: 1.4;
 }
 .v2-logo-strip__grid {
     max-width: 1240px;
     margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
     align-items: center;
-    justify-content: center;
-    gap: 2.5rem 3.25rem;
+    justify-items: center;
+    gap: 3rem 2rem;
 }
 .v2-logo-strip__grid img {
-    max-height: 48px;
+    max-height: 52px;
+    max-width: 170px;
     width: auto;
     height: auto;
     object-fit: contain;
-    flex-shrink: 0;
     /* PNGs carry internal brand detail (Microsoft 4-squares, Standard Chartered swirl, etc.).
-       Grayscale-only filter desaturates while preserving internal luminance contrast — matches
-       B's "desaturated but still-iconic" look, unlike a solid silhouette. */
+       Grayscale desaturates while preserving internal luminance contrast; multiply blends the
+       white canvases baked into 7 of the 12 PNGs invisibly into the cream background. */
     filter: grayscale(100%) opacity(0.72);
+    mix-blend-mode: multiply;
     transition: filter 0.3s ease;
 }
 .v2-logo-strip__grid img:hover {
     filter: grayscale(100%) opacity(1);
 }
 /* Per-logo size tweaks (visual balance: taller square-ish logos, shorter wide wordmarks) */
-.v2-logo-strip__grid img[alt="Microsoft"]               { max-height: 46px; }
-.v2-logo-strip__grid img[alt="Unilever"]                { max-height: 64px; }
-.v2-logo-strip__grid img[alt="Standard Chartered"]      { max-height: 56px; }
-.v2-logo-strip__grid img[alt="BAT"]                     { max-height: 56px; }
+.v2-logo-strip__grid img[alt="Microsoft"]               { max-height: 50px; }
+.v2-logo-strip__grid img[alt="Unilever"]                { max-height: 68px; }
+.v2-logo-strip__grid img[alt="Standard Chartered"]      { max-height: 60px; }
+.v2-logo-strip__grid img[alt="BAT"]                     { max-height: 60px; }
 /* Typographic wordmarks (single-line caps/italic) */
-.v2-logo-strip__grid img[alt="Bain & Company"]          { max-height: 26px; }
-.v2-logo-strip__grid img[alt="Diageo"]                  { max-height: 32px; }
-.v2-logo-strip__grid img[alt="Energizer"]               { max-height: 36px; }
+.v2-logo-strip__grid img[alt="Bain & Company"]          { max-height: 30px; }
+.v2-logo-strip__grid img[alt="Diageo"]                  { max-height: 36px; }
+.v2-logo-strip__grid img[alt="Energizer"]               { max-height: 40px; }
 /* Original brand PNGs */
-.v2-logo-strip__grid img[alt="Keppel"]                  { max-height: 42px; }
-.v2-logo-strip__grid img[alt="Rothschild"]              { max-height: 40px; }
-.v2-logo-strip__grid img[alt="Boston Scientific"]       { max-height: 36px; }
+.v2-logo-strip__grid img[alt="Keppel"]                  { max-height: 46px; }
+.v2-logo-strip__grid img[alt="Rothschild"]              { max-height: 44px; }
+.v2-logo-strip__grid img[alt="Boston Scientific"]       { max-height: 40px; }
 /* Government wordmarks (Georgia serif, 2-line, matching A's original elegant style) */
-.v2-logo-strip__grid img[alt="Government of Hong Kong"] { max-height: 44px; }
-.v2-logo-strip__grid img[alt="Government of Singapore"] { max-height: 44px; }
+.v2-logo-strip__grid img[alt="Government of Hong Kong"] { max-height: 48px; }
+.v2-logo-strip__grid img[alt="Government of Singapore"] { max-height: 48px; }
 
 /* Kill credibility-strip's margin-top so logo strip flows into stats */
 .credibility-strip {
