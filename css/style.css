@@ -7706,7 +7706,7 @@ h1.hero-title {
     font-weight: 500;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: #6E6A5E; /* warm stone — matches the cream strip, no grey undertone */
+    color: var(--charcoal); /* darker than the logos — the claim leads the strip */
     line-height: 1.4;
 }
 .v2-logo-strip__grid {
