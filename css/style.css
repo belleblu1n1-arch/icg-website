@@ -7825,6 +7825,42 @@ h1.hero-title {
     padding: 0 1.5rem;
     align-items: center;
 }
+/* Hub layout: wheel center, Connected/Integrated left, Proactive/Adaptive right —
+   the layout enacts the hub-and-spoke metaphor */
+.ioc-section__inner--hub {
+    display: grid;
+    grid-template-columns: 1fr 1.15fr 1fr;
+    gap: 3rem;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    align-items: center;
+}
+.ioc-hub__col {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.ioc-hub__center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ioc-hub__center .ioc-section__image {
+    width: 100%;
+    height: auto;
+}
+@media (max-width: 1024px) {
+    .ioc-section__inner--hub {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .ioc-hub__center {
+        order: -1;
+        max-width: 420px;
+        margin: 0 auto;
+    }
+}
 .ioc-pillars {
     display: flex;
     flex-direction: column;
