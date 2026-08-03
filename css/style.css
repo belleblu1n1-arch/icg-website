@@ -7966,40 +7966,40 @@ h1.hero-title {
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
 }
-.team-card {
+.ht-card {
     border: 0.5px solid rgba(74, 140, 63, 0.18);
     background: #FCFBF8;
 }
-.team-card__photo {
+.ht-card__photo {
     aspect-ratio: 1 / 1;
     overflow: hidden;
 }
-.team-card__photo img {
+.ht-card__photo img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: top center;
 }
-.team-card__photo--light {
+.ht-card__photo--light {
     background: #FFFFFF;
 }
-.team-card__body {
+.ht-card__body {
     padding: 1.5rem 1.75rem 1.75rem;
 }
-.team-card__name {
+.ht-card__name {
     font-family: var(--font-heading);
     font-size: 1.375rem;
     font-weight: 600;
     color: var(--charcoal);
     margin: 0 0 0.2rem;
 }
-.team-card__role {
+.ht-card__role {
     font-family: var(--font-body);
     font-size: 0.875rem;
     color: #6E6A5E;
     margin: 0 0 0.75rem;
 }
-.team-card__tags {
+.ht-card__tags {
     font-family: var(--font-body);
     font-size: 0.75rem;
     font-weight: 500;
@@ -8008,7 +8008,7 @@ h1.hero-title {
     color: var(--green-dark);
     margin: 0 0 0.9rem;
 }
-.team-card__bio {
+.ht-card__bio {
     font-family: var(--font-body);
     font-size: 0.9375rem;
     line-height: 1.65;
