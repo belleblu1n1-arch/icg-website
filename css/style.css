@@ -7973,6 +7973,8 @@ h1.hero-title {
 .ht-card__photo {
     aspect-ratio: 1 / 1;
     overflow: hidden;
+    margin: 1.25rem 1.25rem 0;
+    border: 1px solid rgba(45, 45, 45, 0.15); /* frame — separates each portrait from card + neighbours */
 }
 .ht-card__photo img {
     width: 100%;
