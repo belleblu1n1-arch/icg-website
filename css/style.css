@@ -7933,6 +7933,108 @@ h1.hero-title {
 
 
 /* --- v2 Stats section (dark bg, mid-page numerical proof) --- */
+/* ---- Homepage team strip (B-style, house design) ---- */
+.team-strip {
+    background: #FFFFFF;
+    padding: 5rem 1.5rem;
+}
+.team-strip__inner {
+    max-width: 1240px;
+    margin: 0 auto;
+}
+.team-strip__title {
+    font-family: var(--font-heading);
+    font-size: 2.25rem;
+    font-weight: 400;
+    color: var(--charcoal);
+    text-align: center;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    margin: 0 0 1rem;
+}
+.team-strip__intro {
+    font-family: var(--font-body);
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    color: var(--charcoal);
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 3rem;
+}
+.team-strip__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+.team-card {
+    border: 0.5px solid rgba(74, 140, 63, 0.18);
+    background: #FCFBF8;
+}
+.team-card__photo {
+    aspect-ratio: 7 / 8;
+    overflow: hidden;
+}
+.team-card__photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+}
+.team-card__photo--light {
+    background: #FFFFFF;
+}
+.team-card__body {
+    padding: 1.5rem 1.75rem 1.75rem;
+}
+.team-card__name {
+    font-family: var(--font-heading);
+    font-size: 1.375rem;
+    font-weight: 600;
+    color: var(--charcoal);
+    margin: 0 0 0.2rem;
+}
+.team-card__role {
+    font-family: var(--font-body);
+    font-size: 0.875rem;
+    color: #6E6A5E;
+    margin: 0 0 0.75rem;
+}
+.team-card__tags {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--green-dark);
+    margin: 0 0 0.9rem;
+}
+.team-card__bio {
+    font-family: var(--font-body);
+    font-size: 0.9375rem;
+    line-height: 1.65;
+    color: #5A5A5A;
+    margin: 0;
+}
+.team-strip__more {
+    text-align: center;
+    margin: 2.5rem 0 0;
+}
+.team-strip__more a {
+    font-family: var(--font-body);
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: var(--green-dark);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(58, 111, 50, 0.35);
+    padding-bottom: 2px;
+}
+.team-strip__more a:hover {
+    border-bottom-color: var(--green-dark);
+}
+@media (max-width: 1024px) {
+    .team-strip__grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
+}
+
 .v2-stats {
     background: #0F2318;
     color: #ffffff;
