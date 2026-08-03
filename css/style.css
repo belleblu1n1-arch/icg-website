@@ -8033,7 +8033,7 @@ h1.hero-title {
 .team-strip__more a:hover {
     border-bottom-color: var(--green-dark);
 }
-@media (max-width: 1024px) {
+@media (max-width: 700px) {
     .team-strip__grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
 }
 
