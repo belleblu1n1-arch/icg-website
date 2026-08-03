@@ -7938,6 +7938,17 @@ h1.hero-title {
     color: #ffffff;
     padding: 4.5rem 1.5rem;
 }
+.v2-stats__title {
+    font-family: var(--font-heading);
+    font-size: 2.25rem;
+    font-weight: 400;
+    color: #ffffff;
+    text-align: center;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    margin: 0 auto 3rem;
+    max-width: 900px;
+}
 .v2-stats__inner {
     max-width: 1240px;
     margin: 0 auto;
@@ -7957,7 +7968,7 @@ h1.hero-title {
     font-weight: 500;
     line-height: 1;
     letter-spacing: -0.02em;
-    color: #ffffff;
+    color: var(--olive); /* B's accent-numeral pattern, in brand — numbers pop, labels recede */
     margin-bottom: 0.75rem;
 }
 .v2-stat__label {
