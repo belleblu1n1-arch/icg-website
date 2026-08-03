@@ -7971,7 +7971,7 @@ h1.hero-title {
     background: #FCFBF8;
 }
 .team-card__photo {
-    aspect-ratio: 7 / 8;
+    aspect-ratio: 1 / 1;
     overflow: hidden;
 }
 .team-card__photo img {
