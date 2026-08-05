@@ -7888,10 +7888,7 @@ h1.hero-title {
 .ioc-pillars-row .ioc-pillar:last-child {
     border-bottom: none;
 }
-@media (max-width: 1024px) {
-    .ioc-pillars-row { grid-template-columns: repeat(2, 1fr); }
-}
-@media (max-width: 640px) {
+@media (max-width: 700px) {
     .ioc-pillars-row { grid-template-columns: 1fr; }
 }
 .ioc-pillars {
