@@ -120,6 +120,14 @@
             <div class="newsletter reveal">
                 <h3>Stay Ahead</h3>
                 <p>Subscribe to receive insights on finance leadership, performance, cross-border structuring, and strategic execution for growing businesses across Asia-Pacific.</p>
+                <div id="subscribeTopics" style="margin:0.25rem 0 1.25rem">
+                    <p style="font-size:0.85rem;font-weight:600;margin-bottom:0.5rem">Which topic would you like first? <span style="font-weight:400;opacity:0.7">(optional)</span></p>
+                    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:0.5rem 1.5rem;font-size:0.9rem">
+                        <label style="display:inline-flex;align-items:center;gap:0.4rem;cursor:pointer"><input type="checkbox" name="topic" value="Performance" form="subscribeForm" style="accent-color:var(--green)"> Performance cadence</label>
+                        <label style="display:inline-flex;align-items:center;gap:0.4rem;cursor:pointer"><input type="checkbox" name="topic" value="Structuring" form="subscribeForm" style="accent-color:var(--green)"> Governance for cross-border growth</label>
+                        <label style="display:inline-flex;align-items:center;gap:0.4rem;cursor:pointer"><input type="checkbox" name="topic" value="Cross-border" form="subscribeForm" style="accent-color:var(--green)"> Singapore as your APAC gateway</label>
+                    </div>
+                </div>
                 <form class="newsletter__form" id="subscribeForm" action="https://formspree.io/f/mppqaaeq" method="POST">
                     <input type="hidden" name="_subject" value="New Insights subscriber &mdash; Island Capital website">
                     <input type="hidden" name="source" value="Insights page subscription">
@@ -131,7 +139,7 @@
                 <script>
                 (function(){var f=document.getElementById('subscribeForm'),m=document.getElementById('subscribeMsg');if(!f)return;
                 f.addEventListener('submit',function(e){e.preventDefault();var b=f.querySelector('button');b.disabled=true;b.textContent='Sending...';
-                fetch(f.action,{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}}).then(function(r){if(!r.ok)throw 0;f.style.display='none';m.style.display='block';})
+                fetch(f.action,{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}}).then(function(r){if(!r.ok)throw 0;f.style.display='none';var tp=document.getElementById('subscribeTopics');if(tp)tp.style.display='none';m.style.display='block';})
                 .catch(function(){b.disabled=false;b.textContent='Subscribe';alert('Sorry, something went wrong. Please try again or email us.');});});})();
                 </script>
             </div>
