@@ -75,7 +75,7 @@
                         </svg>
                     </div>
                     <div class="insight-card__body">
-                        <span class="insight-card__tag">Performance</span>
+                        <span class="insight-card__tag">Performance &middot; Coming soon</span>
                         <h3>Building a Performance Cadence That Delivers</h3>
                         <p>How leadership teams can move from static planning cycles to an integrated performance rhythm that connects targets, accountability, and measurable delivery.</p>
                     </div>
@@ -89,7 +89,7 @@
                         </svg>
                     </div>
                     <div class="insight-card__body">
-                        <span class="insight-card__tag">Structuring</span>
+                        <span class="insight-card__tag">Structuring &middot; Coming soon</span>
                         <h3>Governance Foundations for Cross&#8209;Border Growth</h3>
                         <p>Practical considerations for businesses expanding across markets &mdash; including entity structures, governance design, and coordination across legal, tax, and finance workstreams.</p>
                     </div>
@@ -103,7 +103,7 @@
                         </svg>
                     </div>
                     <div class="insight-card__body">
-                        <span class="insight-card__tag">Cross-border</span>
+                        <span class="insight-card__tag">Cross-border &middot; Coming soon</span>
                         <h3>Scaling into APAC: Singapore as Your Gateway</h3>
                         <p>How businesses can use Singapore as a strategic base for Asia-Pacific expansion. Structuring, governance, and practical considerations for cross-border growth.</p>
                     </div>
@@ -120,10 +120,20 @@
             <div class="newsletter reveal">
                 <h3>Stay Ahead</h3>
                 <p>Subscribe to receive insights on finance leadership, performance, cross-border structuring, and strategic execution for growing businesses across Asia-Pacific.</p>
-                <div class="newsletter__form">
-                    <input type="email" placeholder="Enter your email address" aria-label="Email address for newsletter">
-                    <button class="btn btn--primary">Subscribe</button>
-                </div>
+                <form class="newsletter__form" id="subscribeForm" action="https://formspree.io/f/mppqaaeq" method="POST">
+                    <input type="hidden" name="_subject" value="New Insights subscriber &mdash; Island Capital website">
+                    <input type="hidden" name="source" value="Insights page subscription">
+                    <input type="email" name="email" required placeholder="Enter your email address" aria-label="Email address for newsletter">
+                    <button type="submit" class="btn btn--primary">Subscribe</button>
+                </form>
+                <p id="subscribeMsg" style="display:none;margin-top:1rem;font-weight:500">Thank you &mdash; you&rsquo;re subscribed. We&rsquo;ll let you know when new insights are published.</p>
+                <p style="font-size:0.8rem;opacity:0.7;margin-top:0.75rem">We&rsquo;ll only use your email to send Island Capital insights. Unsubscribe any time.</p>
+                <script>
+                (function(){var f=document.getElementById('subscribeForm'),m=document.getElementById('subscribeMsg');if(!f)return;
+                f.addEventListener('submit',function(e){e.preventDefault();var b=f.querySelector('button');b.disabled=true;b.textContent='Sending...';
+                fetch(f.action,{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}}).then(function(r){if(!r.ok)throw 0;f.style.display='none';m.style.display='block';})
+                .catch(function(){b.disabled=false;b.textContent='Subscribe';alert('Sorry, something went wrong. Please try again or email us.');});});})();
+                </script>
             </div>
         </div>
     </section>
