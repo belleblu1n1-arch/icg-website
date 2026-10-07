@@ -19,6 +19,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css?v=20260803m">
+    <style>.page-hero{padding-bottom:1.5rem}.page-hero__subtitle{color:#5A5A5A}.insights-grid-section{padding-top:1.5rem!important}.insight-card p{font-size:1rem;color:var(--charcoal);line-height:1.75}.insight-card h3{font-size:1.5rem}.insight-card__tag{font-size:0.8rem}#stay-ahead label{font-size:1rem;color:var(--charcoal)}#stay-ahead p{color:#5A5A5A}</style>
 </head>
 <body>
 
@@ -64,7 +65,7 @@
 
 
     <!-- ========== INSIGHTS GRID ========== -->
-    <section class="section section--white">
+    <section class="section section--white insights-grid-section">
         <div class="container">
             <div class="grid grid--3">
 
@@ -136,27 +137,26 @@
     <!-- ========== NEWSLETTER SIGNUP ========== -->
     <section class="section section--cream" style="padding-top:2.5rem">
         <div class="container">
-            <div class="newsletter reveal" id="stay-ahead">
-                <h3>Stay Ahead</h3>
-                <p>Subscribe to receive insights.</p>
-                <div id="subscribeTopics" style="margin:1.25rem 0 1.5rem">
-                    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:0.6rem 2rem;max-width:580px;margin:0 auto;text-align:left;font-size:0.9rem">
-                        <label style="display:inline-flex;align-items:center;gap:0.4rem;cursor:pointer"><input type="checkbox" name="topic" value="Planning &amp; Cash" form="subscribeForm" style="accent-color:var(--green)"> Planning, forecasting &amp; cash</label>
-                        <label style="display:inline-flex;align-items:center;gap:0.4rem;cursor:pointer"><input type="checkbox" name="topic" value="Performance" form="subscribeForm" style="accent-color:var(--green)"> Monthly performance reviews</label>
-                        <label style="display:inline-flex;align-items:center;gap:0.4rem;cursor:pointer"><input type="checkbox" name="topic" value="Reporting" form="subscribeForm" style="accent-color:var(--green)"> Board packs</label>
-                        <label style="display:inline-flex;align-items:center;gap:0.4rem;cursor:pointer"><input type="checkbox" name="topic" value="Decision Support" form="subscribeForm" style="accent-color:var(--green)"> Decision support</label>
-                        <label style="display:inline-flex;align-items:center;gap:0.4rem;cursor:pointer"><input type="checkbox" name="topic" value="Change" form="subscribeForm" style="accent-color:var(--green)"> Finance through change</label>
-                        <label style="display:inline-flex;align-items:center;gap:0.4rem;cursor:pointer"><input type="checkbox" name="topic" value="Structuring" form="subscribeForm" style="accent-color:var(--green)"> Singapore as your APAC gateway</label>
-                        <label style="display:inline-flex;align-items:center;gap:0.4rem;cursor:pointer"><input type="checkbox" name="topic" value="Other" id="topicOther" form="subscribeForm" style="accent-color:var(--green)"> Other</label>
+            <div class="newsletter reveal" id="stay-ahead" style="background:transparent;border:none;padding:0;max-width:1200px;margin:0 auto">
+                <h3 style="margin-bottom:0">Stay ahead &mdash; subscribe to receive insights.</h3>
+                <div id="subscribeTopics" style="margin:1.75rem 0 1.75rem">
+                    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,max-content));justify-content:center;gap:0.85rem 2.5rem;max-width:1200px;margin:0 auto;text-align:left;font-size:0.95rem">
+                        <label style="display:inline-flex;align-items:center;gap:0.5rem;cursor:pointer;white-space:nowrap"><input type="checkbox" name="topic" value="Planning &amp; Cash" form="subscribeForm" style="accent-color:var(--green)"> Planning, forecasting &amp; cash</label>
+                        <label style="display:inline-flex;align-items:center;gap:0.5rem;cursor:pointer;white-space:nowrap"><input type="checkbox" name="topic" value="Performance" form="subscribeForm" style="accent-color:var(--green)"> Monthly performance reviews</label>
+                        <label style="display:inline-flex;align-items:center;gap:0.5rem;cursor:pointer;white-space:nowrap"><input type="checkbox" name="topic" value="Reporting" form="subscribeForm" style="accent-color:var(--green)"> Board packs</label>
+                        <label style="display:inline-flex;align-items:center;gap:0.5rem;cursor:pointer;white-space:nowrap"><input type="checkbox" name="topic" value="Decision Support" form="subscribeForm" style="accent-color:var(--green)"> Decision support</label>
+                        <label style="display:inline-flex;align-items:center;gap:0.5rem;cursor:pointer;white-space:nowrap"><input type="checkbox" name="topic" value="Change" form="subscribeForm" style="accent-color:var(--green)"> Finance through change</label>
+                        <label style="display:inline-flex;align-items:center;gap:0.5rem;cursor:pointer;white-space:nowrap"><input type="checkbox" name="topic" value="Structuring" form="subscribeForm" style="accent-color:var(--green)"> Singapore as your APAC gateway</label>
+                        <label style="display:inline-flex;align-items:center;gap:0.5rem;cursor:pointer;white-space:nowrap"><input type="checkbox" name="topic" value="Other" id="topicOther" form="subscribeForm" style="accent-color:var(--green)"> Other</label>
                     </div>
                     <div id="otherWrap" style="display:none;margin:0.75rem auto 0;max-width:440px">
                         <input type="text" name="other_topic" form="subscribeForm" maxlength="200" placeholder="Tell us the topic in your own words" aria-label="Other topic" style="width:100%;padding:0.6rem 0.9rem;border:1px solid var(--cream-dark);border-radius:6px;font:inherit;font-size:0.9rem">
                     </div>
                 </div>
-                <form class="newsletter__form" id="subscribeForm" action="https://formspree.io/f/mppqaaeq" method="POST">
+                <form class="newsletter__form" id="subscribeForm" style="flex-direction:row;flex-wrap:wrap;max-width:620px;justify-content:center" action="https://formspree.io/f/mppqaaeq" method="POST">
                     <input type="hidden" name="_subject" value="New Insights subscriber &mdash; Island Capital website">
                     <input type="hidden" name="source" value="Insights page subscription">
-                    <input type="email" name="email" required placeholder="Enter your email address" aria-label="Email address for newsletter">
+                    <input type="email" name="email" required placeholder="Enter your email address" aria-label="Email address for newsletter" style="flex:1 1 300px;background:#fff">
                     <button type="submit" class="btn btn--primary" style="background:var(--green);border-color:var(--green);color:#fff">Subscribe</button>
                 </form>
                 <p id="subscribeMsg" style="display:none;margin-top:1rem;font-weight:500">Thank you &mdash; you&rsquo;re subscribed. We&rsquo;ll let you know when new insights are published.</p>
