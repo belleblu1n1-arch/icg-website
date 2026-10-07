@@ -57,7 +57,7 @@
                 <span class="breadcrumb__separator">/</span>
                 <span>Insights</span>
             </div>
-            <img src="img/icg-framework.png?v=trim" alt="The Integrated Operating Cadence" style="width:150px;height:auto;display:block;margin:0.5rem auto 1rem">
+            <img src="img/icg-framework.png?v=trim" alt="The Integrated Operating Cadence" style="width:300px;max-width:80%;height:auto;display:block;margin:0.5rem auto 1.25rem">
             <h1>Insights &amp; Resources</h1>
             <p class="page-hero__subtitle">Turning strategy into results<br>from planning to execution to delivery.</p>
         </div>
@@ -172,10 +172,10 @@
                         <label style="display:inline-flex;align-items:center;gap:0.5rem;cursor:pointer;white-space:nowrap"><input type="checkbox" name="topic" value="Decision Support" form="subscribeForm" style="accent-color:var(--green)"> Decision support</label>
                         <label style="display:inline-flex;align-items:center;gap:0.5rem;cursor:pointer;white-space:nowrap"><input type="checkbox" name="topic" value="Change" form="subscribeForm" style="accent-color:var(--green)"> Finance through change</label>
                         <label style="display:inline-flex;align-items:center;gap:0.5rem;cursor:pointer;white-space:nowrap"><input type="checkbox" name="topic" value="Structuring" form="subscribeForm" style="accent-color:var(--green)"> Singapore as your APAC gateway</label>
-                        <label style="display:inline-flex;align-items:center;gap:0.5rem;cursor:pointer;white-space:nowrap"><input type="checkbox" name="topic" value="Other" id="topicOther" form="subscribeForm" style="accent-color:var(--green)"> Other</label>
-                    </div>
-                    <div id="otherWrap" style="display:none;margin:0.75rem auto 0;max-width:440px">
-                        <input type="text" name="other_topic" form="subscribeForm" maxlength="200" placeholder="Tell us the topic in your own words" aria-label="Other topic" style="width:100%;padding:0.6rem 0.9rem;border:1px solid var(--cream-dark);border-radius:6px;font:inherit;font-size:0.9rem">
+                        <div style="grid-column:1/-1;display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap">
+                            <label style="display:inline-flex;align-items:center;gap:0.5rem;cursor:pointer;white-space:nowrap"><input type="checkbox" name="topic" value="Other" id="topicOther" form="subscribeForm" style="accent-color:var(--green)"> Other:</label>
+                            <input type="text" id="otherText" name="other_topic" form="subscribeForm" maxlength="200" placeholder="Tell us in your own words" aria-label="Other topic" style="flex:1 1 280px;max-width:560px;padding:0.55rem 0.9rem;border:1px solid var(--cream-dark);border-radius:6px;font:inherit;font-size:0.95rem;background:#fff">
+                        </div>
                     </div>
                 </div>
                 <form class="newsletter__form" id="subscribeForm" style="flex-direction:row;flex-wrap:wrap;max-width:620px;justify-content:center" action="https://formspree.io/f/mppqaaeq" method="POST">
@@ -187,7 +187,7 @@
                 <p id="subscribeMsg" style="display:none;margin-top:1rem;font-weight:500">Thank you &mdash; you&rsquo;re subscribed. We&rsquo;ll let you know when new insights are published.</p>
                 <p style="font-size:0.8rem;opacity:0.7;margin-top:0.75rem">We&rsquo;ll only use your email to send Island Capital insights. Unsubscribe any time. <a href="privacy.html" style="color:inherit;text-decoration:underline">Privacy Notice</a></p>
                 <script>
-                (function(){var o=document.getElementById('topicOther'),w=document.getElementById('otherWrap');if(o&&w){o.addEventListener('change',function(){w.style.display=o.checked?'block':'none';if(o.checked)w.querySelector('input').focus();});}})();
+                (function(){var o=document.getElementById('topicOther'),t=document.getElementById('otherText');if(o&&t){t.addEventListener('input',function(){o.checked=t.value.trim().length>0;});}})();
                 (function(){var f=document.getElementById('subscribeForm'),m=document.getElementById('subscribeMsg');if(!f)return;
                 f.addEventListener('submit',function(e){e.preventDefault();var b=f.querySelector('button');b.disabled=true;b.textContent='Sending...';
                 fetch(f.action,{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}}).then(function(r){if(!r.ok)throw 0;f.style.display='none';var tp=document.getElementById('subscribeTopics');if(tp)tp.style.display='none';m.style.display='block';})
