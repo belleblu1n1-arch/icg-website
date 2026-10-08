@@ -8087,3 +8087,21 @@ h1.hero-title {
 @media (max-width: 500px) {
     .v2-stats__inner { grid-template-columns: 1fr; }
 }
+
+/* ===== Home page: one left edge for all main section titles ===== */
+.leaders-section > .container { max-width: var(--max-width); }
+.ioc-section__center-header {
+    max-width: var(--max-width);
+    padding: 16px var(--space-6) 0;
+    text-align: left;
+}
+.ioc-section__sub--center { margin-left: 0; text-align: left; }
+.team-strip { padding: 5rem 0; }
+.team-strip__inner { max-width: var(--max-width); padding: 0 var(--space-6); }
+.team-strip__title,
+.team-strip__intro { text-align: left; }
+.team-strip__intro { margin-left: 0; }
+@media (min-width: 1280px) {
+    .ioc-section__center-header,
+    .team-strip__inner { padding-left: var(--space-8); padding-right: var(--space-8); }
+}
