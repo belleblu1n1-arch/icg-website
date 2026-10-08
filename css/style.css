@@ -8134,3 +8134,5 @@ h1.hero-title {
 @media (min-width: 1280px) {
     .ioc-pillars-row { padding-left: var(--space-8); padding-right: var(--space-8); }
 }
+/* IOC pillars: indented under the section title, centred like the wheel */
+.ioc-pillars-row { max-width: 1120px; padding: 0 var(--space-6); }
