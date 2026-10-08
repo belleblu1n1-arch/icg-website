@@ -8105,3 +8105,22 @@ h1.hero-title {
     .ioc-section__center-header,
     .team-strip__inner { padding-left: var(--space-8); padding-right: var(--space-8); }
 }
+
+/* ===== Home page: darker, stronger titles ===== */
+.leaders-section__title,
+.ioc-section__center-title,
+.section-title,
+.team-strip__title,
+.eng-col-title {
+    color: #111111;
+    font-weight: 500;
+}
+/* Sub-section title (one step below main section titles) */
+.subsection-title {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #111111;
+    line-height: 1.3;
+    margin: 0;
+}
