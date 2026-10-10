@@ -162,9 +162,32 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
 
-            if (!isValid) {
-                e.preventDefault();
-            }
+            e.preventDefault();
+            if (!isValid) return;
+
+            // Send in the background so visitors stay on the site
+            const btn = contactForm.querySelector('button[type="submit"]');
+            const btnText = btn ? btn.textContent : '';
+            if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
+
+            fetch(contactForm.action, {
+                method: 'POST',
+                body: new FormData(contactForm),
+                headers: { 'Accept': 'application/json' }
+            }).then(res => {
+                if (!res.ok) throw new Error('Send failed');
+                contactForm.reset();
+                contactForm.style.display = 'none';
+                const success = document.getElementById('formSuccess');
+                if (success) {
+                    success.classList.add('is-visible');
+                    success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            }).catch(() => {
+                // Fall back to a normal submission if the background send fails
+                if (btn) { btn.disabled = false; btn.textContent = btnText; }
+                HTMLFormElement.prototype.submit.call(contactForm);
+            });
         });
 
         // Real-time validation: clear error on input
