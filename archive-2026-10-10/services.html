@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Services | Island Capital Singapore — Fractional CFO, Projects &amp; Structuring</title>
+<meta name="description" content="Fractional CFO, project-based finance and performance support, and regional structuring, governance and compliance &mdash; led by senior leaders in Singapore.">
+<meta property="og:site_name" content="Island Capital Singapore">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Fractional CFO & Singapore Regional HQ | Island Capital">
+<meta property="og:description" content="Fractional CFO, project-based finance and performance support, and regional structuring, governance and compliance &mdash; led by senior leaders in Singapore.">
+<meta property="og:locale" content="en_SG">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="../img/favicon.png">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<!-- Site stylesheet -->
+<link rel="stylesheet" href="../css/style.css?v=20260803m">
+
+<!-- Page-specific styles -->
+<style>
+/* ── Services page overrides ─────────────────────────── */
+:root{
+  --sp-max:1060px;
+  --sp-border:rgba(74,140,63,0.15);
+  --sp-muted:#6B6B6B;
+}
+
+/* Hero — centered title, split intro/illustration */
+.sp-hero{padding:7rem 2rem 4rem;text-align:center;background:var(--cream)}
+.sp-hero-eyebrow{font-size:0.8125rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--green);margin-bottom:1.25rem}
+.sp-hero-title{font-family:var(--font-heading);font-size:2.75rem;font-weight:400;line-height:1.2;margin-bottom:0.75rem;letter-spacing:-0.01em;color:var(--charcoal);max-width:860px;margin-left:auto;margin-right:auto}
+.sp-hero-split{max-width:var(--sp-max);margin:0 auto;display:grid;grid-template-columns:1fr 460px;gap:2.5rem;align-items:center;text-align:left;margin-top:0}
+.sp-hero-p{font-size:1.0625rem;line-height:1.75;margin-bottom:1.25rem;color:var(--charcoal)}
+.sp-hero-sub{font-family:var(--font-heading);font-size:1.5rem;color:#000000;font-weight:400;line-height:1.5;margin-bottom:1.5rem}
+.sp-hero-img img{width:100%;max-width:460px;height:auto;display:block}
+.sp-btns{display:flex;gap:0.75rem;flex-wrap:wrap;margin-top:2rem}
+.sp-btn{display:inline-block;background:var(--green);color:#fff;padding:11px 28px;border-radius:2px;font-size:0.875rem;font-weight:500;text-decoration:none}
+.sp-btn:hover{background:var(--green-dark)}
+.sp-btn-out{background:transparent;color:var(--green);border:1px solid var(--green)}
+.sp-btn-out:hover{background:var(--green);color:#fff}
+
+/* Engagement Models */
+.sp-models{padding:4.5rem 2rem 2rem;border-top:0.5px solid var(--sp-border);background:var(--cream)}
+.sp-models-inner{max-width:var(--sp-max);margin:0 auto}
+.sp-models-grid{display:grid;grid-template-columns:1fr 1fr 1.25fr;gap:2rem}
+.sp-model-card{background:#fff;border:0.5px solid rgba(74,140,63,0.12);border-radius:0;padding:2.5rem 2.75rem}
+.sp-model-label{font-size:0.68rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--green);margin-bottom:0.75rem;text-align:center}
+.sp-model-title{font-family:var(--font-heading);font-size:1.5rem;font-weight:400;line-height:1.3;margin-bottom:1.25rem;text-align:center;color:var(--charcoal)}
+.sp-model-body{font-size:0.9rem;line-height:1.7;color:var(--charcoal);margin-bottom:1rem}
+.sp-model-bullets{list-style:none;padding:0;margin-top:1rem}
+.sp-model-bullets li{font-size:0.9375rem;color:var(--charcoal);line-height:1.65;padding:0.3rem 0 0.3rem 1.2rem;position:relative}
+.sp-model-bullets li::before{content:"✅";position:absolute;left:0;font-size:0.75rem;line-height:1.8}
+.sp-sprint-table{width:100%;border-collapse:collapse;margin-top:1.25rem}
+.sp-sprint-table thead th{font-size:0.68rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--green);padding:0 0 0.6rem;text-align:left}
+.sp-sprint-table thead th:last-child{color:var(--sp-muted);font-weight:500}
+.sp-sprint-table tbody td{font-size:0.875rem;line-height:1.55;padding:0.55rem 0.5rem 0.55rem 0;border-top:0.5px solid var(--sp-border);vertical-align:top}
+.sp-sprint-table tbody td:first-child{font-weight:500;color:var(--charcoal);padding-right:1rem;white-space:nowrap}
+.sp-sprint-table tbody td:last-child{color:var(--sp-muted);font-size:0.8125rem}
+
+/* Engagement list — single-column stacked layout */
+.sp-engage-list{list-style:none;padding:0;margin:0}
+.sp-engage-list li{padding:0.6rem 0;border-top:0.5px solid var(--sp-border)}
+.sp-engage-list li:first-child{border-top:none}
+.sp-engage-list--ticks li{padding:0.25rem 0 0.25rem 1.1rem;position:relative;border-top:none;font-size:0.85rem;color:var(--charcoal);line-height:1.6}
+.sp-engage-list--ticks li::before{content:"✅";position:absolute;left:0;font-size:0.7rem;line-height:1.8}
+.sp-engage-list--ticks .sp-engage-title{display:inline;font-size:0.85rem;color:var(--charcoal);font-weight:400}
+.sp-engage-type{display:block;font-size:0.6rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--green);margin-bottom:0.15rem}
+.sp-engage-type--managed{color:var(--green)}
+.sp-engage-title{display:block;font-size:0.8rem;font-weight:500;color:var(--charcoal);line-height:1.4}
+.sp-engage-scope{display:block;font-size:0.7rem;color:var(--sp-muted);line-height:1.5;margin-top:0.15rem}
+.sp-proof{margin-top:1.5rem;padding:0.85rem 0 0.25rem 0.9rem;border-left:2px solid var(--olive, #A5C83A);font-size:0.78rem;line-height:1.6;color:#3F3F3F}
+.sp-proof-label{display:block;font-size:0.62rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--green);margin-bottom:0.35rem}
+
+/* Scope section */
+.sp-scope{padding:2.5rem 2rem 4.5rem;background:var(--cream)}
+.sp-scope-inner{max-width:var(--sp-max);margin:0 auto}
+.sp-scope-label{font-size:0.68rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--green);margin-bottom:0.75rem}
+.sp-scope-title{font-family:var(--font-heading);font-size:2rem;font-weight:400;color:var(--charcoal);line-height:1.2;margin-bottom:0.75rem}
+.sp-scope-note{font-size:1rem;color:var(--charcoal);line-height:1.7;margin-bottom:2.5rem;max-width:700px}
+.sp-scope-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+.sp-scope-card{background:#fff;border:0.5px solid rgba(74,140,63,0.12);border-radius:0;padding:1.5rem}
+.sp-scope-icon{width:100%;margin-bottom:0.85rem;display:flex;align-items:center;justify-content:center}
+.sp-scope-icon img{width:60px;height:60px;object-fit:contain}
+.sp-scope-icon svg{width:48px;height:48px}
+.sp-scope-card-title{font-size:0.875rem;font-weight:600;color:var(--charcoal);margin-bottom:0.6rem;padding-bottom:0.5rem;border-bottom:0.5px solid var(--sp-border);text-align:center}
+.sp-scope-card ul{list-style:none;padding:0}
+.sp-scope-card ul li{font-size:0.8rem;color:var(--sp-muted);line-height:1.6;padding:0.2rem 0 0.2rem 1rem;position:relative}
+.sp-scope-card ul li::before{content:"·";position:absolute;left:0;color:var(--green);font-size:1.1rem;line-height:1.2}
+
+/* Closing */
+.sp-closing{background:var(--surface-dark);color:#fff;padding:5rem 2rem;text-align:center}
+.sp-closing .sp-rule{width:48px;height:1.5px;background:var(--green);margin:0 auto 2rem}
+.sp-closing-title{font-family:var(--font-heading);font-size:2.75rem;font-weight:300;color:#fff;line-height:1.2;margin-bottom:1.5rem;max-width:680px;margin-left:auto;margin-right:auto}
+.sp-closing-note{font-size:1.25rem;color:rgba(255,255,255,0.7);line-height:1.75;margin-bottom:2.5rem;max-width:620px;margin-left:auto;margin-right:auto;font-style:italic}
+.sp-btn-white{display:inline-block;background:#fff;color:var(--green-dark);padding:11px 28px;border-radius:2px;font-size:0.875rem;font-weight:500;text-decoration:none}
+</style>
+        <meta property="og:url" content="https://islandcapital.com.sg/services.html">
+    <meta property="og:image" content="https://islandcapital.com.sg/img/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="robots" content="noindex, nofollow">
+<style>.arch-banner{position:fixed;top:0;left:0;right:0;height:34px;line-height:34px;z-index:1002}.nav{top:34px!important}body{padding-top:34px}</style>
+</head>
+<body>
+<div class="arch-banner" style="background:#1A3A24;color:#F5F7F2;text-align:center;font:500 0.8rem Inter,sans-serif;padding:0 1rem">Archived version of islandcapital.com.sg as at 10 October 2026 &mdash; not the current site.</div>
+
+
+    <!-- ========== NAVIGATION ========== -->
+    <nav class="nav nav--solid" id="navbar">
+        <div class="nav__inner">
+            <a href="index.html" class="nav__logo">
+                <img src="../img/logo-island-capital.png" alt="Island Capital" class="nav__logo-img nav__logo-img--dark">
+                <img src="../img/logo-island-capital-white.png" alt="Island Capital" class="nav__logo-img nav__logo-img--light">
+            </a>
+
+            <div class="nav__links">
+                <a href="index.html" class="nav__link">Home</a>
+                <a href="services.html" class="nav__link">Services</a>
+                <a href="about.html" class="nav__link">About</a>
+                <a href="contact.html" class="nav__link">Contact</a>
+            </div>
+
+            <button class="nav__hamburger" id="navToggle" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="nav__mobile" id="mobileMenu">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+
+<!-- ========== LOGO RIBBON ========== -->
+<!-- ========== HERO ========== -->
+<div class="sp-hero">
+  <p class="sp-hero-eyebrow">Services</p>
+  <h1 class="sp-hero-title">Senior finance and business leadership</h1>
+  <p class="sp-hero-sub">Our Integrated Operating Cadence&trade; connects planning, decisions, performance, and execution &mdash; turning strategy into measurable delivery.<br>Your partner through growth, complexity, and change &mdash; ongoing or by project.</p>
+  <div class="sp-hero-split">
+    <div>
+      <p class="sp-hero-p">We provide fractional CFO leadership and senior decision support &mdash; from planning and performance management to delivering results, projects, transitions, and expansion in Asia-Pacific.</p>
+      <p class="sp-hero-p">We work with you in an ongoing partnership or on a project basis &mdash; flexible in time and scope, scaled to the seasonality and stage of your business. <strong>Senior leaders on every engagement.</strong></p>
+      <div class="sp-btns">
+        <a href="contact.html" class="sp-btn">Book a free first conversation</a>
+      </div>
+    </div>
+    <div class="sp-hero-img">
+      <img src="../img/hero-illustration.png" alt="" />
+    </div>
+  </div>
+</div>
+
+<!-- ========== WHO ========== -->
+<div class="sp-who-when" style="max-width:1100px;margin:0 auto;padding:2.5rem 1.5rem 0.5rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem 3rem">
+  <div>
+    <p style="font-size:0.7rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--green);margin:0 0 0.75rem">Who we work with</p>
+    <ul style="margin:0;padding-left:1.1rem;line-height:1.9;color:var(--charcoal);list-style:disc">
+      <li>International groups setting up or operating in Asia-Pacific</li>
+      <li>Owner-led businesses and family offices</li>
+      <li>Investors and their portfolio companies</li>
+    </ul>
+  </div>
+</div>
+
+
+<!-- ========== ENGAGEMENT MODELS ========== -->
+<div class="sp-models" id="fractional-cfo-performance-leadership">
+  <div class="sp-models-inner">
+    <div class="sp-models-grid">
+      <div class="sp-model-card">
+        <p class="sp-model-label">Ongoing Partnership</p>
+        <h2 class="sp-model-title">Fractional CFO &amp; Performance Leadership</h2>
+        <p class="sp-model-body">Senior finance and business leadership, as and when you need it &mdash; scaled to the seasonality and stage of your business, and adapting as your priorities change.</p>
+        <p class="sp-model-body" style="font-weight:500;margin-bottom:0.5rem">Examples:</p>
+        <ul class="sp-model-bullets">
+          <li>Decision support</li>
+          <li>Planning, forecasting, and performance leadership</li>
+          <li>Stakeholder-ready reporting</li>
+          <li>Governance &amp; cross-border coordination</li>
+        </ul>
+        <div class="sp-proof"><span class="sp-proof-label">Track record</span>Fortune 500 finance, strategy and performance leadership across six regions, spanning 40+ markets, alongside strategy consulting experience with Bain &amp; Company in Singapore and the U.S. Leadership roles included company directorships, regional committee chairs and transformation programme boards.</div>
+      </div>
+      <div class="sp-model-card" id="focused-engagements">
+        <p class="sp-model-label">Project Basis</p>
+        <h2 class="sp-model-title">Finance &middot; Decision Support &middot; Change</h2>
+        <p class="sp-model-body">Focused on a defined business need &mdash; clear scope, practical output.</p>
+        <p class="sp-model-body">Typically scoped over 4–12 weeks.</p>
+        <p class="sp-model-body" style="font-weight:500;margin-bottom:0.5rem">Examples:</p>
+        <ul class="sp-engage-list sp-engage-list--ticks">
+          <li><span class="sp-engage-title">Planning &amp; Forecasting Reset</span></li>
+          <li><span class="sp-engage-title">Reporting &amp; Board Materials Reset</span></li>
+          <li><span class="sp-engage-title">KPI &amp; Dashboard Reset</span></li>
+          <li><span class="sp-engage-title">Profitability &amp; Cost Insight</span></li>
+          <li><span class="sp-engage-title">Scenario &amp; Trade-off</span></li>
+          <li><span class="sp-engage-title">Integration &amp; Transition Support</span></li>
+        </ul>
+        <div class="sp-proof"><span class="sp-proof-label">Track record</span>Led diverse, cross-functional teams from strategy through execution to deliver profitable growth, turnarounds, M&amp;A integration and finance transformation.<span style="display:block;margin-top:0.6rem">Certified PRINCE2&reg; Practitioner.</span></div>
+      </div>
+      <div class="sp-model-card" id="regional-operations">
+      <p class="sp-model-label">Project Basis &amp; Ongoing Partnership</p>
+      <h2 class="sp-model-title">Structuring &middot; Governance<br>Compliance</h2>
+      <p class="sp-model-body">For regional operations in Asia-Pacific, we design and set up legal entity structure, operating model and financial model &mdash; aligned to your strategy, tax-efficient and compliant.</p>
+      <p class="sp-model-body">Coordinated across finance, tax, legal, and compliance.</p>
+
+      <p class="sp-engage-group-header" style="font-size:0.7rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--green);margin:1.5rem 0 0.5rem">Project Basis &mdash; Design &amp; Set-up</p>
+      <ul class="sp-engage-list sp-engage-list--ticks">
+        <li>
+          <span class="sp-engage-title">Readiness Review</span>
+          <span class="sp-engage-scope">Structure, health, gaps, actions</span>
+        </li>
+        <li>
+          <span class="sp-engage-title">Entity &amp; Operating Structure Design</span>
+          <span class="sp-engage-scope">Tax-efficient, compliant, aligned to your strategy</span>
+        </li>
+        <li>
+          <span class="sp-engage-title">Governance &amp; Reporting Design</span>
+          <span class="sp-engage-scope">Compliant, lean, privacy-protected, fit for internal needs</span>
+        </li>
+      </ul>
+
+      <p class="sp-engage-group-header" style="font-size:0.7rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--green);margin:1.25rem 0 0.5rem">Ongoing Partnership &mdash; Outsourced to us</p>
+      <ul class="sp-engage-list sp-engage-list--ticks">
+        <li>
+          <span class="sp-engage-title">Governance, Compliance &amp; Reporting</span>
+          <span class="sp-engage-scope">Singapore, Hong Kong, Indonesia, Australia</span>
+        </li>
+      </ul>
+      <p style="font-size:0.78rem;color:#5A5A5A;margin:0.35rem 0 0 1.75rem">Registered Corporate Service Provider with ACRA, Singapore.</p>
+      <div class="sp-proof"><span class="sp-proof-label">Track record</span>50+ years in international structuring, governance, and legal tax mitigation &mdash; former Rothschild director, adviser to governments and NUS adjunct professor.<span style="display:block;margin-top:0.6rem">25+ years leading finance, strategy and transformation from regional headquarters across Asia-Pacific.</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ========== SHARED SCOPE ========== -->
+<div class="sp-scope" id="scope">
+  <div class="sp-scope-inner">
+    <p class="sp-scope-label">Areas We Support</p>
+    <p class="sp-scope-note">Every engagement is tailored to your needs. Typical areas include:</p>
+    <div class="sp-scope-grid">
+
+      <!-- 1 Planning: seedling icon -->
+      <div class="sp-scope-card" id="planning-forecasting">
+        <div class="sp-scope-icon">
+          <svg viewBox="0 0 44 44" fill="none" stroke="#8FB82E" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 38 V20"/>
+            <path d="M22 28 C16 28 11 22 11 16 C17 16 22 22 22 28"/>
+            <path d="M22 22 C28 22 33 16 33 10 C27 10 22 16 22 22"/>
+            <line x1="14" y1="38" x2="30" y2="38"/>
+          </svg>
+        </div>
+        <div class="sp-scope-card-title">Planning, Forecasting &amp; Cash</div>
+        <ul>
+          <li>Cash flow forecasting and working capital</li>
+          <li>Budgeting and annual operating planning</li>
+          <li>Rolling forecast design and cadence</li>
+          <li>Scenario planning and trade-off analysis</li>
+          <li>Target setting and resource alignment</li>
+        </ul>
+      </div>
+
+      <!-- 2 Performance: sun icon -->
+      <div class="sp-scope-card" id="performance-management-decision-support">
+        <div class="sp-scope-icon">
+          <img src="../img/icon-sun.png" alt="Performance Management" />
+        </div>
+        <div class="sp-scope-card-title">Monthly Performance Reviews</div>
+        <ul>
+          <li>Monthly &amp; quarterly rhythm</li>
+          <li>KPI structure &amp; dashboard reset</li>
+          <li>Accountability and follow-through</li>
+          <li>One set of numbers everyone trusts</li>
+        </ul>
+      </div>
+
+      <!-- 3 Reporting: leaf icon -->
+      <div class="sp-scope-card" id="lean-stakeholder-ready-reporting">
+        <div class="sp-scope-icon">
+          <img src="../img/icon-leaf.png" alt="Reporting" />
+        </div>
+        <div class="sp-scope-card-title">Reporting &amp; Board Materials</div>
+        <ul>
+          <li>Board pack design</li>
+          <li>Reporting simplification</li>
+          <li>Leadership and stakeholder materials</li>
+          <li>Investor and lender readiness</li>
+        </ul>
+      </div>
+
+      <!-- 4 Decision Support: double mountain icon -->
+      <div class="sp-scope-card" id="decision-support-resource-allocation">
+        <div class="sp-scope-icon">
+          <svg viewBox="0 0 44 44" fill="none" stroke="#8FB82E" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 38 L18 8 L23.5 17.5 L18 22 L13 17.8 L7.5 21.5 L18 8"/>
+            <path d="M2 38 L18 8 L34.5 38"/>
+            <path d="M29 38 L35 24 L38.5 27.5 L41 25 L42 38"/>
+            <path d="M29 38 L35 24 L42 38"/>
+          </svg>
+        </div>
+        <div class="sp-scope-card-title">Decision Support &amp; Insight</div>
+        <ul>
+          <li>Investment prioritisation</li>
+          <li>Cost and profitability driver analysis</li>
+          <li>Business model evaluation</li>
+          <li>Portfolio, customer, market, segment, or channel decisions</li>
+        </ul>
+      </div>
+
+      <!-- 5 Strategic Execution: compass SVG -->
+      <div class="sp-scope-card" id="strategic-execution-regional-expansion">
+        <div class="sp-scope-icon">
+          <svg viewBox="0 0 44 44" fill="none" stroke="#8FB82E" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="22" cy="22" r="18"/>
+            <path d="M22 4 v4 M22 36 v4 M4 22 h4 M36 22 h4"/>
+            <path d="M22 12 L26 22 L22 32 L18 22 Z"/>
+            <circle cx="22" cy="22" r="2.5" fill="#8FB82E" stroke="none"/>
+          </svg>
+        </div>
+        <div class="sp-scope-card-title">Integration, Transition &amp; Change</div>
+        <ul>
+          <li>Integration support</li>
+          <li>Restructuring and transition support</li>
+          <li>Change delivery</li>
+          <li>Cross-functional and cross-border implementation</li>
+        </ul>
+      </div>
+
+      <!-- 6 Cross-Border: globe SVG -->
+      <div class="sp-scope-card" id="structuring-governance-cross-border-readiness">
+        <div class="sp-scope-icon">
+          <svg viewBox="0 0 44 44" fill="none" stroke="#8FB82E" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="22" cy="22" r="18"/>
+            <ellipse cx="22" cy="22" rx="7" ry="18"/>
+            <line x1="4" y1="22" x2="40" y2="22"/>
+            <path d="M6 14 h32"/><path d="M6 30 h32"/>
+          </svg>
+        </div>
+        <div class="sp-scope-card-title">Structuring, Governance &amp; Compliance</div>
+        <ul>
+          <li>Entity and operational structuring</li>
+          <li>Governance and decision-rights design</li>
+          <li>Cross-border operating readiness</li>
+          <li>Coordination across finance, tax, legal, and compliance</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- ========== CLOSING ========== -->
+<div class="sp-closing">
+  <div class="sp-rule"></div>
+  <h2 class="sp-closing-title">What can we help you achieve?</h2>
+  <p class="sp-closing-note">Looking for senior finance and business leadership &mdash; ongoing or for a defined project?</p>
+  <a href="contact.html" class="sp-btn-white">Book a free first conversation</a>
+</div>
+
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div>
+                    <div class="footer__logo"><img src="../img/tree-icon.png" alt="" class="footer__logo-icon">Island <span>Capital</span></div>
+                    <p class="footer__desc">Senior finance and business leadership for growing businesses across Asia-Pacific.</p>
+                </div>
+
+                <div>
+                    <h4>Company</h4>
+                    <div class="footer__links">
+                        <a href="about.html">About</a>
+                        <a href="insights.html">Insights</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4>Services</h4>
+                    <div class="footer__links">
+                        <a href="services.html#fractional-cfo-performance-leadership">Fractional CFO</a>
+                        <a href="services.html#focused-engagements">Project Basis</a>
+                        <a href="services.html#regional-operations">Structuring &amp; Governance</a>
+                        <a href="services.html#scope">Areas We Support</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4>Contact</h4>
+                    <div class="footer__links">
+                        <a href="contact.html">Send an enquiry</a>
+                        <a href="mailto:hello@islandcapital.com.sg">hello@islandcapital.com.sg</a>
+                        <a href="https://wa.me/6587614322" target="_blank" rel="noopener">WhatsApp +65 8761 4322</a>
+                        <span>Singapore</span>
+                        <a href="https://www.linkedin.com/in/isabellalan/" target="_blank" rel="noopener">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p class="footer__copyright">&copy; 2026 Island Capital Pte. Ltd. All rights reserved. &middot; ACRA-registered Corporate Service Provider</p>
+                <div class="footer__legal">
+                    <a href="privacy.html">Privacy Notice</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
