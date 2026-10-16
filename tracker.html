@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Compliance Tracker for Asia-Pacific Groups | Early Access</title>
+<meta name="description" content="Every filing deadline for every entity across Asia-Pacific, in one place: owners, form numbers, late penalties and status, with rules reviewed every month. Join the early access list.">
+<link rel="canonical" href="https://islandcapital.com.sg/tracker.html">
+<meta property="og:title" content="Compliance Tracker for Asia-Pacific Groups">
+<meta property="og:description" content="Every filing, every entity, every market. Always up to date.">
+<meta property="og:url" content="https://islandcapital.com.sg/tracker.html">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f3f6f4;--surface:#fff;--ink:#14231d;--muted:#5b6b64;--line:#d9e2dd;--accent:#1f6b4f;--accent-soft:#e1efe8;--warn:#a86300;--warn-bg:#fbefd9;--bad:#b3261e;
+--f-display:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;--f-body:"IBM Plex Sans","Segoe UI",system-ui,sans-serif;--f-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.55}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header.top{padding:18px 0;border-bottom:1px solid var(--line);background:var(--surface)}
+header.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.brand{font-family:var(--f-display);font-weight:700;font-size:1.1rem;color:var(--ink);text-decoration:none}
+.badge{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;font-weight:600;color:var(--warn);background:var(--warn-bg);padding:4px 10px;border-radius:999px}
+.hero{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:40px;padding:56px 0 40px;align-items:start}
+@media (max-width:860px){.hero{grid-template-columns:minmax(0,1fr);padding-top:36px}}
+h1{font-family:var(--f-display);font-weight:700;font-size:clamp(2rem,4.2vw,2.9rem);line-height:1.08;margin:0 0 16px;text-wrap:balance}
+.lead{font-size:1.1rem;color:var(--muted);margin:0 0 24px;max-width:56ch}
+.points{list-style:none;padding:0;margin:0 0 28px;display:grid;gap:14px}
+.points li{display:grid;grid-template-columns:28px 1fr;gap:10px}
+.points b{display:block}
+.points span{color:var(--muted);font-size:.95rem}
+.tick{width:22px;height:22px;border-radius:50%;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;font-size:.8rem;font-weight:700;margin-top:2px}
+.markets{display:grid;gap:10px}
+.mk-label{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;font-weight:600;color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-size:.85rem;padding:4px 10px;border-radius:999px;background:var(--surface);border:1px solid var(--line)}
+.chip.live{border-color:var(--accent);color:var(--accent);font-weight:500}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:24px}
+.card h2{font-family:var(--f-display);font-weight:600;font-size:1.35rem;margin:0 0 4px}
+.card .note{color:var(--muted);font-size:.88rem;margin:0 0 18px}
+form{display:grid;gap:14px}
+label{display:grid;gap:5px;font-size:.85rem;font-weight:500}
+input[type=email],input[type=text],select{font:inherit;font-size:.95rem;padding:9px 11px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);width:100%}
+input:focus-visible,select:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+fieldset{border:0;padding:0;margin:0;display:grid;gap:8px}
+legend{font-size:.85rem;font-weight:500;margin-bottom:6px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:6px 12px}
+@media (max-width:420px){.grid2{grid-template-columns:1fr}}
+.cb{display:flex;gap:8px;align-items:flex-start;font-weight:400;font-size:.88rem}
+.cb input{margin-top:3px;accent-color:var(--accent)}
+.cb small{color:var(--muted)}
+.offer{background:var(--accent-soft);border-radius:8px;padding:12px}
+.btn{font:inherit;font-weight:600;font-size:1rem;padding:12px 16px;border-radius:8px;border:0;background:var(--accent);color:#fff;cursor:pointer}
+.btn[disabled]{opacity:.6;cursor:wait}
+.msg{font-size:.9rem;margin:0}
+.msg.err{color:var(--bad)}
+.done{display:grid;gap:8px;text-align:left}
+.done h2{color:var(--accent)}
+.hp{position:absolute;left:-9999px}
+section.how{padding:24px 0 56px}
+.how h2{font-family:var(--f-display);font-weight:600;font-size:1.5rem;margin:0 0 18px}
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+@media (max-width:760px){.steps{grid-template-columns:minmax(0,1fr)}}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px}
+.step .n{font-family:var(--f-mono);font-size:.8rem;color:var(--accent)}
+.step b{display:block;margin:4px 0}
+.step span{color:var(--muted);font-size:.92rem}
+footer{border-top:1px solid var(--line);padding:22px 0;color:var(--muted);font-size:.85rem}
+footer a{color:var(--muted)}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="tracker.html">Compliance Tracker</a>
+  <span class="badge">Early access</span>
+</div></header>
+
+<main class="wrap">
+  <section class="hero">
+    <div>
+      <h1>Every filing, every entity, every market. Always up to date.</h1>
+      <p class="lead">For groups with companies in Asia-Pacific. See every statutory and tax deadline, filing status, who owns it and what it costs if late, with regulatory requirements updated every month.</p>
+      <ul class="points">
+        <li><span class="tick">✓</span><div><b>Deadlines set up for you</b><span>Add an entity, its country and year end. Annual returns, tax filings, GST/VAT and more appear automatically.</span></div></li>
+        <li><span class="tick">✓</span><div><b>Clear owners and status</b><span>Assign each filing to your company secretary, tax agent or team, and track it from not started to accepted.</span></div></li>
+        <li><span class="tick">✓</span><div><b>Know what's at stake</b><span>Form numbers, late penalties and a direct link to file on the official portal.</span></div></li>
+        <li><span class="tick">✓</span><div><b>Rules kept up to date</b><span>Regulatory changes are tracked monthly and reviewed by local advisers. You're told when a change affects you.</span></div></li>
+      </ul>
+      <div class="markets">
+        <span class="mk-label">At launch</span>
+        <div class="chips"><span class="chip live">Singapore</span><span class="chip live">Hong Kong</span><span class="chip live">Malaysia</span><span class="chip live">Indonesia</span><span class="chip live">Australia</span><span class="chip live">China</span></div>
+        <span class="mk-label">Next, in order of demand</span>
+        <div class="chips"><span class="chip">Vietnam</span><span class="chip">Thailand</span><span class="chip">Philippines</span><span class="chip">India</span><span class="chip">Japan</span><span class="chip">South Korea</span></div>
+      </div>
+    </div>
+
+    <div class="card" id="signup">
+      <div id="formWrap">
+        <h2>Join early access</h2>
+        <p class="note">Free to join. We'll invite you when your markets go live.</p>
+        <form id="waitForm" action="https://formspree.io/f/mppqaaeq" method="POST" novalidate>
+          <input type="hidden" name="_subject" value="Compliance Tracker early access sign-up">
+          <input type="hidden" name="source" value="tracker.html">
+          <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <label for="email">Work email<input type="email" id="email" name="email" required autocomplete="email"></label>
+          <label for="company">Company or group name<input type="text" id="company" name="company" required autocomplete="organization"></label>
+          <div class="grid2">
+            <label for="role">Your role<select id="role" name="role" required>
+              <option value="">Select</option><option>CFO / Finance head</option><option>CEO / Founder</option><option>Finance manager</option><option>Company secretary / Legal</option><option>Adviser / Accounting firm</option><option>Other</option></select></label>
+            <label for="entities">Number of entities<select id="entities" name="entities" required>
+              <option value="">Select</option><option>1</option><option>2–5</option><option>6–15</option><option>16–50</option><option>50+</option></select></label>
+          </div>
+          <fieldset>
+            <legend>Where are your entities? <span style="font-weight:400;color:var(--muted)">(select all)</span></legend>
+            <div class="grid2" id="mkts"></div>
+            <label for="other" style="font-weight:400">Other countries<input type="text" id="other" name="other_countries" placeholder="e.g. UAE, United States"></label>
+          </fieldset>
+          <label class="cb offer"><input type="checkbox" name="founding_member" value="Yes"><span><b>I'm interested in founding-member pricing</b><br><small>The first 50 companies get 50% off for their first 12 months.</small></span></label>
+          <label class="cb"><input type="checkbox" id="consent" name="consent" value="Yes" required><span>I agree that Island Capital may use these details only to contact me about the Compliance Tracker, as described in the <a href="privacy.html">privacy policy</a>. <small>You can unsubscribe at any time.</small></span></label>
+          <button class="btn" type="submit" id="submitBtn">Join early access</button>
+          <p class="msg" id="msg" role="status"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="how">
+    <h2>How it works</h2>
+    <div class="steps">
+      <div class="step"><span class="n">Step 1</span><b>Add your entities</b><span>Name, country, year end and incorporation date. Takes two minutes per company.</span></div>
+      <div class="step"><span class="n">Step 2</span><b>Assign owners</b><span>Choose who handles each filing: your company secretary, tax agent, auditor or finance team.</span></div>
+      <div class="step"><span class="n">Step 3</span><b>Stay ahead</b><span>Get reminders before deadlines, a monthly one-page status report, and alerts when rules change.</span></div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap">A product in development by Island Capital, Singapore. · <a href="privacy.html">Privacy policy</a> · <a href="index.html">islandcapital.com.sg</a></div></footer>
+
+<script>
+const MKTS=["Singapore","Hong Kong","Malaysia","Indonesia","Australia","China","Vietnam","Thailand","Philippines","India","Japan","South Korea"];
+document.getElementById("mkts").innerHTML=MKTS.map((m,i)=>`<label class="cb" for="m${i}"><input type="checkbox" id="m${i}" name="markets" value="${m}"><span>${m}</span></label>`).join("");
+const form=document.getElementById("waitForm"),msg=document.getElementById("msg"),btn=document.getElementById("submitBtn");
+form.addEventListener("submit",async e=>{
+  e.preventDefault();msg.className="msg";msg.textContent="";
+  const email=form.email.value.trim();
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){msg.className="msg err";msg.textContent="Enter a valid work email.";form.email.focus();return}
+  if(!form.company.value.trim()){msg.className="msg err";msg.textContent="Enter your company name.";form.company.focus();return}
+  if(!form.role.value||!form.entities.value){msg.className="msg err";msg.textContent="Choose your role and number of entities.";return}
+  if(!form.querySelector('input[name="markets"]:checked')&&!form.other.value.trim()){msg.className="msg err";msg.textContent="Select at least one country.";return}
+  if(!form.consent.checked){msg.className="msg err";msg.textContent="Tick the consent box so we can contact you.";return}
+  btn.disabled=true;btn.textContent="Sending…";
+  const fd=new FormData(form);
+  fd.set("markets",[...form.querySelectorAll('input[name="markets"]:checked')].map(c=>c.value).join(", "));
+  try{
+    const r=await fetch(form.action,{method:"POST",body:fd,headers:{Accept:"application/json"}});
+    if(!r.ok)throw new Error();
+    document.getElementById("formWrap").innerHTML=`<div class="done"><h2>You're on the list</h2><p>Thank you. We'll email ${email.replace(/[<>&"]/g,"")} when your markets go live${fd.get("founding_member")?", with details of founding-member pricing":""}.</p></div>`;
+  }catch(err){
+    msg.className="msg err";msg.textContent="That didn't go through. Check your connection and try again, or email hello@islandcapital.com.sg.";
+    btn.disabled=false;btn.textContent="Join early access";
+  }
+});
+</script>
+</body>
+</html>
