@@ -101,7 +101,7 @@ footer a{color:var(--muted)}
     <div class="card" id="signup">
       <div id="formWrap">
         <h2>Join early access</h2>
-        <p class="note">Free to join. We'll invite you when your markets go live.</p>
+        <p class="note">The first 50 companies get 50% off for 12 months when we launch. We'll let you know when your markets go live.</p>
         <form id="waitForm" action="https://formspree.io/f/mppqaaeq" method="POST" novalidate>
           <input type="hidden" name="_subject" value="Compliance Tracker early access sign-up">
           <input type="hidden" name="source" value="tracker.html">
@@ -119,7 +119,7 @@ footer a{color:var(--muted)}
             <div class="grid2" id="mkts"></div>
             <label for="other" style="font-weight:400">Other countries<input type="text" id="other" name="other_countries" placeholder="e.g. UAE, United States"></label>
           </fieldset>
-          <label class="cb offer"><input type="checkbox" name="founding_member" value="Yes"><span><b>I'm interested in founding-member pricing</b><br><small>The first 50 companies get 50% off for their first 12 months.</small></span></label>
+          <label class="cb offer"><input type="checkbox" name="founding_member" value="Yes"><span><b>Reserve my founding-member discount</b><br><small>50% off for 12 months, first 50 companies.</small></span></label>
           <label class="cb"><input type="checkbox" id="consent" name="consent" value="Yes" required><span>I agree that Island Capital may use these details to contact me about the Compliance Tracker and to improve it, as described in the <a href="privacy.html">privacy policy</a>. <small>You can unsubscribe at any time.</small></span></label>
           <label class="cb"><input type="checkbox" name="services_optin" value="Yes"><span>Also tell me about Island Capital's compliance and advisory services. <small>Optional.</small></span></label>
           <button class="btn" type="submit" id="submitBtn">Join early access</button>
@@ -159,7 +159,7 @@ form.addEventListener("submit",async e=>{
   try{
     const r=await fetch(form.action,{method:"POST",body:fd,headers:{Accept:"application/json"}});
     if(!r.ok)throw new Error();
-    document.getElementById("formWrap").innerHTML=`<div class="done"><h2>You're on the list</h2><p>Thank you. We'll email ${email.replace(/[<>&"]/g,"")} when your markets go live${fd.get("founding_member")?", with details of founding-member pricing":""}.</p></div>`;
+    document.getElementById("formWrap").innerHTML=`<div class="done"><h2>You're on the list</h2><p>Thank you. We'll email ${email.replace(/[<>&"]/g,"")} when your markets go live${fd.get("founding_member")?", with your founding-member discount details":""}.</p></div>`;
   }catch(err){
     msg.className="msg err";msg.textContent="That didn't go through. Check your connection and try again, or email hello@islandcapital.com.sg.";
     btn.disabled=false;btn.textContent="Join early access";
